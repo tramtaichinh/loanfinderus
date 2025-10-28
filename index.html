@@ -12,6 +12,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  integrity="sha512-RXf+QSDCUQs6Q0G+Gk3hjhCwqj4P9fWmXZyD0ZbZyVqj4b6VvkpV6R05R3pK5p0MRCb9z5xXrWvE1q8X1vHUQ=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
     <style>
         /* CSS Variables */
         :root { 
@@ -704,8 +709,7 @@
 }
 
 .lf-menu a:hover{ text-decoration:underline; }
-
-/* SOCIAL (hàng dưới menu) */
+/* SOCIAL ICON WRAPPER */
 .lf-social {
   display: flex;
   justify-content: center;
@@ -714,30 +718,35 @@
   margin: 14px 0 18px;
 }
 
+/* MỖI ICON */
 .lf-social a {
   width: 38px;
   height: 38px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid #d1d5db;
   border-radius: 8px;
-  background: #fff;
-  color: #374151;
-  font-size: 18px;
-  transition: all 0.2s ease;
+  background: transparent;     /* không có nền */
+  border: none;                /* không viền */
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0.85;
 }
 
+/* ẢNH ICON */
+.lf-social img {
+  width: 36px;                 /* điều chỉnh kích cỡ cố định */
+  height: 36px;
+  object-fit: contain;
+  display: block;
+  transition: opacity 0.3s ease;
+}
+
+/* HIỆU ỨNG HOVER */
 .lf-social a:hover {
-  background: #3A7D51; /* brand green */
-  border-color: #3A7D51;
-  color: #fff;
+  transform: scale(1.08);      /* phóng nhẹ lên */
+  opacity: 1;
 }
-
-.lf-social i {
-  line-height: 1;
-}
-
+.lf-social i { line-height: 1; }
 
 /* Disclaimer */
 .lf-legal{
@@ -1488,13 +1497,6 @@
             <a class="btn" href="#partners">Get Started Now</a>
         </div>
     </section>
-	<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-  integrity="sha512-RXf+QSDCUQs6Q0G+Gk3hjhCwqj4P9fWmXZyD0ZbZyVqj4b6VvkpV6R05R3pK5p0MRCb9z5xXrWvE1q8X1vHUQ=="
-  crossorigin="anonymous"
-  referrerpolicy="no-referrer"
-/>
 <footer class="lf-footer">
   <div class="lf-wrap">
     <!-- top row: logo + menu -->
@@ -1516,22 +1518,66 @@
 
     <!-- SOCIAL ROW (vị trí khung đỏ) -->
 <div class="lf-social">
-  <a href="https://facebook.com/LoanFinderUS" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-  <a href="https://tiktok.com/@LoanFinderUS" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-  <a href="https://instagram.com/LoanFinderUS" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-  <a href="https://pinterest.com/LoanFinderUS" target="_blank" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
-  <a href="https://reddit.com/r/LoanFinderUS" target="_blank" aria-label="Reddit"><i class="fab fa-reddit-alien"></i></a>
-  <a href="https://loanfinderus.substack.com" target="_blank" aria-label="Substack"><i class="fa-solid fa-rss"></i></a>
-  <a href="https://medium.com/@LoanFinderUS" target="_blank" aria-label="Medium"><i class="fab fa-medium"></i></a>
-  <a href="https://linkedin.com/company/loanfinderus" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+  <a href="https://facebook.com/LoanFinderUS" target="_blank" aria-label="Facebook"><img src="https://raw.githubusercontent.com/tramtaichinh/loanfinderus/refs/heads/main/fb_facebook_facebook%20logo_icon.png" alt="Facebook" ></a>
+  <a href="https://youtube.com/company/loanfinderus" target="_blank" aria-label="Youtube"><img src="https://raw.githubusercontent.com/tramtaichinh/loanfinderus/refs/heads/main/youtube_logo_icon.png" alt="Youtube"></a>
+  <a href="https://tiktok.com/@LoanFinderUS" target="_blank" aria-label="TikTok"><img src="https://raw.githubusercontent.com/tramtaichinh/loanfinderus/refs/heads/main/tiktok_icon.png" alt="TikTok"> </a>
+  <a href="https://pinterest.com/LoanFinderUS" target="_blank" aria-label="Pinterest"><img src="https://raw.githubusercontent.com/tramtaichinh/loanfinderus/refs/heads/main/pinterest_icon.png" alt="Pinterest"></a>
+  <a href="https://twitter.com/LoanFinderUS" target="_blank" aria-label="Twitter"><img src="https://raw.githubusercontent.com/tramtaichinh/loanfinderus/refs/heads/main/twitter%20logo_icon.png" alt="Twitter"></a>
+  <a href="https://instagram.com/LoanFinderUS" target="_blank" aria-label="Instagram"> <img src="https://raw.githubusercontent.com/tramtaichinh/loanfinderus/refs/heads/main/instagram%20logo_icon.png" alt="Instagram"></a>
+  <a href="https://linkedin.com/company/loanfinderus" target="_blank" aria-label="LinkedIn"><img src="https://raw.githubusercontent.com/tramtaichinh/loanfinderus/refs/heads/main/linkedin%20logo_icon.png" alt="LinkedIn"></a>
+  <a href="https://www.reddit.com/r/FinanceReliefUS/" target="_blank" aria-label="Reddit"><img src="https://raw.githubusercontent.com/tramtaichinh/loanfinderus/refs/heads/main/reddit_icon.png" alt="Reddit"></a>
+  <a href="https://loanfinderus.substack.com" target="_blank" aria-label="Substack"><img src="https://raw.githubusercontent.com/tramtaichinh/loanfinderus/refs/heads/main/substack_icon.png" alt="Substack"></a>
+  <a href="hhttps://www.tumblr.com/loanfinderus" target="_blank" aria-label="Tumblr"><img src="https://raw.githubusercontent.com/tramtaichinh/loanfinderus/refs/heads/main/tumblr_logo_icon.png" alt="Tumblr"></a>
 </div>
+
+
 
     <!-- DISCLAIMER -->
     <div class="lf-legal">
-      <p><strong>Disclaimer:</strong> LoanFinderUS is <strong>not a lender</strong> and does not make loan or credit decisions. We do not represent, broker, or act as agents for any lender or financial institution. Participating lenders may offer loan amounts that vary by your credit profile, income, and state regulations. Availability and terms differ by state and this service may not be available in all areas.</p>
-      <p>Submitting a request on our website does not guarantee approval or specific terms. Funding times depend on each lender’s review and verification process. Lenders may check your information with one or more major credit bureaus (Experian, Equifax, or TransUnion) to determine eligibility. For questions about a specific loan, please contact the lender directly.</p>
-      <p>This service is not a loan offer and may be void where prohibited by law. LoanFinderUS may receive compensation from third-party partners if you choose to engage with them. Please borrow responsibly.</p>
-    </div>
+    <div style="font-family: Inter, Arial, sans-serif; color: #333; line-height: 1.6; font-size: 15px;">
+  <p><strong style="color:#F5B800;">Disclaimer:</strong> 
+    <span style="color:#C0392B;">LoanFinderUS</span> is 
+    <strong style="color:#F5B800;">not a lender</strong> and does not make credit decisions or loan offers. 
+    We are an independent online platform designed to help connect consumers with a network of participating lenders and financial service providers.
+  </p>
+
+  <p>
+    Submitting a request through <span style="color:#C0392B;">LoanFinderUS</span> does 
+    <strong style="color:#F5B800;">not guarantee approval</strong> or the amount you may qualify for. 
+    Loan terms, conditions, and availability vary depending on your 
+    <strong>credit profile</strong>, <strong>income</strong>, <strong>state regulations</strong>, 
+    and individual lender policies. Not all lenders are available in every state, and some products or offers 
+    may be limited or unavailable where prohibited by law.
+  </p>
+
+  <p>
+    Lenders may perform credit checks with one or more of the major credit bureaus 
+    (<strong>Experian</strong>, <strong>Equifax</strong>, or <strong>TransUnion</strong>) 
+    or other sources to assess eligibility. Funding times will depend on the lender’s 
+    internal review process and your financial institution’s policies.
+  </p>
+
+  <p>
+    <span style="color:#C0392B;">LoanFinderUS</span> does <strong style="color:#F5B800;">not charge any fees</strong> 
+    for its services. We may receive compensation from lending partners or affiliates 
+    if you choose to engage with them. This compensation helps support the operation of our platform 
+    and <strong>does not affect</strong> how offers are presented to you.
+  </p>
+
+  <p>
+    <strong style="color:#F5B800;">Please borrow responsibly.</strong> 
+    Always review all loan terms carefully before agreeing to any offer, 
+    and contact your lender directly for specific details or clarifications.
+  </p>
+
+  <p style="margin-top: 20px; border-top: 1px solid #eee; padding-top: 10px;">
+    <strong style="color:#C0392B;">Please remember:</strong> 
+    <em style="color:#333;">personal loans are not a long-term financial solution.</em> 
+    If you are experiencing <strong style="color:#F5B800;">significant financial hardship</strong>, 
+    consider seeking <strong>professional financial advice</strong> or speaking with 
+    a certified credit counselor for assistance.
+  </p>
+</div>
 
     <!-- COPYRIGHT -->
     <div class="lf-copy">© 2025 LoanFinderUS. All rights reserved.</div>
@@ -1632,5 +1678,3 @@
     </script>
 </body>
 </html>
-
-
