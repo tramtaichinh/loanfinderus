@@ -71,7 +71,7 @@
             --brand-ink:#0f4ec2; 
             --cta:#FFEB00; 
             --ink:#0F172A; 
-            --muted:#64748B; 
+            --muted:#000000de; 
             --bg:#F8FAFC; 
             --card:#FFFFFF; 
             --border:#E2E8F0; 
@@ -90,7 +90,7 @@
             color:var(--ink);
             background:var(--bg);
             /* Loại bỏ cuộn ngang không mong muốn */
-            overflow-x: hidden; 
+            overflow-x: show; 
         }
         a{text-decoration:none}
 
@@ -368,41 +368,60 @@
             align-items: center;
             box-shadow: 0 1px 3px rgba(0,0,0,0.05); 
         }
-        .comparison-card-top-lender {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            padding-bottom: 8px;
-            border-bottom: 1px solid var(--border);
-        }
-        .comparison-card-top-lender .logo-img {
-            width: 30px; 
-            height: 30px;
-            border-radius: 6px;
-            object-fit: cover;
-            flex-shrink: 0;
-        }
-        .comparison-card-top-lender > div {
-            display: flex;
-            flex-direction: column;
-            gap: 2px;
-        }
-        .comparison-card-top-lender span {
-            font-weight: 600;
-            font-size: 14px; 
-        }
-        .comparison-card .rating {
-            display: flex;
-            align-items: center;
-            gap: 4px;
-            font-size: 13px;
-            color: var(--muted);
-        }
-        .comparison-card .stars {
-            color: #FFD700; 
-            letter-spacing: -1px; 
-            font-size: 16px; 
-        }
+      .comparison-card-top-lender {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Logo hiển thị theo tỉ lệ 16:9 */
+.comparison-card-top-lender .logo-img {
+  width: 80px;              /* chiều ngang khung */
+  aspect-ratio: 16 / 9;     /* giữ đúng tỉ lệ */
+  border-radius: 6px;
+  object-fit: contain;      /* không cắt logo */
+  background: #f5f7fa;      /* nền nhẹ nếu PNG trong suốt */
+  flex-shrink: 0;
+  display: block;
+}
+
+/* Giữ nguyên phần text bên cạnh */
+.comparison-card-top-lender > div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+/* mọi thứ giữ 1 dòng mà không co khung: */
+.comparison-card-top-lender > div span {
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.comparison-card-top-lender span {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.comparison-card .rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.comparison-card .stars {
+  color: #FFD700;
+  letter-spacing: -1px;
+  font-size: 16px;
+}
+.comparison-card > div:nth-child(2)::first-line,
+.comparison-card > div:nth-child(5)::first-line {
+  color: #ff0000;
+  font-weight: 600;
+}
         .comparison-card .info-text {
             font-size: 14px;
             color: var(--ink);
@@ -934,56 +953,59 @@
             }
 
              /* Comparison Table Desktop Layout (6 columns) */
-             .comparison-header {
-                display: grid; /* Show header on desktop */
-                grid-template-columns: 1.2fr 1fr 1fr 1fr 0.8fr 1.2fr; 
-                font-size: 14px;
-                background-color: var(--brand); /* Màu nền cho header */
-                color: white; /* Chữ trắng cho header */
-                padding: 12px 16px; /* Padding cho header */
-                border-radius: 12px 12px 0 0; /* Bo tròn góc trên */
-                margin-bottom: -12px; /* Dịch lên để khớp với card đầu tiên */
-                align-items: center;
-             }
-             .comparison-cards {
-                gap: 0; /* Loại bỏ gap giữa các card khi có header */
-             }
-             .comparison-card {
-                 grid-template-columns: 1.2fr 1fr 1fr 1fr 0.8fr 1.2fr; 
-                 gap: 10px;
-                 padding: 10px 16px;
-                 border-radius: 0; /* Loại bỏ bo tròn cho các card giữa */
-                 border-top: none; /* Loại bỏ viền trên */
-             }
-             .comparison-card:first-of-type {
-                border-top-left-radius: 0; /* Đảm bảo không có bo tròn ở góc trên cùng của card đầu tiên */
-                border-top-right-radius: 0;
-             }
-             .comparison-card:last-of-type {
-                border-bottom-left-radius: 12px; /* Bo tròn góc dưới cùng của card cuối cùng */
-                border-bottom-right-radius: 12px;
-             }
-             .comparison-card-top-lender {
-                 flex-direction: row; 
-                 align-items: center;
-                 padding-bottom: 0;
-                 border-bottom: none;
-             }
-             .comparison-card .info-text {
-                 text-align: center;
-             }
-             .comparison-card .btn-get-rate {
-                width: auto;
-                max-width: 120px;
-                margin-top: 0;
-             }
-             .comparison-card-top-lender > div {
-                align-items: flex-start;
-                text-align: left;
-             }
-             .comparison-card .see-details {
-                display: none; /* Hide on desktop for cleaner table */
-             }
+			 .comparison-header > div:first-child {
+  padding-left: calc(12px + 5px) !important;
+}
+.comparison-header {
+
+  display: grid;
+  grid-template-columns: 1.8fr 1.4fr 1fr 1fr 1.5fr 1fr;
+  align-items: center;
+  height: 70px; /* khớp chiều cao của .comparison-card */
+  padding: 0 16px;
+  background-color: var(--brand);
+  color: #fff;
+  font-weight: 600;
+  font-size: 15px;
+  border-radius: 12px 12px 0 0;
+}
+
+/* 2️⃣ Card - đảm bảo hàng cao đồng nhất */
+.comparison-card {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr 1fr 0.8fr 1.2fr;
+  align-items: center;          /* căn giữa nội dung theo chiều dọc */
+  min-height: 82px;             /* đồng nhất với header */
+  border-bottom: 1px solid #e5e8ec;
+  padding: 0 16px;
+}
+
+/* 3️⃣ Logo - hiển thị full, cân giữa */
+.comparison-card-top-lender {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.comparison-card-top-lender .logo-img {
+  width: 110px;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;          /* không cắt logo */
+  object-position: center;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 0 0 1px #e5e8ec;
+  display: block;
+  flex-shrink: 0;
+}
+
+/* (Tuỳ chọn) để text cạnh logo căn giữa theo chiều cao logo */
+.comparison-card-top-lender > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+}
+
 
              /* FOOTER */
              .footer-row{
@@ -1013,7 +1035,7 @@
   gap: 10px;
 }
 .brand h1 {
-  font-size: 23px;
+  font-size: 15px;
   font-weight: 700;
   margin: 0;
   color: var(--brand-ink);
@@ -1062,7 +1084,7 @@
         <img src="https://raw.githubusercontent.com/tramtaichinh/loanfinderus/refs/heads/main/Logo_LoanFinderUS_NoBG.png" alt="LoanFinderUS Logo" class="logo-img">
         <h1>LoanFinderUS</h1>
       </div>
-      <a class="btn btn-cta" href="#calculator">Loan Calculator</a>
+      <a class="btn btn-cta" href="#calculator">Payment Estimator</a>
     </div>
   </div>
 </header>
@@ -1073,89 +1095,29 @@
                 <img src="https://raw.githubusercontent.com/tramtaichinh/loanfinderus/refs/heads/main/LFU_Banner%20Top.png" class="hero-image" alt="Man cheerfully checking loan options on his phone">
             </div>
             <div class="hero-content">
-                <h2 class="headline">
-                    <span class="headline-highlight">Get the cash you need</span> 
-                    <br>fast, easy, and transparent
-                </h2>
-                <p class="sub">Life can throw unexpected expenses at you - car repairs, medical bills, or urgent payments. A personal loan is a smart borrowing option designed to help you cover costs. 				the top lenders, rates, and terms to find the one that works best for you.</p>
+    <h2 class="headline">
+        <span class="headline-highlight">Facing unexpected expenses?</span><br>
+        Explore smart loan options made for you
+    </h2>
+    <p class="sub">
+        Whether it’s car repairs, medical bills, or monthly costs - we help you compare
+        trusted lenders and find flexible loan offers that fit your needs. 
+        No stress, no hidden fees, and no impact on your credit score.
+    </p>
 
-                <a class="btn btn-cta cta-main" href="#partners">Apply to get loans</a>
-                
-                <div class="security-check">
-                    <div class="security-check-icon">✓</div>
-                    It's free, simple, and secure
-                </div>
-            </div>
+    <a class="btn btn-cta cta-main" href="#partners">Check your options</a>
+
+    <div class="security-check">
+        <div class="security-check-icon">✓</div>
+        No fees • Secure • Transparent
+    </div>
+</div>
+
         </div>
     </section>
-    
-    
-
-<section class="solution-section">
-  <div class="container">
-    <h2>Find a Solution That Fits You</h2>
-    <div class="solution-grid">
-      
-      <!-- CẶP 1: PERSONAL LOANS -->
-      <div class="solution-pair">
-        <figure class="solution-img-card">
-          <img
-            class="solution-photo"
-            src="https://raw.githubusercontent.com/tramtaichinh/loanfinderus/refs/heads/main/personal-loan.jpg"
-            alt="Personal loans load"
-            loading="lazy"
-          />
-        </figure>
-        <div class="solution-block detail">
-          <h3>Personal Solutions (up to $50,000)</h3>
-          <p class="sub">
-            Gain access to personalized financial options from our large network of partners. Build a plan with manageable monthly terms designed for your needs.
-          </p>
-          <a class="btn btn-green" href="https://pmcloud1.com/c/l/1">See Available Offers</a>
-        </div>
-      </div>
-
-      <!-- CẶP 2: FAST CASH ADVANCE -->
-      <div class="solution-pair">
-        <figure class="solution-img-card">
-          <img
-            class="solution-photo"
-            src="https://hanfincal.com/wp-content/uploads/2025/08/Group-3.png"
-            alt="Fast cash advance illustration"
-            loading="lazy"
-          />
-        </figure>
-        <div class="solution-block detail">
-          <h3>Emergency Fund Support</h3>
-          <p class="sub">
-            Handle short-term or unexpected expenses with confidence. Connect with trusted providers who offer flexible options to help you stay on track.
-          </p>
-          <a class="btn btn-green" href="https://pmcloud1.com/c/l/2"><center>Get Support Now</center></a>
-        </div>
-      </div>
-
-      <!-- CẶP 3: BAD CREDIT LOANS -->
-      <div class="solution-pair">
-        <figure class="solution-img-card">
-          <img
-            class="solution-photo"
-            src="https://hanfincal.com/wp-content/uploads/2025/08/Group-3.png"
-            alt="Bad credit loans illustration"
-            loading="lazy"
-          />
-        </figure>
-        <div class="solution-block detail">
-          <h3>Flexible Financial Options</h3>
-          <p class="sub">
-            Don’t let your past define your future. We work with partners who understand every financial journey and provide tailored programs for your situation.
-          </p>
-          <a class="btn btn-green" href="https://pmcloud1.com/c/l/3">Explore Your Options</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
+	<!-- =========================
+Loan Payment Calculator
+  ========================== -->
 <section class="calc-section" id="calculator">
         <div class="container">
             <h2>Personal Loan Payment Calculator</h2>
@@ -1236,12 +1198,78 @@
                     <div class="sub" style="color: white; opacity: 0.9;">
                         <p>Results are illustrative and do not represent a final loan offer. Your actual rate and payment will depend on your profile and chosen lender.</p>
                     </div>
-                    <a class="btn btn-cta" href="#partners">See Real Offers Now</a>
+                    <a class="btn btn-cta" href="#offers">See Real Offers Now</a>
                 </div>
             </div>
         </div>
     </section>
+<!-- =========================
+       Section Find a Solution That Fits You
+  ========================== -->
+<section class="solution-section">
+  <div class="container">
+    <h2>Find a Solution That Fits You</h2>
+    <div class="solution-grid">
+      
+      <!-- CẶP 1: PERSONAL LOANS -->
+      <div class="solution-pair">
+        <figure class="solution-img-card">
+          <img
+            class="solution-photo"
+            src="https://raw.githubusercontent.com/tramtaichinh/loanfinderus/refs/heads/main/personal-loan.jpg"
+            alt="Personal loans load"
+            loading="lazy"
+          />
+        </figure>
+        <div class="solution-block detail">
+          <h3>Personal Solutions (up to $50,000)</h3>
+          <p class="sub">
+            Gain access to personalized financial options from our large network of partners. Build a plan with manageable monthly terms designed for your needs.
+          </p>
+          <a class="btn btn-green" href="https://pmcloud1.com/c/l/1">See Available Offers</a>
+        </div>
+      </div>
 
+      <!-- CẶP 2: FAST CASH ADVANCE -->
+      <div class="solution-pair">
+        <figure class="solution-img-card">
+          <img
+            class="solution-photo"
+            src="https://hanfincal.com/wp-content/uploads/2025/08/Group-3.png"
+            alt="Fast cash advance illustration"
+            loading="lazy"
+          />
+        </figure>
+        <div class="solution-block detail">
+          <h3>Emergency Fund Support</h3>
+          <p class="sub">
+            Handle short-term or unexpected expenses with confidence. Connect with trusted providers who offer flexible options to help you stay on track.
+          </p>
+          <a class="btn btn-green" href="https://pmcloud1.com/c/l/2"><center>Get Support Now</center></a>
+        </div>
+      </div>
+
+      <!-- CẶP 3: BAD CREDIT LOANS -->
+      <div class="solution-pair">
+        <figure class="solution-img-card">
+          <img
+            class="solution-photo"
+            src="https://hanfincal.com/wp-content/uploads/2025/08/Group-3.png"
+            alt="Bad credit loans illustration"
+            loading="lazy"
+          />
+        </figure>
+        <div class="solution-block detail">
+          <h3>Flexible Financial Options</h3>
+          <p class="sub">
+            Don’t let your past define your future. We work with partners who understand every financial journey and provide tailored programs for your situation.
+          </p>
+          <a class="btn btn-green" href="https://pmcloud1.com/c/l/3">Explore Your Options</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
     <section class="how" id="how">
         <div class="container">
             <h3>How LoanFinderUS works</h3>
@@ -1253,69 +1281,10 @@
         </div>
     </section>
 
-    <section class="partners" id="partners">
-        <div class="container">
-            <h3>Explore lender options</h3>
-            <div class="cards">
-                
-                
-
-<article class="card">
-                    <div class="row" style="justify-content:space-between;align-items:flex-start">
-                        <h3>Upstart</h3>
-                        <span class="badge">Popular pick</span>
-                    </div>
-                    <div class="meta">
-                        <div class="chip">$1,000–$50,000</div>
-                        <div class="chip">6–60 months</div>
-                        <div class="chip">APR ~6.5%–35.99%</div>
-                    </div>
-                    <div class="apply">
-                        <a class="btn btn-cta" href="https://pmcloud1.com/c/l/1" rel="nofollow noopener">Check my rate</a>
-                        <small>Soft inquiry with many profiles</small>
-                    </div>
-                </article>
-                
-                
-
-<article class="card">
-                    <div class="row" style="justify-content:space-between;align-items:flex-start">
-                        <h3>Upgrade</h3>
-                        <span class="badge">Fast funding</span>
-                    </div>
-                    <div class="meta">
-                        <div class="chip">$1,000–$100,000</div>
-                        <div class="chip">24–84 months</div>
-                        <div class="chip">APR ~7.9%–35.99%</div>
-                    </div>
-                    <div class="apply">
-                        <a class="btn btn-cta" href="https://pmcloud1.com/c/l/2" rel="nofollow noopener">See my options</a>
-                        <small>Timing varies by lender & bank</small>
-                    </div>
-                </article>
-                
-                
-
-<article class="card">
-                    <div class="row" style="justify-content:space-between;align-items:flex-start">
-                        <h3>LendingClub</h3>
-                        <span class="badge">Debt consolidation</span>
-                    </div>
-                    <div class="meta">
-                        <div class="chip">$2,000–$40,000</div>
-                        <div class="chip">36–60 months</div>
-                        <div class="chip">APR ~6.9%–35.89%</div>
-                    </div>
-                    <div class="apply">
-                        <a class="btn btn-cta" href="https://pmcloud1.com/c/l/3" rel="nofollow noopener">Compare offer</a>
-                        <small>Availability varies by state</small>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <section class="compare" aria-label="comparison table">
+<!-- =========================
+       Section compare offers
+  ========================== -->
+    <section class="compare" aria-label="comparison table" id="offers">
         <div class="container">
             <h3>Snapshot comparison (illustrative)</h3>
             <div class="comparison-header">
@@ -1323,31 +1292,23 @@
                 <div>Loan amounts</div>
                 <div>APR</div>
                 <div>Loan term</div>
-                <div>Min. credit score</div>
+                <div>Funding time</div>
                 <div>Best for</div>
             </div>
             <div class="comparison-cards">
-                
-                
-
 <div class="comparison-card">
                     <div class="comparison-card-top-lender">
                         <img src="https://best.creditloanexpert.com/_next/image?url=%2Flogo.png&w=640&q=75" alt="Credit loan expert" class="logo-img">
                         <div>
-                            <span>Creditloanexpert</span>
-                            <div class="rating">
-                                <span class="stars">★★★★☆</span> 4.6
-                            </div>
+                            <span>Credit loan Expert</span>
                         </div>
                     </div>
-                    <div class="info-text">$100 to $5,000</div>
+                    <div class="info-text">Up to $35,000</div>
                     <div class="info-text">4.95% to 35.99%</div>
-                    <div class="info-text">3 to 84 months</div>
-                    <div class="info-text">From 610</div>
+                    <div class="info-text">3 - 84 Months</div>
+                    <div class="info-text">As soon as 1-2 days</div>
                     <div>
-                        <a href="#" class="info-text" style="color: var(--brand-ink); margin-bottom: 8px; display: block;">Urgent expenses</a>
-                        <a class="btn-get-rate" href="https://clearpmf.com/ql/suj71" rel="nofollow noopener">Get Your Rate</a>
-                        <a href="#" class="see-details" style="color: var(--brand-ink);">See details ▼</a>
+                        <a class="btn-get-rate" href="https://clearpmf.com/ql/suj71" rel="nofollow noopener">See Your Options</a>
                     </div>
                 </div>
 
@@ -1355,22 +1316,17 @@
 
 <div class="comparison-card">
                     <div class="comparison-card-top-lender">
-                        <img src="https://placehold.co/30x30/28A745/fff?text=SP" alt="Super Personal Finder logo" class="logo-img">
+                        <img src="https://hanfincal.com/wp-content/uploads/2025/08/logo-1.webp" alt="Best Hanfincal" class="logo-img">
                         <div>
-                            <span>Super Personal Finder</span>
-                            <div class="rating">
-                                <span class="stars">★★★★★</span> 4.8
-                            </div>
+                            <span>Best Hanfincal LD</span>
                         </div>
                     </div>
-                    <div class="info-text">$500 to $50K</div>
+                    <div class="info-text">Up to $50,000</div>
                     <div class="info-text">5.99% to 35.99%</div>
-                    <div class="info-text">6 to 72 months</div>
-                    <div class="info-text">None</div>
+                    <div class="info-text">3 - 72 Months</div>
+                    <div class="info-text">Often next business day</div>
                     <div>
-                        <a href="#" class="info-text" style="color: var(--brand-ink); margin-bottom: 8px; display: block;">Debt consolidation</a>
-                        <a class="btn-get-rate" href="https://example.com/go/superpersonalfinder" rel="nofollow noopener">Get Your Rate</a>
-                        <a href="#" class="see-details" style="color: var(--brand-ink);">See details ▼</a>
+                        <a class="btn-get-rate" href="https://clearpmf.com/ql/V8ay1DYM" rel="nofollow noopener">Explore Offers</a>
                     </div>
                 </div>
 
@@ -1378,91 +1334,62 @@
 
 <div class="comparison-card">
                     <div class="comparison-card-top-lender">
-                        <img src="https://placehold.co/30x30/007BFF/fff?text=50K" alt="50kLoans.com logo" class="logo-img">
+                        <img src="https://loan.hanfincal.com/apply/assets/logo-D5U692mO.png" alt="Hanfincal Lending" class="logo-img">
                         <div>
-                            <span>50kLoans.com</span>
-                            <div class="rating">
-                                <span class="stars">★★★★☆</span> 4.5
-                            </div>
+                            <span>Hanfincal Lending</span>
                         </div>
                     </div>
-                    <div class="info-text">$500 to $50K</div>
-                    <div class="info-text">5.99% to 35.99%</div>
-                    <div class="info-text">6 to 72 months</div>
-                    <div class="info-text">580</div>
+                    <div class="info-text">Up to $30,000</div>
+                    <div class="info-text">4.55% to 35.95%</div>
+                    <div class="info-text">3 - 84 Months</div>
+                    <div class="info-text">Usually within 48h</div>
                     <div>
-                        <a href="#" class="info-text" style="color: var(--brand-ink); margin-bottom: 8px; display: block;">Quick funding</a>
-                        <a class="btn-get-rate" href="https://example.com/go/50kloans" rel="nofollow noopener">Get Your Rate</a>
-                        <a href="#" class="see-details" style="color: var(--brand-ink);">See details ▼</a>
+                        <a class="btn-get-rate" href="https://clearpmf.com/ql/Ognqr9" rel="nofollow noopener">Find My Match</a>
                     </div>
                 </div>
-
-                
-
 <div class="comparison-card">
                     <div class="comparison-card-top-lender">
-                        <img src="https://placehold.co/30x30/6F42C1/fff?text=LT" alt="LendingTree logo" class="logo-img">
+                        <img src="https://raw.githubusercontent.com/tramtaichinh/loanfinderus/refs/heads/main/Checkdraw.png" alt="LendingTree logo" class="logo-img">
                         <div>
-                            <span>LendingTree</span>
-                            <div class="rating">
-                                <span class="stars">★★★★☆</span> 4.4
-                            </div>
+                            <span>CheckDraw Finance</span>
                         </div>
                     </div>
-                    <div class="info-text">$1K to $50K</div>
-                    <div class="info-text">6.99% to 35.99%</div>
-                    <div class="info-text">24 to 60 months</div>
-                    <div class="info-text">550</div>
+                    <div class="info-text">Up to $35,000</div>
+                    <div class="info-text">4.95% to 35.95%</div>
+                    <div class="info-text">3 - 84 Months</div>
+                    <div class="info-text">As soon as 1-2 days</div>
                     <div>
-                        <a href="#" class="info-text" style="color: var(--brand-ink); margin-bottom: 8px; display: block;">Compare offers</a>
-                        <a class="btn-get-rate" href="https://example.com/go/lendingtree" rel="nofollow noopener">Get Your Rate</a>
-                        <a href="#" class="see-details" style="color: var(--brand-ink);">See details ▼</a>
+                        <a class="btn-get-rate" href="https://clearpmf.com/ql/pbwBcnAjv" rel="nofollow noopener">Begin Request</a>
                     </div>
                 </div>
-
-                
-
 <div class="comparison-card">
                     <div class="comparison-card-top-lender">
-                        <img src="https://placehold.co/30x30/DC3545/fff?text=PL" alt="PersonalLoans.com logo" class="logo-img">
+                        <img src="https://apply.trustedonlineloans.com/assets/logo-BScK9-MQ.svg" alt="PersonalLoans.com logo" class="logo-img">
                         <div>
-                            <span>PersonalLoans.com</span>
-                            <div class="rating">
-                                <span class="stars">★★★★☆</span> 4.7
-                            </div>
+                            <span>Trusted Online Loans</span>
                         </div>
                     </div>
-                    <div class="info-text">$1K to $35K</div>
-                    <div class="info-text">5.99% to 35.99%</div>
-                    <div class="info-text">12 to 72 months</div>
-                    <div class="info-text">600</div>
+                    <div class="info-text">Up to $100,000</div>
+                    <div class="info-text">4.95% to 35.95%</div>
+                    <div class="info-text">3 - 84 Months</div>
+                    <div class="info-text">Fast review process</div>
                     <div>
-                        <a href="#" class="info-text" style="color: var(--brand-ink); margin-bottom: 8px; display: block;">Large loan amounts</a>
-                        <a class="btn-get-rate" href="https://example.com/go/personalloans" rel="nofollow noopener">Get Your Rate</a>
-                        <a href="#" class="see-details" style="color: var(--brand-ink);">See details ▼</a>
+                        <a class="btn-get-rate" href="https://clearpmf.com/ql/Gmwhy" rel="nofollow noopener">See Today’s Offers</a>
                     </div>
                 </div>
-
-                
-
 <div class="comparison-card">
                     <div class="comparison-card-top-lender">
-                        <img src="https://placehold.co/30x30/FD7E14/fff?text=CF" alt="CashAdvance.com logo" class="logo-img">
+                        <img src="https://best.creditloanexpert.com/_next/image?url=%2Flogo.png&w=640&q=75" alt="CashAdvance.com logo" class="logo-img">
                         <div>
-                            <span>CashAdvance.com</span>
-                            <div class="rating">
-                                <span class="stars">★★★☆☆</span> 3.9
-                            </div>
+                            <span>Same-day possible</span>
                         </div>
                     </div>
-                    <div class="info-text">$100 to $1K</div>
-                    <div class="info-text">Varies</div>
-                    <div class="info-text">1 to 12 weeks</div>
-                    <div class="info-text">None</div>
+                    <div class="info-text">Up to $50,000</div>
+                   <div class="info-text">4.95% to 35.95%</div>
+                    <div class="info-text">3 - 84 Months</div>
+                    <div class="info-text">Fast decision, quick deposit</div>
                     <div>
-                        <a href="#" class="info-text" style="color: var(--brand-ink); margin-bottom: 8px; display: block;">Short-term cash</a>
-                        <a class="btn-get-rate" href="https://example.com/go/cashadvance" rel="nofollow noopener">Get Your Rate</a>
-                        <a href="#" class="see-details" style="color: var(--brand-ink);">See details ▼</a>
+                        <a class="btn-get-rate" href="#" rel="nofollow noopener">Get Your Rate</a>
                     </div>
                 </div>
 
@@ -1470,9 +1397,6 @@
             <p class="sub" style="margin-top:10px; text-align: center;">Data shown is for education only and may change. Always review current terms on the lender website.</p>
         </div>
     </section>
-
-    
-
 <section class="why">
         <div class="container">
             <h3>Why people choose LoanFinderUS</h3>
@@ -1506,7 +1430,7 @@
     
     <section class="faq-section" id="faq">
         <div class="container">
-            <h2>FAQ – Common Questions</h2>
+            <h2>FAQ - Common Questions</h2>
             <div>
                 <details class="faq-item">
                     <summary>Will checking my options affect my credit score?</summary>
@@ -1553,13 +1477,13 @@
       </div>
 
       <nav class="lf-menu" aria-label="Footer menu">
-        <a href="/">HOME</a>
-        <a href="/about">ABOUT</a>
-        <a href="/blog">BLOG</a>
-        <a href="/privacy">PRIVACY POLICY</a>
-        <a href="/terms">TERMS OF USE</a>
-        <a href="/disclaimer">DISCLAIMER</a>
-        <a href="/contact">CONTACT</a>
+        <a href="#">HOME</a>
+        <a href="#">ABOUT</a>
+        <a href="#">BLOG</a>
+        <a href="#">PRIVACY POLICY</a>
+        <a href="#">TERMS OF USE</a>
+        <a href="#">DISCLAIMER</a>
+        <a href="#">CONTACT</a>
       </nav>
     </div>
 
@@ -1796,7 +1720,7 @@
   }
   </script>
 
-  <!-- 4) FAQPage nhỏ (AI Overview rất thích; chỉ 2–3 câu hỏi cốt lõi) -->
+  <!-- 4) FAQPage nhỏ (AI Overview rất thích; chỉ 2-3 câu hỏi cốt lõi) -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
