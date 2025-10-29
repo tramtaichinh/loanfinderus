@@ -90,7 +90,7 @@
             color:var(--ink);
             background:var(--bg);
             /* Loại bỏ cuộn ngang không mong muốn */
-            overflow-x: auto; 
+            overflow-x: none;
         }
         a{text-decoration:none}
 
@@ -121,10 +121,10 @@
             color: var(--brand-ink);
         }
         h2 {
-            /* 24px (mobile) đến 32px (desktop) */
+            /* 16px (mobile) đến 32px (desktop) */
             font-size: clamp(1.5rem, 3vw + 0.5rem, 32px); 
             margin-top: 0;
-            margin-bottom: 24px;
+            margin-bottom: 16px;
             text-align: center;
         }
         /* Cập nhật H3 để dùng clamp */
@@ -885,8 +885,8 @@
             .hero .container{
                 grid-template-columns: 1fr 1fr; 
                 gap: 40px; 
-                padding-top: 60px; 
-                padding-bottom: 60px;
+                padding-top: 30px; 
+                padding-bottom: 30px;
             }
             .hero-content {
                 order: 1; 
@@ -1072,8 +1072,6 @@
   margin: 10px auto 0;
   text-align: center;
 }
-
-
     </style>
 </head>
 <body>
@@ -1096,7 +1094,7 @@
             </div>
             <div class="hero-content">
     <h2 class="headline">
-        <span class="headline-highlight">Unexpected bills? We’ve got you covered</span><br>
+        <span class="headline-highlight">Planning for an expense? Explore your options.</span><br>
         Compare trusted short-term options today.
     </h2>
     <p class="sub">
@@ -1111,6 +1109,10 @@
         <div class="security-check-icon">✓</div>
         No fees • Secure • Transparent
     </div>
+<!-- DISCLAIMER NGẮN ĐÃ THÊM: Rất quan trọng cho chính sách -->
+            <div class="mt-8 p-4 bg-gray-100 rounded-lg text-sm text-gray-700 border border-gray-200">
+                <strong>Disclaimer:</strong> LoanFinderUS is <strong>not a lender</strong> or financial advisor. We are a free comparison service. We do not make credit decisions or loan offers.
+            </div>
 </div>
 
         </div>
@@ -1242,7 +1244,7 @@ Loan Payment Calculator
           />
         </figure>
         <div class="solution-block detail">
-          <h3>Short-Term Expense Options</h3>
+          <h3>Flexible Financing Options</h3>
           <p class="sub">
             Cover one-time or time-sensitive costs responsibly. Review flexible programs and choose what fits your needs best.
           </p>
@@ -1417,7 +1419,7 @@ Loan Payment Calculator
                 </div>
                 
                 <div class="why-item">
-                    <div class="why-item-title"><span aria-hidden="true">⚡</span> Fast, Secure, and Mobile-Friendly</div>
+                    <div class="why-item-title"><span aria-hidden="true">⚡</span> Simple, Secure, and Mobile-Friendly</div>
                     <div class="sub">Get matched in minutes and start your loan request anytime, on any device - safely and securely.</div>
                 </div>
                 
@@ -1428,29 +1430,26 @@ Loan Payment Calculator
         <div class="container">
             <h2>FAQ - Common Questions</h2>
             <div>
-                <details class="faq-item">
-                    <summary>Will checking my options affect my credit score?</summary>
-                    <p class="sub">No. Most of our partner lenders only perform a soft credit inquiry to show your available rates. This type of check does not impact your credit score. If you proceed with a full application, a lender may perform a hard inquiry.</p>
+			                <details class="faq-item">
+                    <summary>Is LoanFinderUS a lender or a financial advisor?</summary>
+                    <p class="sub">No. LoanFinderUS is not a lender, financial institution, or financial advisor. We are a free comparison service that helps you explore and compare loan options from our trusted lending partners. We do not make credit decisions or loan offers.</p>
                 </details>
-                <details class="faq-item">
-                    <summary>Is LoanFinderUS a lender?</summary>
-                    <p class="sub">No, we’re not a lender. LoanFinderUS is an information and connection platform that helps you compare loan offers. You can review options and apply directly with trusted lenders.</p>
+			                <details class="faq-item">
+                    <summary>Will checking my loan options affect my credit score?</summary>
+                    <p class="sub">No. Most of our partner lenders only perform a soft credit inquiry to show you available rates. This type of check does not impact your credit score. If you proceed with a full application, a lender may perform a hard inquiry..</p>
                 </details>
-                <details class="faq-item">
-                    <summary>How soon can I receive funds?</summary>
-                    <p class="sub">Funding times vary by lender and the verification process. Once approved, some borrowers may receive funds as soon as the next business day, depending on the lender’s policies.</p>
-                </details>
+
                 <details class="faq-item">
                     <summary>What is an Annual Percentage Rate (APR)?</summary>
-                    <p class="sub">The APR represents the total yearly cost of your loan, including interest rate and fees (such as origination fees). It helps you understand the true cost of borrowing and compare offers more easily.</p>
+                    <p class="sub">The APR represents the total yearly cost of your loan, including the interest rate and fees (such as origination fees). It helps you understand the true cost of borrowing and compare offers more easily.</p>
                 </details>
-                <details class="faq-item">
+<details class="faq-item">
+                    <summary>How soon can I receive funds?</summary>
+                    <p class="sub">Funding times vary by the lender and their verification process. Once approved, some borrowers may receive funds as soon as the next business day, depending on the lender’s policies and your bank’s processing time.</p>
+                </details>
+				<details class="faq-item">
                     <summary>How does my credit score affect my loan options?</summary>
-                    <p class="sub">Your credit score helps lenders determine your rates and terms. While some lenders work with lower credit scores, higher scores often qualify for better terms and lower rates.</p>
-                </details>
-                <details class="faq-item">
-                    <summary>When will I get my money?</summary>
-                    <p class="sub">Funding times vary by lender and depend on their approval and verification process. Once a loan is approved, some lenders may release funds as soon as the next business day, depending on their policies and your financial institution’s processing time.</p>
+                    <p class="sub">Your credit score helps lenders determine your rates and terms. While some lenders work with lower credit scores, higher scores often qualify you for better terms and lower rates.</p>
                 </details>
             </div>
         </div>
@@ -1716,7 +1715,6 @@ Loan Payment Calculator
     ]
   }
   </script>
-
   <!-- 4) FAQPage nhỏ (AI Overview rất thích; chỉ 2-3 câu hỏi cốt lõi) -->
   <script type="application/ld+json">
   {
@@ -1742,7 +1740,6 @@ Loan Payment Calculator
     ]
   }
   </script>
-
   <!-- 5) HowTo ngắn (nếu bạn giữ 1 quy trình ngay trên trang) -->
   <script type="application/ld+json">
   {
