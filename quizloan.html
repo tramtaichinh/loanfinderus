@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoanFinderUS - Find Your Best Loan</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* Use Inter font for a professional look */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f7f7; /* Bright white background */
+        }
+        /* Define the primary financial blue color */
+        .financial-blue {
+            background-color: #054a91; /* Dark Navy Blue, trustworthy */
+        }
+        .financial-blue-hover:hover {
+            background-color: #0d6efd; /* Brighter blue on hover */
+        }
+        .blue-gradient {
+            background-image: linear-gradient(to right, #0d6efd, #054a91);
+        }
+        /* Style for the modal overlay (reused for both modals) */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.75);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 50;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+        }
+        .modal-overlay.open {
+            opacity: 1;
+            visibility: visible;
+        }
+        /* Custom class for the placeholder horizontal logo */
+        .lender-logo-placeholder {
+            width: 100%; /* Ensure it spans the container width */
+            height: 30px; /* Fixed height for consistency */
+            object-fit: contain; /* Ensure the image scales nicely */
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <!-- Global Header with Logo (Sticky on Top) -->
+    <header class="w-full bg-white shadow-md py-4 sticky top-0 z-40">
+        <div class="max-w-4xl mx-auto flex justify-center items-center px-4">
+            <!-- Simple Logo Design (Can be replaced with an image later) -->
+            <div class="text-3xl font-extrabold text-blue-600">
+                Loan<span class="text-gray-800">Finder</span><span class="text-yellow-500">US</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <div class="flex-grow flex items-center justify-center p-4">
+        <!-- Main Container - Pre-Lander Steps -->
+        <div id="app-container" class="w-full max-w-lg bg-white shadow-2xl rounded-xl p-6 md:p-10 border-t-8 border-blue-600 transition-all duration-300">
+
+            <!-- Title & Progress Bar -->
+            <header class="text-center mb-8">
+                <h1 class="text-3xl md:text-4xl font-extrabold text-gray-800 mb-2 leading-tight">
+                    Need Fast Cash?
+                </h1>
+                <p class="text-lg text-gray-500 font-medium">
+                    Find the BEST loan options in the US in just <span class="text-blue-600 font-bold">2 minutes.</span>
+                </p>
+                <div id="progress-bar" class="w-full bg-gray-200 rounded-full h-2.5 mt-4">
+                    <div id="progress" class="bg-blue-600 h-2.5 rounded-full transition-all duration-500" style="width: 25%;"></div>
+                </div>
+            </header>
+
+            <!-- Main Form Content -->
+            <main id="main-content">
+                <!-- Step 1: Loan Purpose -->
+                <div id="step-1" class="transition-opacity duration-300">
+                    <h2 class="text-xl font-semibold text-gray-700 mb-6 text-center">Step 1/2: What is the main purpose of your loan?</h2>
+
+                    <div class="space-y-4">
+                        <!-- Button 1: Text centered and full width -->
+                        <button data-value="Debt Consolidation" onclick="nextStep(1, this)" class="w-full py-4 px-4 border border-gray-300 rounded-lg text-lg font-bold text-gray-700 hover:bg-blue-50 hover:border-blue-500 transition duration-150 shadow-sm text-center">
+                            Consolidate Debt / Pay Bills
+                        </button>
+                        <!-- Button 2: Text centered and full width -->
+                        <button data-value="Home Repair" onclick="nextStep(1, this)" class="w-full py-4 px-4 border border-gray-300 rounded-lg text-lg font-bold text-gray-700 hover:bg-blue-50 hover:border-blue-500 transition duration-150 shadow-sm text-center">
+                            Home Repair / Improvement
+                        </button>
+                        <!-- Button 3: Text centered and full width -->
+                        <button data-value="Emergency" onclick="nextStep(1, this)" class="w-full py-4 px-4 border border-gray-300 rounded-lg text-lg font-bold text-gray-700 hover:bg-blue-50 hover:border-blue-500 transition duration-150 shadow-sm text-center">
+                            Emergency / Other Needs
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Step 2: Loan Amount -->
+                <div id="step-2" class="transition-opacity duration-300 hidden">
+                    <h2 class="text-xl font-semibold text-gray-700 mb-6 text-center">Step 2/2: How much money do you need?</h2>
+
+                    <div class="space-y-4">
+                        <!-- Button 4: Text centered and full width -->
+                        <button data-value="5000" onclick="nextStep(2, this)" class="w-full py-4 px-4 border border-gray-300 rounded-lg text-lg font-bold text-gray-700 hover:bg-blue-50 hover:border-blue-500 transition duration-150 shadow-sm text-center">
+                            Under $5,000
+                        </button>
+                        <!-- Button 5: Text centered and full width -->
+                        <button data-value="10000" onclick="nextStep(2, this)" class="w-full py-4 px-4 border border-gray-300 rounded-lg text-lg font-bold text-gray-700 hover:bg-blue-50 hover:border-blue-500 transition duration-150 shadow-sm text-center">
+                            $5,001 - $10,000
+                        </button>
+                        <!-- Button 6: Text centered and full width -->
+                        <button data-value="10000_plus" onclick="nextStep(2, this)" class="w-full py-4 px-4 border border-gray-300 rounded-lg text-lg font-bold text-gray-700 hover:bg-blue-50 hover:border-blue-500 transition duration-150 shadow-sm text-center">
+                            $10,001 or More
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Step 3: Call to Action (CTA) before Modal pop-up -->
+                <div id="step-3" class="transition-opacity duration-300 hidden text-center">
+                    <div class="mb-6 p-4 bg-green-50 rounded-lg border border-green-200">
+                        <p class="text-lg font-semibold text-green-700">
+                            Excellent! We've matched you with eligible lending partners.
+                        </p>
+                        <p class="text-sm text-gray-500 mt-1">
+                            Click below to view your personalized loan options.
+                        </p>
+                    </div>
+                    
+                    <!-- Main CTA Button to open the Modal -->
+                    <button onclick="openLoanModal()" class="inline-block w-full py-4 px-6 text-lg font-bold text-white blue-gradient rounded-full shadow-lg financial-blue-hover transition-all duration-200 transform hover:scale-105">
+                        <svg class="w-6 h-6 inline-block mr-2 -mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        Check My Loan Matches
+                    </button>
+                    
+                    <p class="text-xs text-gray-400 mt-4">
+                        Checking your rates won’t impact your credit score. Safe & private.
+                    </p>
+                </div>
+            </main>
+        </div>
+    </div>
+    
+    <!-- Global Footer -->
+    <footer class="w-full bg-gray-900 text-white mt-8 py-8 px-4">
+        <div class="max-w-4xl mx-auto">
+            
+            <!-- Menu Links Section: Added JS calls for modals -->
+            <div class="flex flex-wrap justify-center space-x-4 md:space-x-8 text-sm font-semibold border-b border-gray-700 pb-4 mb-6">
+                <!-- Use onclick to open the dynamic footer modal -->
+                <a href="#" onclick="openFooterModal('Privacy Policy', 'privacy'); return false;" class="hover:text-blue-400 transition">Privacy Policy</a>
+                <a href="#" onclick="openFooterModal('Terms of Use', 'terms'); return false;" class="hover:text-blue-400 transition">Terms of Use</a>
+                <a href="#" onclick="openFooterModal('Contact Us', 'contact'); return false;" class="hover:text-blue-400 transition">Contact Us</a>
+                <a href="#" onclick="openFooterModal('About Us', 'about'); return false;" class="hover:text-blue-400 transition">About Us</a>
+            </div>
+            
+            <!-- Disclaimer Section (4-5 lines, highlighted) -->
+            <div class="text-xs text-gray-400 leading-relaxed space-y-2">
+                <p class="font-bold text-gray-200 uppercase">ADVERTISEMENT DISCLOSURE</p>
+                <p>
+                    LoanFinderUS is <span class="font-bold text-yellow-400">not a lender or a loan broker</span>. We are a free, independent comparison and referral service. The operator of this website does not endorse any specific lender or loan product. 
+                </p>
+                <p>
+                    The term "best" refers to the top offers found through our proprietary matching process. Not all consumers will qualify for the advertised rates or maximum loan amounts. Actual loan amounts, rates, and repayment terms <span class="font-bold text-yellow-400">vary based on the specific lender</span> and the consumer's credit profile.
+                </p>
+                <p>
+                    By clicking on any "See Options" button, you will be redirected to a third-party lending platform to complete your application.
+                </p>
+            </div>
+
+            <!-- Copyright -->
+            <div class="text-center text-xs text-gray-500 mt-6 pt-4 border-t border-gray-800">
+                &copy; 2024 LoanFinderUS. All rights reserved.
+            </div>
+        </div>
+    </footer>
+    
+    <!-- 1. Loan Options Modal (Popup) - Wider for PC -->
+    <div id="loanOptionsModal" class="modal-overlay">
+        <!-- Modal Content Container: Increased size to max-w-5xl -->
+        <div class="bg-white rounded-xl shadow-2xl w-11/12 max-w-5xl max-h-[90vh] overflow-y-auto p-4 md:p-6 transform scale-95 transition-transform duration-300">
+            <div class="flex justify-between items-center border-b pb-3 mb-4 sticky top-0 bg-white">
+                <h3 class="text-2xl font-bold text-gray-800">Your Personalized Loan Offers</h3>
+                <!-- Close button for the modal -->
+                <button onclick="closeLoanModal()" class="text-gray-400 hover:text-gray-600 transition">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+            </div>
+            
+            <!-- Loan List Header (Blue Banner) - Adjusted widths for PC -->
+            <div class="hidden md:flex bg-blue-600 text-white rounded-t-lg font-semibold text-sm p-3 sticky top-[60px] z-10">
+                <div class="w-[22%]">Top Lender</div>
+                <div class="w-[20%]">Loan Amounts</div>
+                <div class="w-[18%]">APR</div>
+                <div class="w-[18%]">Loan Term</div>
+                <div class="w-[22%] text-right">Action</div>
+            </div>
+            
+            <!-- Loan List Items -->
+            <div class="space-y-4 md:space-y-0">
+                <!-- Loan Item 1: Top Lender -->
+                <div class="bg-white border rounded-lg md:rounded-none md:border-t-0 md:border-b p-3 flex flex-col md:flex-row md:items-center justify-between shadow-sm hover:shadow-md transition duration-200">
+                    <!-- Lender Column -->
+                    <div class="w-full md:w-[22%] mb-2 md:mb-0">
+                        <img src="https://best.creditloanexpert.com/_next/image?url=%2Flogo.png&w=640&q=75" onerror="this.onerror=null;this.src='https://placehold.co/150x30/054a91/ffffff?text=CL+Logo';" alt="Lender Logo" class="lender-logo-placeholder">
+                        <!-- Mobile highlight added for amount -->
+                        <p class="text-xs text-gray-500 md:hidden mt-1"><span class="font-bold text-yellow-600 text-sm">Loan Amounts: Up to $35,000</span></p>
+                    </div>
+                    
+                    <div class="w-full md:w-[20%] text-sm font-semibold mb-1 md:mb-0 hidden md:block text-blue-600">Up to $35,000</div>
+                    <div class="w-full md:w-[18%] text-sm text-gray-700 mb-1 md:mb-0">4.95% - 35.99%</div>
+                    <div class="w-full md:w-[18%] text-sm text-gray-700 mb-1 md:mb-0">3 - 84 Months</div>
+                    <div class="w-full md:w-[22%] text-right pt-2 md:pt-0">
+                        <!-- Affiliate Link -->
+                        <a href="[LINK_TO_LOANFINDERUS_OFFER]?lender=1" target="_top" class="w-full md:w-auto py-2 px-4 bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold rounded-full text-sm inline-block text-center transition shadow whitespace-nowrap">
+                            See Your Options
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Loan Item 2 -->
+                <div class="bg-white border rounded-lg md:rounded-none md:border-t-0 md:border-b p-3 flex flex-col md:flex-row md:items-center justify-between shadow-sm hover:shadow-md transition duration-200">
+                    <!-- Lender Column -->
+                    <div class="w-full md:w-[22%] mb-2 md:mb-0">
+                        <img src="https://raw.githubusercontent.com/tramtaichinh/loanfinderus/refs/heads/main/Checkdraw.png" onerror="this.onerror=null;this.src='https://placehold.co/150x30/d63384/ffffff?text=CD+Logo';" alt="Lender Logo" class="lender-logo-placeholder">
+                        <!-- Mobile highlight added for amount -->
+                        <p class="text-xs text-gray-500 md:hidden mt-1"><span class="font-bold text-yellow-600 text-sm">Loan Amounts: Up to $35,000</span></p>
+                    </div>
+                    <div class="w-full md:w-[20%] text-sm font-semibold mb-1 md:mb-0 hidden md:block text-blue-600">Up to $35,000</div>
+                    <div class="w-full md:w-[18%] text-sm text-gray-700 mb-1 md:mb-0">4.95% - 35.95%</div>
+                    <div class="w-full md:w-[18%] text-sm text-gray-700 mb-1 md:mb-0">3 - 84 Months</div>
+                    <div class="w-full md:w-[22%] text-right pt-2 md:pt-0">
+                        <!-- Affiliate Link -->
+                        <a href="[LINK_TO_LOANFINDERUS_OFFER]?lender=2" target="_top" class="w-full md:w-auto py-2 px-4 bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold rounded-full text-sm inline-block text-center transition shadow whitespace-nowrap">
+                            See Your Options
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Loan Item 3 -->
+                <div class="bg-white border rounded-lg md:rounded-none md:border-t-0 md:border-b p-3 flex flex-col md:flex-row md:items-center justify-between shadow-sm hover:shadow-md transition duration-200">
+                    <!-- Lender Column -->
+                    <div class="w-full md:w-[22%] mb-2 md:mb-0">
+                        <img src="https://seekerloans.com/assets/logo-C2F6fihU.svg" onerror="this.onerror=null;this.src='https://placehold.co/150x30/343a40/ffffff?text=SL+Logo';" alt="Lender Logo" class="lender-logo-placeholder">
+                        <!-- Mobile highlight added for amount -->
+                        <p class="text-xs text-gray-500 md:hidden mt-1"><span class="font-bold text-yellow-600 text-sm">Loan Amounts: Up to $30,000</span></p>
+                    </div>
+                    <div class="w-full md:w-[20%] text-sm font-semibold mb-1 md:mb-0 hidden md:block text-blue-600">Up to $30,000</div>
+                    <div class="w-full md:w-[18%] text-sm text-gray-700 mb-1 md:mb-0">4.95% - 35.95%</div>
+                    <div class="w-full md:w-[18%] text-sm text-gray-700 mb-1 md:mb-0">3 - 84 Months</div>
+                    <div class="w-full md:w-[22%] text-right pt-2 md:pt-0">
+                        <!-- Affiliate Link -->
+                        <a href="[LINK_TO_LOANFINDERUS_OFFER]?lender=3" target="_top" class="w-full md:w-auto py-2 px-4 bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold rounded-full text-sm inline-block text-center transition shadow whitespace-nowrap">
+                            See Your Options
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Loan Item 4 -->
+                <div class="bg-white border rounded-lg md:rounded-none md:border-t-0 md:border-b p-3 flex flex-col md:flex-row md:items-center justify-between shadow-sm hover:shadow-md transition duration-200">
+                    <!-- Lender Column -->
+                    <div class="w-full md:w-[22%] mb-2 md:mb-0">
+                        <img src="https://hanfincal.com/wp-content/uploads/2025/08/logo-1.webp" onerror="this.onerror=null;this.src='https://placehold.co/150x30/dc3545/ffffff?text=HL+Logo';" alt="Lender Logo" class="lender-logo-placeholder">
+                        <!-- Mobile highlight added for amount -->
+                        <p class="text-xs text-gray-500 md:hidden mt-1"><span class="font-bold text-yellow-600 text-sm">Loan Amounts: Up to $50,000</span></p>
+                    </div>
+                    <div class="w-full md:w-[20%] text-sm font-semibold mb-1 md:mb-0 hidden md:block text-blue-600">Up to $50,000</div>
+                    <div class="w-full md:w-[18%] text-sm text-gray-700 mb-1 md:mb-0">5.99% - 35.99%</div>
+                    <div class="w-full md:w-[18%] text-sm text-gray-700 mb-1 md:mb-0">3 - 72 Months</div>
+                    <div class="w-full md:w-[22%] text-right pt-2 md:pt-0">
+                        <!-- Affiliate Link -->
+                        <a href="[LINK_TO_LOANFINDERUS_OFFER]?lender=4" target="_top" class="w-full md:w-auto py-2 px-4 bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold rounded-full text-sm inline-block text-center transition shadow whitespace-nowrap">
+                            See Your Options
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Loan Item 5: The big one -->
+                <div class="bg-white border rounded-lg md:rounded-none md:border-t-0 md:border-b p-3 flex flex-col md:flex-row md:items-center justify-between shadow-sm hover:shadow-md transition duration-200">
+                    <!-- Lender Column -->
+                    <div class="w-full md:w-[22%] mb-2 md:mb-0">
+                        <img src="https://loan.hanfincal.com/apply/assets/logo-D5U692mO.png" onerror="this.onerror=null;this.src='https://placehold.co/150x30/28a745/ffffff?text=TL+Logo';" alt="Lender Logo" class="lender-logo-placeholder">
+                        <!-- Mobile highlight added for amount -->
+                        <p class="text-xs text-gray-500 md:hidden mt-1"><span class="font-bold text-yellow-600 text-sm">Loan Amounts: Up to $100,000</span></p>
+                    </div>
+                    <div class="w-full md:w-[20%] text-sm font-semibold mb-1 md:mb-0 hidden md:block text-blue-600">Up to $100,000</div>
+                    <div class="w-full md:w-[18%] text-sm text-gray-700 mb-1 md:mb-0">4.95% - 35.95%</div>
+                    <div class="w-full md:w-[18%] text-sm text-gray-700 mb-1 md:mb-0">3 - 84 Months</div>
+                    <div class="w-full md:w-[22%] text-right pt-2 md:pt-0">
+                        <!-- Affiliate Link -->
+                        <a href="[LINK_TO_LOANFINDERUS_OFFER]?lender=5" target="_top" class="w-full md:w-auto py-2 px-4 bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold rounded-full text-sm inline-block text-center transition shadow whitespace-nowrap">
+                            See Your Options
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Mobile Note for Data -->
+                <div class="md:hidden text-center text-xs text-gray-400 p-2 mt-4">
+                    Scroll horizontally to view all columns on smaller screens.
+                </div>
+            </div>
+            
+            <!-- Final CTA below list -->
+            <div class="pt-6 border-t mt-6 text-center">
+                <!-- Main redirect link from Modal -->
+                <a href="[LINK_TO_LOANFINDERUS_OFFER]" target="_top" class="inline-block w-full py-3 px-6 text-lg font-bold text-white blue-gradient rounded-full shadow-lg financial-blue-hover transition-all duration-200 transform hover:scale-105">
+                    PROCEED WITH TOP MATCHES
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 2. Dynamic Footer Modal (Policy/Contact/About) -->
+    <div id="footerModal" class="modal-overlay">
+        <!-- Modal Content Container -->
+        <div class="bg-white rounded-xl shadow-2xl w-11/12 max-w-2xl max-h-[90vh] overflow-y-auto p-6 md:p-8 transform scale-95 transition-transform duration-300">
+            <div class="flex justify-between items-center border-b pb-3 mb-4 sticky top-0 bg-white">
+                <h3 id="footerModalTitle" class="text-xl font-bold text-gray-800"></h3>
+                <!-- Close button -->
+                <button onclick="closeFooterModal()" class="text-gray-400 hover:text-gray-600 transition">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+            </div>
+            <div id="footerModalContent" class="text-gray-700 leading-relaxed text-sm space-y-4">
+                <!-- Content will be injected here by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        let currentStep = 1;
+        const data = {}; // Temporary data collection
+        const progressBar = document.getElementById('progress');
+        const step1 = document.getElementById('step-1');
+        const step2 = document.getElementById('step-2');
+        const step3 = document.getElementById('step-3');
+        const allSteps = [step1, step2, step3];
+        
+        // Modal elements
+        const loanModal = document.getElementById('loanOptionsModal');
+        const footerModal = document.getElementById('footerModal');
+        const footerModalTitle = document.getElementById('footerModalTitle');
+        const footerModalContent = document.getElementById('footerModalContent');
+
+        // Policy content definitions
+        const policyContent = {
+            'privacy': {
+                title: 'Privacy Policy',
+                text: `We value your privacy. Your information is used only to **match you with relevant loan partners**. We do not sell your personal data to third parties. Our system uses a secure, encrypted connection to transmit your preliminary information. <br><br>By using our service, you agree to the collection and use of information in accordance with this policy. The information collected includes your loan purpose, desired amount, and device information for analytics. **You can request removal of your data at any time** by contacting our support team.`
+            },
+            'terms': {
+                title: 'Terms of Use',
+                text: `LoanFinderUS is a <span class="font-bold text-red-500">referral service and not a direct lender</span>. By using this website, you agree that we are not responsible for the accuracy or availability of the loan offers displayed by third-party lenders. All listed APRs and terms are estimates and are subject to change by the provider. <br><br>Your use of this site constitutes acceptance of these terms. **The minimum repayment term is 61 days** as our service is designed for personal installment loans, not short-term pay day loans. **Do not use this site if you require emergency cash in under 60 days.**`
+            },
+            'contact': {
+                title: 'Contact Us',
+                text: `If you have any questions or require support, please reach out to us. We aim to respond to all inquiries within **48 hours**. <br><br>Email: <a href="mailto:support@loanfinderus.com" class="text-blue-500 hover:text-blue-700 font-bold">support@loanfinderus.com</a> <br>Address: 123 Main Street, Suite 500, Anytown, USA 10001. <br><br>**Note: For specific questions regarding your loan application or approval status, please contact the lender directly** after you have been redirected.`
+            },
+            'about': {
+                title: 'About Us',
+                text: `Our mission at LoanFinderUS is simple: to help you **find the best personal loan options quickly and securely**. We partner with a network of trusted US-based lenders to provide personalized matches based on your needs, without impacting your credit score. <br><br>We are **committed to transparency** and providing an easy-to-use platform that saves you time and money. Our service is completely free to the user. We receive compensation from our lending partners when you successfully complete an application on their site.`
+            }
+        };
+
+        /**
+         * Opens the main loan options modal.
+         */
+        function openLoanModal() {
+            loanModal.classList.add('open');
+            document.body.style.overflow = 'hidden';
+            console.log("Main Loan Modal is now open.");
+        }
+
+        /**
+         * Closes the main loan options modal.
+         */
+        function closeLoanModal() {
+            loanModal.classList.remove('open');
+            document.body.style.overflow = '';
+        }
+
+        /**
+         * Opens the dynamic footer modal with selected content.
+         * @param {string} title - The title of the content (e.g., 'Privacy Policy').
+         * @param {string} contentId - The key for the content object (e.g., 'privacy').
+         */
+        function openFooterModal(title, contentId) {
+            const content = policyContent[contentId];
+            if (content) {
+                footerModalTitle.textContent = content.title;
+                // Use innerHTML to render HTML tags like <br> and <b>/<span>
+                footerModalContent.innerHTML = `<p>${content.text}</p>`;
+                footerModal.classList.add('open');
+                document.body.style.overflow = 'hidden';
+                console.log(`Footer Modal opened for: ${title}`);
+            } else {
+                console.error('Content not found for ID:', contentId);
+            }
+        }
+
+        /**
+         * Closes the dynamic footer modal.
+         */
+        function closeFooterModal() {
+            footerModal.classList.remove('open');
+            document.body.style.overflow = '';
+        }
+
+        /**
+         * Function to transition between steps.
+         * @param {number} stepIndex - The index of the current step (1 or 2).
+         * @param {HTMLElement} selectedButton - The button that was clicked.
+         */
+        function nextStep(stepIndex, selectedButton) {
+            const value = selectedButton.getAttribute('data-value');
+
+            // Save data to the object
+            if (stepIndex === 1) {
+                data.purpose = value;
+            } else if (stepIndex === 2) {
+                data.amount = value;
+            }
+            
+            // Hide the current step by accessing its parent div using currentStep index
+            document.getElementById(`step-${currentStep}`).classList.add('hidden');
+
+            // Step transition logic
+            if (currentStep === 1) {
+                currentStep = 2;
+                // Show step 2
+                step2.classList.remove('hidden');
+                // Update progress bar
+                progressBar.style.width = '75%'; 
+            } else if (currentStep === 2) {
+                currentStep = 3;
+                // Show the final CTA (Step 3)
+                step3.classList.remove('hidden');
+                // Update progress bar
+                progressBar.style.width = '100%'; 
+                
+                console.log("Collected data:", data);
+            }
+            
+            console.log(`Transitioning to Step ${currentStep}. Current data:`, data);
+        }
+        
+        // Initialize state on window load
+        window.onload = function() {
+            // Ensure only step 1 is visible on page load and progress is correct
+            step1.classList.remove('hidden');
+            step2.classList.add('hidden');
+            step3.classList.add('hidden');
+            progressBar.style.width = '25%'; // Set initial progress
+        };
+
+    </script>
+</body>
+</html>
