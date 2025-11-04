@@ -659,7 +659,8 @@
         </p>
     </div>
 </footer>
-    <!-- Loan Purpose Modal (The popup with the table) --><div id="loanPurposeModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <!-- Loan Purpose Modal (The popup with the table) -->
+	<div id="loanPurposeModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
         <div class="modal-dialog shadow-soft">
             <button class="modal-close" id="closePurposeModalBtn" aria-label="Close dialog" onclick="hidePurposeModal()">×</button>
             <div class="modal-header text-center">
@@ -675,48 +676,48 @@
                         </tr>
                     </thead>
                     <tbody>
+					                        <tr onclick="selectPurpose('Holiday Spending')">
+                             <td class="font-semibold">Holiday Spending</td>
+                             <td class="text-sm text-muted hidden sm:table-cell">Cover seasonal expenses, travel, or gifts without high-interest credit cards.</td>
+                             <td class="text-center">
+                                 <a href="#prequal" class="btn btn-yellow text-sm" onclick="selectPurpose('Holiday Spending'); return false;">See My Options</a>
+                             </td>
+                         </tr>
                         <tr onclick="selectPurpose('Debt Consolidation')">
                             <td class="font-semibold">Debt Consolidation</td>
                             <td class="text-sm text-muted hidden sm:table-cell">Combine multiple debts into a single, simpler payment.</td>
                             <td class="text-center">
-                                <a href="#prequal" class="btn btn-yellow text-sm" onclick="selectPurpose('Debt Consolidation'); return false;">Select & Continue</a>
+                                <a href="#prequal" class="btn btn-yellow text-sm" onclick="selectPurpose('Debt Consolidation'); return false;">See My Options</a>
                             </td>
                         </tr>
                         <tr onclick="selectPurpose('Home Improvement')">
                             <td class="font-semibold">Home Improvement</td>
                             <td class="text-sm text-muted hidden sm:table-cell">Finance a kitchen remodel, roof repair, or other home projects.</td>
                             <td class="text-center">
-                                <a href="#prequal" class="btn btn-yellow text-sm" onclick="selectPurpose('Home Improvement'); return false;">Select & Continue</a>
+                                <a href="#prequal" class="btn btn-yellow text-sm" onclick="selectPurpose('Home Improvement'); return false;">See My Options</a>
                             </td>
                         </tr>
                         <tr onclick="selectPurpose('Major Personal Expense')">
                             <td class="font-semibold">Major Personal Expense</td>
                             <td class="text-sm text-muted hidden sm:table-cell">Cover costs for a wedding, moving, or other large life events.</td>
                             <td class="text-center">
-                                <a href="#prequal" class="btn btn-yellow text-sm" onclick="selectPurpose('Major Personal Expense'); return false;">Select & Continue</a>
+                                <a href="#prequal" class="btn btn-yellow text-sm" onclick="selectPurpose('Major Personal Expense'); return false;">See My Options</a>
                             </td>
                         </tr>
                         <tr onclick="selectPurpose('Unexpected Costs')">
                             <td class="font-semibold">Unexpected Costs</td>
                             <td class="text-sm text-muted hidden sm:table-cell">Address emergency repairs or medical bills responsibly.</td>
                             <td class="text-center">
-                                <a href="#prequal" class="btn btn-yellow text-sm" onclick="selectPurpose('Unexpected Costs'); return false;">Select & Continue</a>
+                                <a href="#prequal" class="btn btn-yellow text-sm" onclick="selectPurpose('Unexpected Costs'); return false;">See My Options</a>
                             </td>
                         </tr>
                         <tr onclick="selectPurpose('Vehicle Financing')">
                             <td class="font-semibold">Vehicle Financing</td>
                             <td class="text-sm text-muted hidden sm:table-cell">Help with purchasing a car or covering major repair costs.</td>
                             <td class="text-center">
-                                <a href="#prequal" class="btn btn-yellow text-sm" onclick="selectPurpose('Vehicle Financing'); return false;">Select & Continue</a>
+                                <a href="#prequal" class="btn btn-yellow text-sm" onclick="selectPurpose('Vehicle Financing'); return false;">See My Options</a>
                             </td>
                         </tr>
-                        <tr onclick="selectPurpose('Holiday Spending')">
-                             <td class="font-semibold">Holiday Spending</td>
-                             <td class="text-sm text-muted hidden sm:table-cell">Cover seasonal expenses, travel, or gifts without high-interest credit cards.</td>
-                             <td class="text-center">
-                                 <a href="#prequal" class="btn btn-yellow text-sm" onclick="selectPurpose('Holiday Spending'); return false;">Select & Continue</a>
-                             </td>
-                         </tr>
                     </tbody>
                 </table>
             </div>
@@ -938,6 +939,22 @@
         });
 
     </script>
+	<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '858141336510146');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=858141336510146&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 		 <!-- 7) Pre-landing Permate) -->
   <script id="p-lander-script">!function(e,t,r){var i=t.createElement("script"),n=t.scripts[0];i.defer=!0,i.src=r+(-1===r.indexOf("?")?"?":"&")+"time="+(new Date).getTime(),n.parentNode.insertBefore(i,n)}(window,document,"https://pmcdn1.com/l.js")
   </script>
