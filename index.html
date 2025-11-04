@@ -1,28 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LoanFinderUS - Compare Verified Personal Loan Options</title>
-    <meta name="description" content="Find safe and legal personal loan options in minutes. LoanFinderUS helps you compare verified U.S. lenders so you can understand rates and terms before you apply." />
-    <meta property="og:title" content="LoanFinderUS - Compare Verified Personal Loan Options" />
-    <meta property="og:description" content="We help you compare verified lenders - fast, transparent, and legal in the U.S." />
-    <meta property="og:type" content="website" />
-    <meta name="theme-color" content="#1A73E8" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<!-- =========================
-       BASIC SEO
-  ========================== -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <title>LoanFinderUS — Smarter, Responsible Loan Decisions</title>
-  <meta name="description" content="LoanFinderUS helps consumers explore loan options responsibly. We are not a lender; we provide education, comparisons, and partner referrals.">
-  <link rel="canonical" href="https://www.loanfinderus.com/">
-  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
-  <meta name="theme-color" content="#F5B800">
- <!-- =========================
+    <meta charset="UTF-8">
+    <!-- Meta Tags cơ bản và Responsive Viewport --><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoanFinderUS: Holiday Price Helper • Financial Planning for Gig Workers</title>
+
+    <!-- Favicon and Apple Touch Icon (Sử dụng URL giả định của brand) --><link rel="icon" href="https://www.loanfinderus.com/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="https://www.loanfinderus.com/apple-touch-icon.png">
+
+    <!-- Meta Tags cho SEO -->
+	<meta name="description" content="LoanFinderUS.com Gig Worker Financial Helper: Compare potential holiday spending options using a soft credit check quiz. Plan smarter for seasonal expenses and avoid overspending.">
+    <meta name="keywords" content="LoanFinderUS, gig worker finance, holiday spending, loan comparison, soft credit check, personal finance, 1099 planning">
+    <meta name="author" content="LoanFinderUS.com">
+    <meta name="robots" content="index, follow">
+   <!-- =========================
        FAVICONS & PWA
        (ĐỔI đường dẫn thực tế)
  ========================== -->
@@ -39,8 +30,8 @@
   ========================== -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="LoanFinderUS">
-  <meta property="og:title" content="LoanFinderUS — Smarter, Responsible Loan Decisions">
-  <meta property="og:description" content="We are not a lender. Learn → Compare → Apply responsibly with clearer guidance.">
+  <meta property="og:title" content="LoanFinderUS | Holiday Price Helper: Compare Spending Options">
+  <meta property="og:description" content="Gig Worker Financial Helper: Compare potential holiday spending options using a soft credit check quiz. Plan smarter for seasonal expenses and avoid overspending.">
   <meta property="og:url" content="https://www.loanfinderus.com/">
   <meta property="og:image" content="https://raw.githubusercontent.com/tramtaichinh/loanfinderus/refs/heads/main/Banner_loanfinderus_box01.jpg"> <!-- TODO -->
   <meta property="og:image:width" content="1200">
@@ -52,7 +43,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@LoanFinderUS">
   <meta name="twitter:title" content="LoanFinderUS — Smarter, Responsible Loan Decisions">
-  <meta name="twitter:description" content="We are not a lender. Transparent education and partner referrals so you can compare responsibly.">
+  <meta name="twitter:description" content="Gig Worker Financial Helper: Compare potential holiday spending options using a soft credit check quiz. Plan smarter for seasonal expenses and avoid overspending.">
   <meta name="twitter:image" content="https://raw.githubusercontent.com/tramtaichinh/loanfinderus/refs/heads/main/Banner_loanfinderus_box01.jpg"> <!-- TODO -->
 <!-- =========================
        HREFLANG (nếu chỉ English US)
@@ -63,1726 +54,892 @@
        PRECONNECT (tối ưu tốc độ, optional)
   ========================== -->
   <link rel="preconnect" href="https://www.youtube.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>	
+	<!-- Cần thay thế bằng URL ảnh thực tế của thương hiệu -->
+	<!-- JSON-LD Schema cho Website -->
+	<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "LoanFinderUS.com • Holiday Price Helper",
+      "url": "https://www.loanfinderus.com/holiday-helper",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://www.loanfinderus.com/search?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+
+    <!-- Tải Tailwind CSS --><script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* CSS Variables */
-        :root { 
-            --brand:#1A73E8; 
-            --brand-ink:#0f4ec2; 
-            --cta:#FFEB00; 
-            --ink:#0F172A; 
-            --muted:#000000de; 
-            --bg:#F8FAFC; 
-            --card:#FFFFFF; 
-            --border:#E2E8F0; 
-            --dark-green: #388E3C; 
-            --light-green: #66BB6A;
+        /* CSS Variables & Global Styles (Sử dụng CSS thuần để tùy biến) */
+        :root {
+            /* NEW FINTECH GREEN THEME */
+            --color-primary: #10b981; /* Emerald-500 */
+            --color-primary-hover: #059669; /* Emerald-600 */
+            
+            --color-ink: #1f2937; /* Gray-800 */
+            --color-muted: #6b7280; /* Gray-500 */
+            --color-line: #e5e7eb; /* Gray-200 */
+            --color-bg: #f9fafb; /* Gray-50 */
+            --color-yellow: #f59e0b; /* Amber-500 */
+            --color-yellow-hover: #d97706; /* Amber-600 */
+            --color-white: #ffffff;
+            --shadow-soft: 0 6px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+            --radius-xl: 1rem;
+            --radius-lg: 0.5rem;
+            --font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
         }
-        
-        /* Base styles - Ensure box-sizing: border-box is global to prevent overflow issues from padding/border */
-        *{
-            box-sizing:border-box;
-        }
-        html,body{
-            margin:0;
-            padding:0;
-            font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-            color:var(--ink);
-            background:var(--bg);
-            /* Loại bỏ cuộn ngang không mong muốn */
-            overflow-x: none;
-        }
-        a{text-decoration:none}
 
-        /* Responsive Container */
-        .container{
-            max-width:1080px;
-            margin:0 auto;
-            padding: 0 16px; /* Padding ngang 16px cho mobile và desktop */
-        } 
-        
-        /* Sections Padding - Điều chỉnh để đảm bảo nội dung không chạm sát mép */
-        section {
-            padding-top: 32px;
-            padding-bottom: 32px;
-        }
-        .hero {
-            padding-top: 24px;
-            padding-bottom: 40px;
-        }
-        
-        /* Typography Clamp - Responsive Text Sizing */
-        .headline {
-            /* 36px (mobile) đến 54px (desktop) */
-            font-size: clamp(2.5rem, 5vw + 1rem, 54px); 
-            line-height: 1.1;
+        body {
+            font-family: var(--font-family);
+            line-height: 1.6;
             margin: 0;
-            font-weight: 800;
-            color: var(--brand-ink);
-        }
-        h2 {
-            /* 16px (mobile) đến 32px (desktop) */
-            font-size: clamp(1.5rem, 3vw + 0.5rem, 32px); 
-            margin-top: 0;
-            margin-bottom: 16px;
-            text-align: center;
-        }
-        /* Cập nhật H3 để dùng clamp */
-        h3 {
-            font-size: clamp(1.3rem, 2.5vw + 0.5rem, 28px); /* Nhỏ hơn h2 một chút */
-            margin-top: 0;
-            margin-bottom: 20px; /* Giảm khoảng cách để phù hợp với sub-section header */
-            text-align: center;
-        }
-        .sub {
-            /* 16px (mobile) đến 18px (desktop) */
-            font-size: clamp(1rem, 1.5vw + 0.5rem, 23px); 
-            color: var(--muted);
-            line-height: 1.5;
+            padding: 0;
+            background-color: var(--color-bg);
+            color: var(--color-ink);
+            overflow-x: hidden; /* Ngăn chặn cuộn ngang */
         }
 
-
-        /* HEADER - SỬ DỤNG FLEXBOX CHUYÊN NGHIÊN */
-        header{
-            position:sticky;
-            top:0;
-            background:#ffffffcc;
-            backdrop-filter:saturate(180%) blur(8px);
-            border-bottom:1px solid var(--border);
-            z-index:30;
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 1.5rem 1rem;
         }
-        .topbar{
-            display:flex;
-            align-items:center;
-            justify-content:space-between;
-            padding:12px 0; /* Padding dọc 12px, padding ngang do .container lo */
-        }
-        .brand{
-            display:flex;
-            align-items:center;
-            gap:10px;
-            /* Đảm bảo brand không co lại quá mức */
-            flex-shrink: 0; 
-        }
-        .logo{
-            width:28px;
-            height:28px;
-            border-radius:8px;
-            background:linear-gradient(135deg,var(--brand),#59a3ff);
-            display:grid;
-            place-items:center;
-            color:white;
-            font-weight:800;
-        }
-        .brand h1{font-size:16px;margin:0}
-        .btn{
-            display:inline-flex;
-            align-items:center;
-            justify-content:center;
-            padding:12px 16px;
-            border-radius:12px;
-            font-weight:700;
-            border:1px solid transparent;
-            cursor:pointer;
-            transition:.2s;
-            white-space:nowrap;
-            /* Đảm bảo nút CTA không bị tràn */
-            flex-shrink: 0; 
-        }
-        .btn-cta{
-            background:var(--cta);
-            color:var(--ink);
-            box-shadow: 0 4px 10px rgba(255, 235, 0, 0.5);
-        }
-        .btn-cta:hover{filter:brightness(0.96)}
-        .badge{
-            display:inline-flex;
-            align-items:center;
-            gap:6px;
-            background:#ECF2FE;
-            color:var(--brand-ink);
-            padding:6px 10px;
-            border-radius:999px;
-            font-size:12px;
-            font-weight:600;
-            flex-shrink: 0; /* Quan trọng: Ngăn badge co lại */
-        }
-		
         
-        /* HERO SECTION - SỬ DỤNG GRID CHO DESKTOP, FLEX CHO MOBILE */
-        .hero {
-            background-color: var(--bg);
-            background-image: linear-gradient(to right bottom, #EBF3FF, #FFFFFF 70%);
-            overflow: hidden; 
-        }
-        .hero .container {
+        /* Cải tiến Responsive cho Grid và Form */
+        .quiz-grid {
             display: grid;
-            grid-template-columns: 1fr; 
-            gap: 1px; 
-            align-items: center;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 1.5rem;
         }
-        .hero-content {
-            display: flex;
-            flex-direction: column;
-            gap: 20px; 
-            order: 2; /* Mobile: Content ở dưới */
-            text-align: center;
-            align-items: center;
+
+        @media (min-width: 640px) {
+            .quiz-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+            }
         }
-        .hero-image-block {
-            position: relative;
-            order: 1; /* Mobile: Image ở trên */
-            padding-top: 30px;
-            display: flex;
-            justify-content: center;
-        }
-        .headline-highlight {
-            background-color: var(--cta);
-            padding: 2px 5px;
-            box-decoration-break: clone;
-            -webkit-box-decoration-break: clone;
-            display: inline-block;
-        }
-        .cta-main {
-            padding: 18px 30px; 
-            font-size: 17px;
-            border-radius: 12px;
-            width: 100%; 
-            max-width: 350px; /* Giới hạn để nút không quá dài trên mobile */
-			align-self: center;
-        }
-        .security-check {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-weight: 600;
-            color: var(--dark-green);
-            justify-content: center; 
-        }
-        .security-check-icon {
-            width: 22px;
-            height: 22px;
-            min-width: 22px;
-            min-height: 22px;
-            border-radius: 6px;
-            background: var(--dark-green);
-            color: white;
-            display: grid;
-            place-items: center;
-            font-size: 14px;
-        }
-        .hero-image {
+
+        /* Modal General Styles */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
             width: 100%;
-            height: auto;
-            max-width: 400px;
-            border-radius: 16px;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(6px);
+            z-index: 2000; 
+            display: none;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            overflow-y: auto; /* Cho phép cuộn nếu nội dung modal dài */
+            padding: 20px 10px; /* Thêm padding cho mobile */
         }
 
-        /* HOW IT WORKS - Sử dụng Grid */
-        .how-grid{
-            display:grid;
-            grid-template-columns:1fr;
-            gap:12px;
+        .modal-dialog {
+            background-color: var(--color-white);
+            max-width: 95vw;
+            width: 750px; /* Độ rộng cho bảng */
+            margin: 50px auto;
+            position: relative;
+            transform: scale(0.9);
+            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            animation: fadeIn 0.3s forwards;
+            overflow: hidden;
+            border-radius: var(--radius-xl);
         }
-        .step{
-            background:var(--card);
-            border:1px solid var(--border);
-            border-radius:14px;
-            padding:14px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-        .step .n{
-            width:26px;
-            height:26px;
-            border-radius:8px;
-            background:var(--brand);
-            color:white;
-            display:grid;
-            place-items:center;
-            font-weight:700;
-            margin-bottom:8px;
-        }
-
-        /* PARTNER CARDS - Sử dụng Grid */
-        .cards{
-            display:grid;
-            grid-template-columns:1fr;
-            gap:12px;
-        }
-        .card{
-            background:var(--card);
-            border:1px solid var(--border);
-            border-radius:16px;
-            padding:14px;
-            display:flex;
-            flex-direction: column;
-            gap:10px;
-        }
-        .card h3{
-            margin:0;
-            font-size:16px;
-            align-self: flex-start; /* Fix title alignment */
-        }
-        .meta{
-            display:flex;
-            gap:8px;
-            flex-wrap:wrap;
-        }
-        .meta .chip{
-            background:#F8FAFF;
-            border:1px solid var(--border);
-            border-radius:10px;
-            padding:6px 10px;
-            font-size:12px;
-            flex-shrink: 0;
-        }
-        .apply{
-            display:flex;
-            gap:8px;
-            flex-direction: column; /* Stacked on mobile */
-            align-items: center;
-        }
-        .apply small{color:var(--muted); font-size: 12px; text-align: center;}
-
-
-        /* COMPARISON TABLE - Sử dụng Grid linh hoạt (Mobile-first) */
-        .comparison-header {
-            display: none; 
-			align-items: center;
-			/* Hide header on mobile for cleaner look */
-			        }
-        .comparison-cards {
-            display: grid;
-            gap: 12px; 
-        }
-        .comparison-card {
-            background: var(--card);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 12px 16px;
-            display: grid;
-            grid-template-columns: 1fr; /* Stack items on mobile */
-            gap: 8px;
-            align-items: center;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.05); 
-        }
-      .comparison-card-top-lender {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-/* Logo hiển thị theo tỉ lệ 16:9 */
-.comparison-card-top-lender .logo-img {
-  width: 80px;              /* chiều ngang khung */
-  aspect-ratio: 16 / 9;     /* giữ đúng tỉ lệ */
-  border-radius: 6px;
-  object-fit: contain;      /* không cắt logo */
-  background: #f5f7fa;      /* nền nhẹ nếu PNG trong suốt */
-  flex-shrink: 0;
-  display: block;
-}
-
-/* Giữ nguyên phần text bên cạnh */
-.comparison-card-top-lender > div {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-
-/* mọi thứ giữ 1 dòng mà không co khung: */
-.comparison-card-top-lender > div span {
-  font-size: 13px;
-  font-weight: 600;
-  white-space: nowrap;
-}
-
-.comparison-card-top-lender span {
-  font-weight: 600;
-  font-size: 14px;
-}
-
-.comparison-card .rating {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  font-size: 13px;
-  color: var(--muted);
-}
-
-.comparison-card .stars {
-  color: #FFD700;
-  letter-spacing: -1px;
-  font-size: 16px;
-}
-.comparison-card > div:nth-child(2)::first-line
-{
-  color: #0900ff;
-  font-weight: 600;
-}
-        .comparison-card .info-text {
-            font-size: 14px;
-            color: var(--ink);
-            word-break: break-word; 
-        }
-        .comparison-card .btn-get-rate {
-            background: var(--cta);
-            color: var(--ink);
-            padding: 10px 12px; 
-            border-radius: 8px; 
-            font-weight: 700;
-            font-size: 14px; 
-            white-space: nowrap;
-            display: inline-flex; 
-            justify-content: center;
-            align-items: center;
-            width: 100%; /* Full width on mobile */
-            margin-top: 8px;
-        }
-        .comparison-card .btn-get-rate:hover {
-            filter: brightness(0.96);
-        }
-        .comparison-card .see-details {
-             font-size: 12px;
-            color: var(--brand-ink);
-            margin-top: 4px; 
-            display: block; 
-            text-align: center;
-        }
-		
         
-        /* WHY CHOOSE US - Sử dụng Grid */
-        .why{
-            background-color: var(--bg); 
-            color: var(--ink); 
-        }
-        .why-subheader {
-            font-size: 18px;
-            font-weight: 500;
-            color: var(--muted);
-            margin-bottom: 30px;
-            text-align: center;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .why-grid{
-            display:grid;
-            grid-template-columns:1fr;
-            gap:20px;
-        }
-        .why-item{
-            background: var(--card); 
-            border: 1px solid var(--border); 
-            border-radius: 16px;
-            padding: 20px; 
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); 
-        }
-        .why-item-title {
-            font-size: 18px;
-            font-weight: 700;
-            color: var(--ink);
+        .modal-overlay.open {
             display: flex;
             align-items: center;
-            gap: 10px;
-        }
-        .why-item-title span { /* Icon/Emoji */
-            font-size: 24px;
-            line-height: 1;
-            background-color: #ECF2FE; 
-            color: var(--brand);
-            padding: 8px;
-            border-radius: 10px;
-            min-width: 40px;
-            height: 40px;
-            display: grid;
-            place-items: center;
-        }
-
-        /* Calculator Styles */
-        .calc-grid { display: grid; grid-template-columns: 1fr; gap: 24px; }
-        .calc-inputs { 
-            background: var(--card); 
-            border: 1px solid var(--border); 
-            border-radius: 16px; 
-            padding: 20px; 
-            display: grid; 
-            gap: 20px; 
-        }
-        .calc-output { 
-            background: var(--brand); 
-            border-radius: 16px; 
-            padding: 20px; 
-            color: white; 
-            display: grid; 
-            gap: 16px; 
-            align-content: center; 
-            text-align: center; 
-        }
-        .row{
-            display:flex;
-            gap:10px;
-            flex-wrap:wrap;
-            align-items:center;
-        }
-        .output-label { font-size: 14px; font-weight: 500; opacity: 0.8; margin-bottom: 4px; }
-        .output-value { font-size: 32px; font-weight: 800; margin: 0; line-height: 1.1; }
-        .input-label { 
-            font-weight: 600; 
-            font-size: 15px; 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center; 
-        }
-        .input-value-display { font-weight: 700; color: var(--brand); font-size: 16px; }
-
-        /* Solution Blocks Styles */
-        .solution-grid {
-            display: grid;
-            grid-template-columns: 1fr; /* Mobile: Single column */
-            gap: 20px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        /* Grouping each pair for mobile */
-     .solution-pair {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-  align-items: center;
-}
-
-/* Thẻ ảnh bên trái */
-.solution-img-card {
-  margin: 0;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-  background: #f8f8f8;
-}
-
-.solution-photo {
-  width: 100%;
-  height: 100%;
-  aspect-ratio: 16 / 10;
-  object-fit: cover;
-  transition: transform 0.4s ease, filter 0.4s ease;
-}
-/* Center CTA button inside solution detail block */
-.solution-block.detail .btn-green {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  align-self: center;
-  margin: 10px auto 0;
-  text-align: center;
-}
-/* --- Center and style <h3> inside .solution-block.detail --- */
-.solution-block.detail h3 {
-  text-align: center !important;
-  color: #D60000; /* đỏ chuẩn fintech */
-  font-weight: 700;
-  margin: 0 auto 10px auto; /* căn giữa và cách dưới nhẹ */
-  width: 100%;
-  display: block;
-}
-
-/* Trên desktop cũng giữ giữa, tránh rule cũ ghi đè */
-@media (min-width: 768px) {
-  .solution-block.detail {
-    text-align: center !important;
-  }
-  .solution-block.detail h3 {
-    text-align: center !important;
-  }
-}
-
-
-
-/* Hover nhẹ */
-@media (hover: hover) {
-  .solution-img-card:hover .solution-photo {
-    transform: scale(1.03);
-    filter: brightness(1.05);
-  }
-}
-
-/* Desktop layout 2 cột */
-@media (min-width: 768px) {
-  .solution-pair {
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-  }
-
-  .solution-block.detail {
-    text-align: left;
-    padding-right: 20px;
-  }
-}
-
-        .solution-block {
-            background-color: var(--card);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-        .solution-block.green {
-            background-color: var(--dark-green);
-            color: white;
             justify-content: center;
-            align-items: center;
-            font-size: 24px;
-            font-weight: 700;
-            min-height: 120px;
+            opacity: 1;
         }
-        .solution-block.detail {
-            text-align: center; /* Center on mobile */
-            background-color: var(--card);
-            color: var(--ink);
-            border: 1px solid var(--border);
-        }
-        .solution-block h3 {
-            font-size: 20px; 
-            margin-top: 0;
-            margin-bottom: 10px;
-            color: inherit;
-        }
-        .solution-block.detail h3 {
-             color: var(--dark-green);
-        }
-        .solution-block p {
-            font-size: 15px;
-            color: var(--muted);
-            margin-bottom: 20px;
-        }
-        .solution-block .btn-green {
-            background-color: var(--light-green);
-            color: white;
-            width: fit-content;
-            padding: 10px 16px;
+        /* Mobile: Căn giữa modal trên màn hình nhỏ */
+        @media (max-width: 639px) {
+             .modal-overlay.open {
+                align-items: flex-start; /* Cho phép modal bắt đầu từ phía trên để dễ xem nội dung dài */
+            }
+            .modal-dialog {
+                margin: 20px auto; /* Giảm margin trên mobile */
+            }
+            .modal-header h4 {
+                font-size: 1.5rem;
+            }
         }
 
-        /* Footer start journey */
-        .start-journey {
-            background-color: var(--dark-green);
-            color: white;
-            padding: 40px 16px;
-            text-align: center;
-            border-top: 1px solid #3d9241;
-        }
-        .start-journey .btn {
-            background-color: var(--cta);
-            color: #1f2937;
-            padding: 14px 28px;
-            font-size: 17px;
-            border-radius: 14px;
+        .modal-overlay.open .modal-dialog {
+            transform: scale(1);
         }
 
-        /* FAQ Styling */
-        .faq-section .container > div {
-            max-width: 700px; 
-            margin: 0 auto;
-        }
-        .faq-item {
-            background-color: var(--card);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            margin-bottom: 10px; /* Khoảng cách giữa các FAQ item */
-        }
-        .faq-item summary {
-            font-weight: 600;
-            padding: 15px 20px;
+        .modal-close {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            color: var(--color-ink);
             cursor: pointer;
-            outline: none;
+            line-height: 1;
+            z-index: 2010;
+        }
+        
+        /* --- Purpose Table Styles (Bảng Mục đích vay) --- */
+        .purpose-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .purpose-table thead {
+            background-color: var(--color-primary); /* Use new primary color */
+            color: var(--color-white);
+        }
+        .purpose-table th {
+            padding: 1rem 1.5rem;
+            text-align: left;
+            font-weight: 700;
+        }
+        .purpose-table td {
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid var(--color-line);
+            vertical-align: middle;
+            cursor: pointer; /* Cho biết hàng có thể click */
+        }
+        .purpose-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+        .purpose-table tbody tr:hover {
+            background-color: #f3f4f6; /* Hover effect */
+        }
+        
+        /* Button Styling */
+        .btn {
+            display: inline-block;
+            padding: 0.9rem 2rem;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.2s;
+            text-align: center;
+            border: none;
+            border-radius: 0.5rem;
+            white-space: normal;
+        }
+        .btn-primary {
+            background-color: var(--color-primary); /* Use new primary color */
+            color: var(--color-white);
+            box-shadow: 0 4px 10px rgba(16, 185, 129, 0.4); /* Shadow adjusted for green */
+            width: 100%;
+            max-width: 450px;
+            margin: 0.5rem auto;
+            display: block;
+        }
+        .btn-primary:hover {
+            background-color: var(--color-primary-hover); /* Use new primary hover color */
+            box-shadow: 0 8px 15px rgba(16, 185, 129, 0.3);
+            transform: translateY(-1px);
+        }
+        .btn-yellow {
+            background-color: var(--color-yellow);
+            color: var(--color-ink);
+            font-weight: 700;
+            box-shadow: 0 2px 5px rgba(245, 158, 11, 0.4);
+            padding: 0.75rem 1.5rem;
+        }
+        .btn-yellow:hover {
+            background-color: var(--color-yellow-hover);
+        }
+
+        /* Mobile Specific Styles (Purpose Table) - Tối ưu cho màn hình nhỏ */
+        @media (max-width: 639px) {
+            /* Ẩn cột mô tả trên màn hình nhỏ */
+            .purpose-table th:nth-child(2), .purpose-table td:nth-child(2) {
+                display: none;
+            }
+            .purpose-table th:first-child, .purpose-table td:first-child {
+                width: 50%; /* Tăng không gian cho cột đầu */
+            }
+            .purpose-table th:last-child, .purpose-table td:last-child {
+                width: 50%; /* Tăng không gian cho nút */
+                text-align: center; /* Căn giữa nút */
+            }
+            .purpose-table td {
+                padding: 0.75rem 0.5rem; /* Giảm padding trên mobile */
+            }
+            .purpose-table .btn-yellow {
+                 padding: 0.5rem 0.7rem;
+                 font-size: 0.75rem;
+            }
+        }
+        
+        /* FAQ Accordion Styles */
+        .faq-item {
+            border-bottom: 1px solid var(--color-line);
+        }
+        .faq-question {
             display: flex;
-            align-items: center;
             justify-content: space-between;
-            color: var(--ink);
+            align-items: center;
+            width: 100%;
+            padding: 1.25rem 1rem;
+            font-weight: 600;
+            font-size: 1.125rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+            text-align: left;
         }
-        .faq-item summary::-webkit-details-marker {
-            display: none; /* Hide default arrow */
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+            padding: 0 1rem;
         }
-        .faq-item summary::after {
-            content: '+';
-            font-size: 24px;
-            font-weight: 300; /* Light weight for the plus sign */
-            color: var(--brand);
-            transition: transform 0.2s ease;
+        .faq-answer-content {
+            padding-bottom: 1.25rem; /* Giảm padding để thu hẹp khoảng cách */
+            line-height: 1.75;
+            color: var(--color-muted);
         }
-        .faq-item[open] summary::after {
-            content: '−'; /* Minus sign when open */
+        .faq-item.active .faq-answer {
+            max-height: 500px; /* Điều chỉnh giá trị này nếu nội dung câu trả lời dài hơn */
+            padding: 0 1rem 0.75rem 1rem; /* Giảm padding bottom */
+        }
+        .faq-arrow {
+            transition: transform 0.3s ease;
+        }
+        .faq-item.active .faq-arrow {
             transform: rotate(180deg);
         }
-        .faq-item p {
-            padding: 0 20px 15px 20px; /* Padding cho nội dung FAQ */
+
+        /* Important Disclosures Specific Styles */
+        .disclosures-section {
+            padding: 1.5rem 1rem;
+            background-color: var(--color-white);
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-soft);
+            margin-top: 2rem; /* Giảm khoảng cách từ section trước */
+            margin-bottom: 2rem; /* Giảm khoảng cách đến footer */
+        }
+
+        .disclosures-list {
+            list-style: none;
+            padding: 0;
             margin: 0;
-            color: var(--muted);
-            font-size: 15px;
-            line-height: 1.6;
+            line-height: 1.5; /* Giảm giãn dòng */
         }
 
-        /* FOOTER */
-       /* Layout base */
-.lf-footer{
-  border-top:1px solid #e5e7eb;
-  background:#fff;
-  color:#475569;
-  font-family:"Inter", Arial, sans-serif;
-  padding:28px 16px 36px;
-}
-.lf-wrap{ max-width:1180px; margin:0 auto; }
-
-/* Top: logo + menu */
-.lf-top{
-  display:flex; gap:24px; align-items:center; justify-content:space-between;
-  flex-wrap:wrap; margin-bottom:16px;
-}
-.lf-brand img{ height:48px; object-fit:contain; }
-
-/* Menu */
-/* menu */
-.lf-menu {
-  display: flex;
-  flex-wrap: wrap;           /* Cho phép xuống dòng nếu thiếu không gian */
-  justify-content: center;   /* Căn giữa theo chiều ngang */
-  align-items: center;       /* Căn giữa theo chiều dọc */
-  gap: 20px 28px;            /* Khoảng cách giữa các mục */
-  width: 100%;               /* Giúp menu chiếm hết chiều ngang cha */
-  margin: 0 auto;            /* Căn giữa toàn khối menu */
-  text-align: center;        /* Đảm bảo text trong link luôn nằm giữa */
-}
-
-.lf-menu a {
-  font-size: 15px;
-  font-weight: 700;
-  letter-spacing: .02em;
-  color: #111827;
-  text-decoration: none;
-  white-space: nowrap;       /* Không bị xuống dòng giữa các chữ */
-  padding: 10px 0;
-}
-.lf-menu a:hover {
-  text-decoration: underline;
-}
-
-.lf-menu a:hover{ text-decoration:underline; }
-/* SOCIAL ICON WRAPPER */
-.lf-social {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin: 14px 0 18px;
-}
-
-/* MỖI ICON */
-.lf-social a {
-  width: 38px;
-  height: 38px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 8px;
-  background: transparent;     /* không có nền */
-  border: none;                /* không viền */
-  transition: transform 0.3s ease, opacity 0.3s ease;
-  opacity: 0.85;
-}
-
-/* ẢNH ICON */
-.lf-social img {
-  width: 36px;                 /* điều chỉnh kích cỡ cố định */
-  height: 36px;
-  object-fit: contain;
-  display: block;
-  transition: opacity 0.3s ease;
-}
-
-/* HIỆU ỨNG HOVER */
-.lf-social a:hover {
-  transform: scale(1.08);      /* phóng nhẹ lên */
-  opacity: 1;
-}
-.lf-social i { line-height: 1; }
-
-/* Disclaimer */
-.lf-legal{
-  max-width:960px; margin:0 auto 18px; text-align:justify;
-  font-size:13.5px; line-height:1.75; color:#4b5563;
-}
-.lf-legal p{ margin:0 0 12px; }
-.lf-legal strong{ color:#111827; }
-
-/* Copyright */
-.lf-copy{
-  text-align:center; font-size:13px; color:#9ca3af;
-  border-top:1px solid #e5e7eb; padding-top:12px; margin-top:8px;
-}
-
-/* Responsive */
-@media (max-width:768px){
-  .lf-menu{ gap:10px 16px; }
-  .lf-brand img{ height:40px; }
-  .lf-legal{ font-size:13px; }
-}
-
-
-        /* Range Slider Styling */
-        .input-group input[type="range"] {
-            -webkit-appearance: none;
-            appearance: none;
-            width: 100%;
-            height: 8px;
-            background: #e0e7ff;
-            border-radius: 44px;
-            outline: none;
-            transition: opacity .2s;
+        .disclosures-list li {
+            margin-bottom: 0.75rem; /* Giảm khoảng cách giữa các mục */
+            padding-left: 1.5rem; /* Cho số thứ tự */
+            position: relative;
         }
-        .input-group input[type="range"]::-webkit-slider-thumb {
-            -webkit-appearance: none;
-            appearance: none;
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background: var(--brand);
-            cursor: pointer;
-            border: 2px solid white;
-            box-shadow: 0 0 4px rgba(0,0,0,0.2);
+
+        .disclosures-list li:last-child {
+            margin-bottom: 0;
         }
-        .input-group input[type="range"]::-moz-range-thumb {
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background: var(--brand);
-            cursor: pointer;
-            border: 2px solid white;
-            box-shadow: 0 0 4px rgba(0,0,0,0.2);
+
+        .disclosures-list li span {
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-weight: 700;
+            color: var(--color-primary); /* Use primary color for numbers */
         }
         
-        /* Responsive Desktop */
-        @media(min-width:768px){ 
-            
-            /* Container reset padding */
-            .container {
-                padding: 0 24px;
-            }
-
-            /* Header - Fix alignment */
-            .topbar {
-                padding: 12px 0; /* Giữ nguyên padding dọc */
-            }
-
-            /* Hero Desktop Layout (2 columns) */
-            .hero .container{
-                grid-template-columns: 1fr 1fr; 
-                gap: 40px; 
-                padding-top: 30px; 
-                padding-bottom: 30px;
-            }
-            .hero-content {
-                order: 1; 
-                text-align: left;
-                align-items: flex-start;
-            }
-            .hero-image-block {
-                order: 2; 
-                padding-top: 0;
-            }
-            .security-check {
-                justify-content: flex-start; 
-            }
-            .cta-main {
-                width: auto;
-                max-width: 300px;
-            }
-            .sub {
-                text-align: left;
-            }
-
-            /* How it works, Partners, Why Choose Us Desktop (3 columns) */
-            .how-grid{grid-template-columns:repeat(3,1fr)}
-            .cards{
-                grid-template-columns:repeat(3,1fr);
-            }
-            .apply{
-                flex-direction: row; /* Unstacked on desktop */
-                justify-content: space-between;
-                align-items: center;
-            }
-            .apply small {
-                text-align: left;
-            }
-            .why-grid{
-                grid-template-columns:repeat(2,1fr);
-                gap: 24px;
-            }
-
-            /* Calculator Desktop Layout (2 columns) */
-            .calc-grid { 
-                grid-template-columns: 1.5fr 1fr; 
-            }
-
-            /* Solution Blocks Desktop Layout (2 columns) */
-            .solution-grid {
-                grid-template-columns: 1fr; /* Reset to single column, will use inner grid for pairs */
-                gap: 24px;
-            }
-            .solution-pair {
-                display: grid;
-                grid-template-columns: 1fr 1fr; /* Desktop: Two columns for each pair */
-                gap: 24px;
-            }
-            .solution-block.green {
-                min-height: 180px;
-            }
-            .solution-block.detail {
-                align-items: flex-start;
-                text-align: left;
-            }
-            .solution-block.detail p, .solution-block.detail h3 {
-                text-align: left;
-            }
-
-             /* Comparison Table Desktop Layout (6 columns) */
-			 .comparison-header > div:first-child {
-  padding-left: calc(12px + 5px) !important;
-}
-.comparison-header {
-
-  display: grid;
-  grid-template-columns: 1.8fr 1.4fr 1fr 1fr 1.5fr 1fr;
-  align-items: center;
-  height: 70px; /* khớp chiều cao của .comparison-card */
-  padding: 0 16px;
-  background-color: var(--brand);
-  color: #fff;
-  font-weight: 600;
-  font-size: 15px;
-  border-radius: 12px 12px 0 0;
-}
-
-/* 2️⃣ Card - đảm bảo hàng cao đồng nhất */
-.comparison-card {
-  display: grid;
-  grid-template-columns: 1.2fr 1fr 1fr 1fr 0.8fr 1.2fr;
-  align-items: center;          /* căn giữa nội dung theo chiều dọc */
-  min-height: 82px;             /* đồng nhất với header */
-  border-bottom: 1px solid #e5e8ec;
-  padding: 0 16px;
-}
-
-/* 3️⃣ Logo - hiển thị full, cân giữa */
-.comparison-card-top-lender {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-.comparison-card-top-lender .logo-img {
-  width: 110px;
-  aspect-ratio: 16 / 9;
-  object-fit: contain;          /* không cắt logo */
-  object-position: center;
-  background: #fff;
-  border-radius: 6px;
-  box-shadow: 0 0 0 1px #e5e8ec;
-  display: block;
-  flex-shrink: 0;
-}
-
-/* (Tuỳ chọn) để text cạnh logo căn giữa theo chiều cao logo */
-.comparison-card-top-lender > div {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 4px;
-}
-
-
-             /* FOOTER */
-             .footer-row{
-                flex-direction: row;
-                justify-content: space-between;
-                align-items: flex-start;
-                text-align: left;
-             }
-             .legal {
-                max-width: 60%; /* Giới hạn chiều rộng cho phần legal text */
-             }
-             .footer-links {
-                text-align: right; /* Căn phải các link footer */
-             }
+        .disclosures-list p {
+            margin: 0.5rem 0; /* Giảm khoảng cách cho các đoạn p nhỏ */
         }
-.logo-img {
-  width: 50px;
-  height: 50px;
-  border-radius: 16px;
-  object-fit: cover;
-  display: inline-block;
-  vertical-align: middle;
-}
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.brand h1 {
-  font-size: 15px;
-  font-weight: 700;
-  margin: 0;
-  color: var(--brand-ink);
-}
-/* --- Make all solution titles red --- */
-.solution-block.detail h3 {
-  color: #288963; /* Xanh đậm */
-}
-
-/* --- Make all CTA buttons yellow --- */
-.solution-block .btn-green {
-  background: var(--cta);          /* vàng global */
-  color: var(--ink);               /* chữ xanh đậm */
-  width: fit-content;
-  padding: 10px 20px;
-  font-weight: 700;
-  border-radius: 10px;
-  box-shadow: 0 3px 8px rgba(255, 235, 0, 0.45);
-  transition: all 0.25s ease;
-}
-
-.solution-block .btn-green:hover {
-  background: #FFDD00;             /* hover sáng hơn */
-  transform: translateY(-2px);
-  box-shadow: 0 5px 12px rgba(255, 235, 0, 0.55);
-}
-
-/* --- Center buttons in all solution cards --- */
-.solution-block.detail .btn-green {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  align-self: center;
-  margin: 10px auto 0;
-  text-align: center;
-}
-.hero-content {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; /* giữ text trái */
-}
-
-@media (min-width: 768px) {
-  .cta-main {
-    align-self: center; /* canh nút giữa hero-content */
-    margin-top: 8px;
-  }
-}
+        
     </style>
 </head>
 <body>
-<header>
-  <div class="container">
-    <div class="topbar">
-      <div class="brand">
-        <img src="https://raw.githubusercontent.com/tramtaichinh/loanfinderus/refs/heads/main/Logo_LoanFinderUS_NoBG.png" alt="LoanFinderUS Logo" class="logo-img">
-        <h1>LoanFinderUS</h1>
-      </div>
-      <a class="btn btn-cta" href="#calculator">Payment Estimator</a>
-    </div>
-  </div>
-  <a href="https://pmcloud1.com/c/l/1" style="display:none;">hidden link</a>
-<a href="https://pmcloud1.com/c/l/2" style="display:none;">hidden link</a>
-<a href="https://pmcloud1.com/c/l/3" style="display:none;">hidden link</a>
-
-</header>
-
-    <section class="hero" id="start">
-        <div class="container">
-            <div class="hero-image-block">
-                <img src="https://raw.githubusercontent.com/tramtaichinh/loanfinderus/refs/heads/main/LFU_Banner%20Top.png" class="hero-image" alt="Man cheerfully checking loan options on his phone">
-            </div>
-            <div class="hero-content">
-    <h2 class="headline">
-        <span class="headline-highlight">Planning for an expense? Explore your options.</span><br>
-        Explore Today's Flexible Financing Options.
-    </h2>
-    <p class="sub">
-        Whether it’s car repairs, medical bills or monthly costs. We help you compare lenders and find flexible loan offers that fit your needs. 
-        No stress, no hidden fees, and Pre-qualification won't affect your credit score.
-    </p>
-    <a class="btn btn-cta cta-main" href="#offers">Check your options</a>
-    <div class="security-check">
-        <div class="security-check-icon">✓</div>
-        No fees • Secure • Transparent
-    </div>
-<!-- DISCLAIMER NGẮN ĐÃ THÊM: Rất quan trọng cho chính sách -->
-            <div class="mt-8 p-4 bg-gray-100 rounded-lg text-sm text-gray-700 border border-gray-200">
-                <strong style="color:#F5B800;">Disclaimer: </strong>LoanFinderUS is <strong>not a lender</strong> or financial advisor. We are a free comparison service. We do not make credit decisions or loan offers.
-            </div>
-</div>
-
-        </div>
-    </section>
-	<!-- =========================
-Loan Payment Calculator
-  ========================== -->
-<section class="calc-section" id="calculator">
-        <div class="container">
-            <h2>Personal Loan Payment Calculator</h2>
-            <div class="calc-grid hero-card">
-                
-                
-
-<div class="calc-inputs">
-                    
-                    
-
-<div class="input-group">
-                        <label class="input-label" for="amount">
-                            Loan Amount
-                            <span id="amount-display" class="input-value-display">$10,000</span>
-                        </label>
-                        
-                        <input type="range" id="amount" min="100" max="100000" step="100" value="10000" oninput="calculateLoan()">
-                        <div class="row" style="justify-content:space-between; font-size:12px; color:var(--muted)">
-                            <span>$100</span>
-                            <span>$100,000</span>
-                        </div>
-                    </div>
-
-                    
-
-<div class="input-group">
-                        <label class="input-label" for="term">
-                            Loan Term
-                            <span id="term-display" class="input-value-display">60 Months (5 Years)</span>
-                        </label>
-                        
-                        <input type="range" id="term" min="1" max="84" step="1" value="60" oninput="calculateLoan()">
-                        <div class="row" style="justify-content:space-between; font-size:12px; color:var(--muted)">
-                            <span>1 Month</span>
-                            <span>84 Months</span>
-                        </div>
-                    </div>
-                    
-                    
-
-<div class="input-group">
-                        <label class="input-label" for="rate">
-                            Estimated APR
-                            <span id="rate-display" class="input-value-display">15.00%</span>
-                        </label>
-                        
-                        <input type="range" id="rate" min="5" max="35.99" step="0.5" value="15" oninput="calculateLoan()">
-                        <div class="row" style="justify-content:space-between; font-size:12px; color:var(--muted)">
-                            <span>5.00%</span>
-                            <span>35.99%</span>
-                        </div>
-                    </div>
-                </div>
-
-                
-
-<div class="calc-output">
-                    <div>
-                        <div class="output-label">Estimated Monthly Payment</div>
-                        <p id="monthly-payment" class="output-value">$237.90</p>
-                    </div>
-                    <hr style="border:0; border-top:1px solid rgba(255,255,255,0.2)">
-                    
-                    
-
-<div class="row" style="justify-content:space-between; opacity:0.9; font-size: 15px;">
-                        <span>Total Payment:</span>
-                        <span id="total-payment" style="font-weight:700;">$14,274.00</span>
-                    </div>
-
-                    
-
-<div class="row" style="justify-content:space-between; opacity:0.9; font-size: 15px;">
-                        <span>Total Interest Paid:</span>
-                        <span id="total-interest" style="font-weight:700;">$4,274.00</span>
-                    </div>
-                    <div class="sub" style="color: white; opacity: 0.9;">
-                        <p>Results are illustrative and do not represent a final loan offer. Your actual rate and payment will depend on your profile and chosen lender.</p>
-                    </div>
-                    <a class="btn btn-cta" href="#offers">See Real Offers Now</a>
-                </div>
-            </div>
-        </div>
-    </section>
-<!-- =========================
-       Section Find a Solution That Fits You
-  ========================== -->
-<section class="solution-section">
-  <div class="container">
-    <h2>Find a Solution That Fits You</h2>
-	<p class="sub-head"><center>Compare flexible plans from trusted partners - clear terms, no fees to check.</center></p>
-    <div class="solution-grid">
-      
-      <!-- CẶP 1: PERSONAL LOANS -->
-      <div class="solution-pair">
-        <figure class="solution-img-card">
-          <img
-            class="solution-photo"
-            src="https://raw.githubusercontent.com/tramtaichinh/loanfinderus/refs/heads/main/Banner_loanfinderus_box01.jpg"
-            alt="Personal loans load"
-            loading="lazy"
-          />
-        </figure>
-        <div class="solution-block detail">
-          <h3>Personal Loan Options</h3>
-          <p class="sub">
-            Explore offers from trusted partners with transparent terms and flexible payment plans. Compare before you decide - it’s free and secure.
-          </p>
-          <a class="btn btn-green" href="https://clearpmf.com/ql/suj71" target="_blank" rel="nofollow noopener">See Available Offers</a>
-        </div>
-      </div>
-
-      <!-- CẶP 2: FAST CASH ADVANCE -->
-      <div class="solution-pair">
-        <figure class="solution-img-card">
-          <img
-            class="solution-photo"
-            src="https://raw.githubusercontent.com/tramtaichinh/loanfinderus/refs/heads/main/Banner_Loanfinderus_02.jpg"
-            alt="Fast cash advance illustration"
-            loading="lazy"
-          />
-        </figure>
-        <div class="solution-block detail">
-          <h3>Flexible Financing Options</h3>
-          <p class="sub">
-            Cover one-time or time-sensitive costs responsibly. Review flexible programs and choose what fits your needs best.
-          </p>
-          <a class="btn btn-green" href="https://clearpmf.com/ql/pbwBcnAjv" target="_blank" rel="nofollow noopener"><center>Explore Offers</center></a>
-        </div>
-      </div>
-      <!-- CẶP 3: BAD CREDIT LOANS -->
-      <div class="solution-pair">
-        <figure class="solution-img-card">
-          <img
-            class="solution-photo"
-            src="https://raw.githubusercontent.com/tramtaichinh/loanfinderus/refs/heads/main/Banner_Loanfinderus_03.jpg"
-            alt="Bad credit loans illustration"
-            loading="lazy"
-          />
-        </figure>
-        <div class="solution-block detail">
-          <h3>Flexible Payment Plans</h3>
-          <p class="sub">
-            Find options that align with your goals and budget. Understand the terms clearly and select a plan that works for you.
-          </p>
-          <a class="btn btn-green" href="https://clearpmf.com/ql/KuaoG" target="_blank" rel="nofollow noopener">Check Available Offers</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-  <!-- How LoanFinderUS works -->
-    <section class="how" id="how">
-        <div class="container">
-            <h3>How LoanFinderUS works</h3>
-            <div class="how-grid">
-                <div class="step"><div class="n">1</div><b>Answer a few questions</b><br><span class="sub">Tell us your loan purpose and range so partners can estimate options.</span></div>
-                <div class="step"><div class="n">2</div><b>Match with licensed lenders</b><br><span class="sub">We route you to verified U.S. partners that may fit your needs.</span></div>
-                <div class="step"><div class="n">3</div><b>Compare, then apply directly</b><br><span class="sub">Review terms on the lender site and proceed if it makes sense.</span></div>
-            </div>
-        </div>
-    </section>
-
-<!-- =========================
-       Section compare offers
-  ========================== -->
-    <section class="compare" aria-label="comparison table" id="offers">
-        <div class="container">
-            <h3>Snapshot comparison (illustrative)</h3>
-            <div class="comparison-header">
-                <div>Top Lender</div>
-                <div>Loan amounts</div>
-                <div>APR</div>
-                <div>Loan term</div>
-                <div>Funding time</div>
-                <div>Best for</div>
-            </div>
-            <div class="comparison-cards">
-<div class="comparison-card">
-                    <div class="comparison-card-top-lender">
-                        <img src="https://best.creditloanexpert.com/_next/image?url=%2Flogo.png&w=640&q=75" alt="Credit loan expert" class="logo-img">
-                        <div>
-                            <span>Credit loan Expert</span>
-                        </div>
-                    </div>
-                    <div class="info-text">Up to $35,000</div>
-                    <div class="info-text">4.95% to 35.99%</div>
-                    <div class="info-text">3 - 84 Months</div>
-                    <div class="info-text">Typically 1-2 days</div>
-                    <div>
-                        <a class="btn-get-rate" href="https://clearpmf.com/ql/suj71" rel="nofollow noopener">See Your Options</a>
-                    </div>
-                </div>
-<div class="comparison-card">
-                    <div class="comparison-card-top-lender">
-                        <img src="https://raw.githubusercontent.com/tramtaichinh/loanfinderus/refs/heads/main/Checkdraw.png" alt="LendingTree logo" class="logo-img">
-                        <div>
-                            <span>CheckDraw Finance</span>
-                        </div>
-                    </div>
-                    <div class="info-text">Up to $35,000</div>
-                    <div class="info-text">4.95% to 35.95%</div>
-                    <div class="info-text">3 - 84 Months</div>
-                    <div class="info-text">As soon as 1-2 days</div>
-                    <div>
-                        <a class="btn-get-rate" href="https://clearpmf.com/ql/pbwBcnAjv" target="_blank" rel="nofollow noopener"">See Your Options</a>
-                    </div>
-                </div>  
-<div class="comparison-card">
-                    <div class="comparison-card-top-lender">
-                        <img src="https://seekerloans.com/assets/logo-C2F6fihU.svg" alt="CashAdvance.com logo" class="logo-img">
-                        <div>
-                            <span>Seeker loans</span>
-                        </div>
-                    </div>
-                    <div class="info-text">Up to $30,000</div>
-                   <div class="info-text">4.95% to 35.95%</div>
-                    <div class="info-text">3 - 84 Months</div>
-                    <div class="info-text">Fast decision, quick deposit</div>
-                    <div>
-                        <a class="btn-get-rate" href="https://clearpmf.com/ql/KuaoG" target="_blank" rel="nofollow noopener">See Your Options</a>
-                    </div>
-                </div>				
-<div class="comparison-card">
-                    <div class="comparison-card-top-lender">
-                        <img src="https://hanfincal.com/wp-content/uploads/2025/08/logo-1.webp" alt="Best Hanfincal" class="logo-img">
-                        <div>
-                            <span>Best Hanfincal LD</span>
-                        </div>
-                    </div>
-                    <div class="info-text">Up to $50,000</div>
-                    <div class="info-text">5.99% to 35.99%</div>
-                    <div class="info-text">3 - 72 Months</div>
-                    <div class="info-text">Often next business day</div>
-                    <div>
-                        <a class="btn-get-rate" href="https://clearpmf.com/ql/V8ay1DYM" target="_blank" rel="nofollow noopener"">See Your Options</a>
-                    </div>
-                </div>
-
-                
-
-<div class="comparison-card">
-                    <div class="comparison-card-top-lender">
-                        <img src="https://loan.hanfincal.com/apply/assets/logo-D5U692mO.png" alt="Hanfincal Lending" class="logo-img">
-                        <div>
-                            <span>Hanfincal Lending</span>
-                        </div>
-                    </div>
-                    <div class="info-text">Up to $30,000</div>
-                    <div class="info-text">4.55% to 35.95%</div>
-                    <div class="info-text">3 - 84 Months</div>
-                    <div class="info-text">Usually within 48h</div>
-                    <div>
-                        <a class="btn-get-rate" href="https://clearpmf.com/ql/Ognqr9" rel="nofollow noopener">See Your Options</a>
-                    </div>
-                </div>
-<div class="comparison-card">
-                    <div class="comparison-card-top-lender">
-                        <img src="https://apply.trustedonlineloans.com/assets/logo-BScK9-MQ.svg" alt="PersonalLoans.com logo" class="logo-img">
-                        <div>
-                            <span>Trusted Online Loans</span>
-                        </div>
-                    </div>
-                    <div class="info-text">Up to $100,000</div>
-                    <div class="info-text">4.95% to 35.95%</div>
-                    <div class="info-text">3 - 84 Months</div>
-                    <div class="info-text">Fast review process</div>
-                    <div>
-                        <a class="btn-get-rate" href="https://clearpmf.com/ql/Gmwhy" target="_blank" rel="nofollow noopener">See Your Options</a>
-                    </div>
-                </div>
-            </div>
-            <p class="sub" style="margin-top:10px; text-align: center;">Data is illustrative and may change. We are not a lender and this is not a loan offer. 
-  Limits, APR and timing vary by state, lender and profile.</p>
-        </div>
-    </section>
-<section class="why">
-        <div class="container">
-            <h3> 💼 Why people choose LoanFinderUS</h3>
-            <p class="why-subheader">We make comparing loan options easy, transparent, and safe - in minutes.</p>
-            <div class="why-grid">
-                
-                <div class="why-item">
-                    <div class="why-item-title"><span aria-hidden="true">✅</span> Verified U.S. Lenders</div>
-                    <div class="sub">We only work with licensed and trusted lending partners who follow federal and state regulations - so you can explore options confidently.</div>
-                </div>
-                
-                <div class="why-item">
-                    <div class="why-item-title"><span aria-hidden="true">🔍</span> Transparent from the Start</div>
-                    <div class="sub">All key details-including APR ranges, terms, and fees-are shown clearly before you make a decision. No surprises.</div>
-                </div>
-                
-                <div class="why-item">
-                    <div class="why-item-title"><span aria-hidden="true">💸</span> 100% Free to Use</div>
-                    <div class="sub">You’ll never pay to check or compare offers. LoanFinderUS is completely free for you - always.</div>
-                </div>
-                
-                <div class="why-item">
-                    <div class="why-item-title"><span aria-hidden="true">⚡</span> Simple, Secure, and Mobile-Friendly</div>
-                    <div class="sub">Get matched in minutes and start your loan request anytime, on any device - safely and securely.</div>
-                </div>
-                
-            </div>
-        </div>
-    </section>
-    <section class="faq-section" id="faq">
-        <div class="container">
-            <h2>FAQ - Common Questions</h2>
-            <div>
-			                <details class="faq-item">
-                    <summary>Is LoanFinderUS a lender or a financial advisor?</summary>
-                    <p class="sub">No. LoanFinderUS is not a lender, financial institution, or financial advisor. We are a free comparison service that helps you explore and compare loan options from our trusted lending partners. We do not make credit decisions or loan offers.</p>
-                </details>
-			                <details class="faq-item">
-                    <summary>Will checking my loan options affect my credit score?</summary>
-                    <p class="sub">No. Most of our partner lenders only perform a soft credit inquiry to show you available rates. This type of check does not impact your credit score. If you proceed with a full application, a lender may perform a hard inquiry..</p>
-                </details>
-
-                <details class="faq-item">
-                    <summary>What is an Annual Percentage Rate (APR)?</summary>
-                    <p class="sub">The APR represents the total yearly cost of your loan, including the interest rate and fees (such as origination fees). It helps you understand the true cost of borrowing and compare offers more easily.</p>
-                </details>
-<details class="faq-item">
-                    <summary>How soon can I receive funds?</summary>
-                    <p class="sub">Funding times vary by the lender and their verification process. Once approved, some borrowers may receive funds as soon as the next business day, depending on the lender’s policies and your bank’s processing time.</p>
-                </details>
-				<details class="faq-item">
-                    <summary>How does my credit score affect my loan options?</summary>
-                    <p class="sub">Your credit score helps lenders determine your rates and terms. While some lenders work with lower credit scores, higher scores often qualify you for better terms and lower rates.</p>
-                </details>
-            </div>
-        </div>
-    </section>
-
     
-<section class="start-journey">
-  <div class="container">
-    <h2>Compare Safe and Flexible Loan Options</h2>
-    <p class="sub start-copy" style="color: white; opacity: 0.9;">
-      <center>Check eligibility with no fees and no Checking options here won’t affect your credit score; lenders may run their own checks if you proceed. Simple, transparent, and secure.</center>
-    </p>
-    <a class="btn" href="https://clearpmf.com/ql/pbwBcnAjv" target="_blank" rel="nofollow noopener" >See Your Options</a>
-  </div>
-</section>
-<footer class="lf-footer">
-  <div class="lf-wrap">
-    <!-- top row: logo + menu -->
-    <div class="lf-top">
-      <div class="lf-brand">
-        <img src="https://raw.githubusercontent.com/tramtaichinh/loanfinderus/refs/heads/main/Logo_LoanFinderUS_NoBG.png" alt="LoanFinderUS" />
-      </div>
-
-      <nav class="lf-menu" aria-label="Footer menu">
-        <a href="#">HOME</a>
-        <a href="#">ABOUT</a>
-        <a href="#">BLOG</a>
-        <a href="#">PRIVACY POLICY</a>
-        <a href="#">TERMS OF USE</a>
-        <a href="#">DISCLAIMER</a>
-        <a href="#">CONTACT</a>
-      </nav>
+    <!-- Top Sticky Alert Banner --><div class="top-sticky-banner bg-red-500 text-white text-center p-2 font-bold z-50 sticky top-0">
+        ⚠️ Attention Gig Workers: Don't miss out on comparing holiday spending options! Powered by LoanFinderUS ⚠️
     </div>
 
-    <!-- SOCIAL ROW (vị trí khung đỏ) -->
-<div class="lf-social">
-  <a href="https://facebook.com/LoanFinderUS" target="_blank" rel="nofollow noopener" aria-label="Facebook"><img src="https://raw.githubusercontent.com/tramtaichinh/loanfinderus/refs/heads/main/fb_facebook_facebook%20logo_icon.png" alt="Facebook" ></a>
-  <a href="https://youtube.com/company/loanfinderus" target="_blank" rel="nofollow noopener" aria-label="Youtube"><img src="https://raw.githubusercontent.com/tramtaichinh/loanfinderus/refs/heads/main/youtube_logo_icon.png" alt="Youtube"></a>
-  <a href="https://tiktok.com/@LoanFinderUS" target="_blank" rel="nofollow noopener" aria-label="TikTok"><img src="https://raw.githubusercontent.com/tramtaichinh/loanfinderus/refs/heads/main/tiktok_icon.png" alt="TikTok"> </a>
-  <a href="https://pinterest.com/LoanFinderUS" target="_blank" rel="nofollow noopener" aria-label="Pinterest"><img src="https://raw.githubusercontent.com/tramtaichinh/loanfinderus/refs/heads/main/pinterest_icon.png" alt="Pinterest"></a>
-  <a href="https://twitter.com/LoanFinderUS" target="_blank" rel="nofollow noopener" aria-label="Twitter"><img src="https://raw.githubusercontent.com/tramtaichinh/loanfinderus/refs/heads/main/twitter%20logo_icon.png" alt="Twitter"></a>
-  <a href="https://instagram.com/LoanFinderUS" target="_blank" rel="nofollow noopener" aria-label="Instagram"> <img src="https://raw.githubusercontent.com/tramtaichinh/loanfinderus/refs/heads/main/instagram%20logo_icon.png" alt="Instagram"></a>
-  <a href="https://linkedin.com/company/loanfinderus" target="_blank" rel="nofollow noopener" aria-label="LinkedIn"><img src="https://raw.githubusercontent.com/tramtaichinh/loanfinderus/refs/heads/main/linkedin%20logo_icon.png" alt="LinkedIn"></a>
-  <a href="https://www.reddit.com/r/FinanceReliefUS/" target="_blank" rel="nofollow noopener" aria-label="Reddit"><img src="https://raw.githubusercontent.com/tramtaichinh/loanfinderus/refs/heads/main/reddit_icon.png" alt="Reddit"></a>
-  <a href="https://loanfinderus.substack.com" target="_blank" rel="nofollow noopener" aria-label="Substack"><img src="https://raw.githubusercontent.com/tramtaichinh/loanfinderus/refs/heads/main/substack_icon.png" alt="Substack"></a>
-  <a href="https://www.tumblr.com/loanfinderus" target="_blank" rel="nofollow noopener" aria-label="Tumblr"><img src="https://raw.githubusercontent.com/tramtaichinh/loanfinderus/refs/heads/main/tumblr_logo_icon.png" alt="Tumblr"></a>
-</div>
+    <header class="bg-white shadow-soft" id="header-section">
+        <!-- Banner for Header - Updated Gradient to Fintech Green/Teal --><div class="w-full h-16 bg-gradient-to-r from-emerald-500 to-teal-500 flex items-center justify-center text-white text-xl font-bold p-2 text-center">
+            <span class="text-sm sm:text-lg lg:text-xl">🎁 Holiday Price Helper: Smart Comparison for Gig Workers! (LoanFinderUS.com) 🎉</span>
+        </div>
+        
+        <div class="container text-center py-10"> <!-- Giảm padding-y --><!-- Badges --><p class="mb-4 space-x-2">
+                <span class="inline-block px-3 py-1 text-sm font-semibold rounded-full bg-emerald-100 text-emerald-800">LoanFinderUS Holiday Price Helper</span>
+                <span class="inline-block px-3 py-1 text-sm font-semibold rounded-full bg-green-100 text-green-800">Soft Credit Check Only</span>
+            </p>
+            <!-- Hero Headline --><h1 class="text-3xl sm:text-4xl font-extrabold mb-4 leading-tight">
+                Secure Better Holiday Deals - Compare Options Before You Overspend
+            </h1>
+            <!-- Subline --><p class="text-lg text-muted mb-6 max-w-3xl mx-auto"> <!-- Giảm margin-bottom -->Weekly income fluctuates. Holiday spending is coming. Smart gig workers don't guess - they **pre-qualify and compare options** for smarter planning.
+            </p>
+            <!-- Primary CTA - Calls the new modal (Uses new primary color) --><a href="#" class="btn btn-primary btn-large mx-auto" onclick="showPurposeModal(); return false;">See My Potential Options →</a>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <!-- Trust Section --><section class="py-8 mb-6"> <!-- Giảm padding-y và margin-bottom --><h2 class="text-center font-bold text-3xl mb-8">A Smarter Way to Prepare for Seasonal Spending</h2> <!-- Giảm margin-bottom --><div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+                <!-- Trust Item 1 --><div class="p-4 sm:p-6 bg-white rounded-xl shadow-soft border-line text-center">
+                    <div class="mb-2 text-xl text-teal-500">
+                        <!-- Icon: Comparison - Updated Color --><svg class="w-7 h-7 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path></svg>
+                    </div>
+                    <h3 class="font-bold text-base sm:text-lg">Pre-Comparison</h3>
+                    <p class="text-muted text-xs sm:text-sm mt-1 sm:mt-2">We provide educational tools to compare potential financial options from LoanFinderUS partners, putting you in control.</p>
+                </div>
+                <!-- Trust Item 2 - TEXT UPDATED HERE --><div class="p-4 sm:p-6 bg-white rounded-xl shadow-soft border-line text-center">
+                    <div class="mb-2 text-xl text-emerald-500">
+                        <!-- Icon: Soft Check - Updated Color --><svg class="w-7 h-7 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="font-bold text-base sm:text-lg">Credit-Friendly Comparison</h3>
+                    <p class="text-muted text-xs sm:text-sm mt-1 sm:mt-2">Preliminary comparison uses a soft credit pull and does not impact your score.</p>
+                </div>
+                 <!-- Trust Item 3 --><div class="p-4 sm:p-6 bg-white rounded-xl shadow-soft border-line text-center">
+                    <div class="mb-2 text-xl text-indigo-500">
+                        <!-- Icon: Flexibility --><svg class="w-7 h-7 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8V9a1 1 0 00-1-1h-4a1 1 0 00-1 1v6a1 1 0 001 1h4a1 1 0 001-1v-1"></path></svg>
+                    </div>
+                    <h3 class="font-bold text-base sm:text-lg">Flexible Options</h3>
+                    <p class="text-muted text-xs sm:text-sm mt-1 sm:mt-2">Many partners work with various income types, including 1099 and gig income.</p>
+                </div>
+                 <!-- Trust Item 4 --><div class="p-4 sm:p-6 bg-white rounded-xl shadow-soft border-line text-center">
+                    <div class="mb-2 text-xl text-yellow-500">
+                        <!-- Icon: Location --><svg class="w-7 h-7 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                    </div>
+                    <h3 class="font-bold text-base sm:text-lg">Availability Notice</h3>
+                    <p class="text-muted text-xs sm:text-sm mt-1 sm:mt-2">Partner availability and products offered vary based on your state of residence.</p>
+                </div>
+            </div>
+        </section>
 
 
+        <!-- Pre-Qualification Quiz Section --><section id="prequal" class="py-8">
+            <div class="p-4 sm:p-6 bg-white rounded-xl shadow-soft border-line">
+                <h2 class="text-center font-extrabold text-2xl sm:text-3xl mb-2">Comparison Tool: See Your Potential Path</h2>
+                <p class="text-center text-muted text-base sm:text-lg mb-6 sm:mb-8">Answer a few quick questions to compare options and plan smarter for the holiday season.</p>
+                
+                <form id="prequalForm">
+                    <div class="quiz-grid">
+                        
+                        <!-- Hidden Field for Purpose --><input type="hidden" id="qPurpose" name="qPurpose" required>
 
-    <!-- DISCLAIMER -->
-    <div class="lf-legal">
-    <div style="font-family: Inter, Arial, sans-serif; color: #333; line-height: 1.6; font-size: 15px;">
-  <p><strong style="color:#F5B800;">Disclaimer:</strong> 
-    <span style="color:#C0392B;">LoanFinderUS</span> is 
-    <strong style="color:#F5B800;">not a lender</strong> and does not make credit decisions or loan offers. 
-    We are an independent online platform designed to help connect consumers with a network of participating lenders and financial service providers.
-  </p>
+                        <!-- Q1: State --><div class="form-group">
+                            <label for="qState" class="block mb-1 font-medium text-sm sm:text-base">1. State of Residence:</label>
+                            <select id="qState" name="qState" required class="w-full p-3 border border-gray-300 rounded-lg text-sm sm:text-base">
+                                <option value="" disabled selected>Select your state</option>
+                                <option value="CA">California (CA)</option>
+                                <option value="TX">Texas (TX)</option>
+                                <option value="FL">Florida (FL)</option>
+                                <option value="NY">New York (NY)</option>
+                                <option value="IL">Illinois (IL)</option>
+                                <option value="OH">Ohio (OH)</option>
+                                <option value="PA">Pennsylvania (PA)</option>
+                                <option value="GA">Georgia (GA)</option>
+                                <option value="MI">Michigan (MI)</option>
+                                <option value="NC">North Carolina (NC)</option>
+                                <option value="Other">Other State</option>
+                            </select>
+                        </div>
 
-  <p>
-    Submitting a request through <span style="color:#C0392B;">LoanFinderUS</span> does 
-    <strong style="color:#F5B800;">not guarantee approval</strong> or the amount you may qualify for. 
-    Loan terms, conditions, and availability vary depending on your 
-    <strong>credit profile</strong>, <strong>income</strong>, <strong>state regulations</strong>, 
-    and individual lender policies. Not all lenders are available in every state, and some products or offers 
-    may be limited or unavailable where prohibited by law.
-  </p>
+                        <!-- Q2: Monthly income range --><div class="form-group">
+                            <label for="qIncome" class="block mb-1 font-medium text-sm sm:text-base">2. Estimated Monthly Income Range:</label>
+                            <select id="qIncome" name="qIncome" required class="w-full p-3 border border-gray-300 rounded-lg text-sm sm:text-base">
+                                <option value="" disabled selected>Select range</option>
+                                <option value="Low">Under $1,500</option>
+                                <option value="Mid">$1,500 - $3,000</option>
+                                <option value="High">$3,001 - $5,000</option>
+                                <option value="VeryHigh">Over $5,000</option>
+                            </select>
+                        </div>
 
-  <p>
-    Lenders may perform credit checks with one or more of the major credit bureaus 
-    (<strong>Experian</strong>, <strong>Equifax</strong>, or <strong>TransUnion</strong>) 
-    or other sources to assess eligibility. Funding times will depend on the lender’s 
-    internal review process and your financial institution’s policies.
-  </p>
+                        <!-- Q3: Employment type --><div class="form-group">
+                            <label for="qEmployment" class="block mb-1 font-medium text-sm sm:text-base">3. Employment Type:</label>
+                            <select id="qEmployment" name="qEmployment" required class="w-full p-3 border border-gray-300 rounded-lg text-sm sm:text-base">
+                                <option value="" disabled selected>Select type</option>
+                                <option value="W2">W-2 Full-time/Part-time</option>
+                                <option value="Gig">1099/Gig Worker (Uber, DoorDash, etc.)</option>
+                                <option value="Self">Self-Employed/Business Owner</option>
+                                <option value="Unemployed">Unemployed / Other</option>
+                            </select>
+                        </div>
 
-  <p>
-    <span style="color:#C0392B;">LoanFinderUS</span> does <strong style="color:#F5B800;">not charge any fees</strong> 
-    for its services. We may receive compensation from lending partners or affiliates 
-    if you choose to engage with them. This compensation helps support the operation of our platform 
-    and <strong>does not affect</strong> how offers are presented to you.
-  </p>
+                        <!-- Q4: Active checking account? --><div class="form-group">
+                            <label for="qBank" class="block mb-1 font-medium text-sm sm:text-base">4. Active Checking Account?</label>
+                            <select id="qBank" name="qBank" required class="w-full p-3 border border-gray-300 rounded-lg text-sm sm:text-base">
+                                <option value="" disabled selected>Select yes/no</option>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                        </div>
 
-  <p>
-    <strong style="color:#F5B800;">Please borrow responsibly.</strong> 
-    Always review all loan terms carefully before agreeing to any offer, 
-    and contact your lender directly for specific details or clarifications.
-  </p>
+                        <!-- Q5: Estimated credit score --><div class="form-group">
+                            <label for="qCredit" class="block mb-1 font-medium text-sm sm:text-base">5. Estimated Credit Score:</label>
+                            <select id="qCredit" name="qCredit" required class="w-full p-3 border border-gray-300 rounded-lg text-sm sm:text-base">
+                                <option value="" disabled selected>Select estimate</option>
+                                <option value="Excellent">Excellent (740+)</option>
+                                <option value="Good">Good (670-739)</option>
+                                <option value="Fair">Fair (580-669)</option>
+                                <option value="Poor">Poor (Under 580)</option>
+                                <option value="NotSure">Not Sure / New Credit</option>
+                            </select>
+                        </div>
 
-  <p style="margin-top: 20px; border-top: 1px solid #eee; padding-top: 10px;">
-    <strong style="color:#C0392B;">Please remember:</strong> 
-    <em style="color:#333;">personal loans are not a long-term financial solution.</em> 
-    If you are experiencing <strong style="color:#F5B800;">significant financial hardship</strong>, 
-    consider seeking <strong>professional financial advice</strong> or speaking with 
-    a certified credit counselor for assistance.
-  </p>
-</div>
+                        <!-- Q6: Amount range --><div class="form-group">
+                            <label for="qAmount" class="block mb-1 font-medium text-sm sm:text-base">6. Estimated Comparison Need:</label>
+                            <select id="qAmount" name="qAmount" required class="w-full p-3 border border-gray-300 rounded-lg text-sm sm:text-base">
+                                <option value="" disabled selected>Select range</option>
+                                <option value="Small">Under $500</option>
+                                <option value="Mid1">$500 - $2,000</option>
+                                <option value="Mid2">$2,001 - $5,000</option>
+                                <option value="Large">$5,001 - $30,000</option>
+                            </select>
+                        </div>
 
-    <!-- COPYRIGHT -->
-    <div class="lf-copy">© 2025 LoanFinderUS. All rights reserved.</div>
-  </div>
+                        <!-- Q7: Timing --><div class="form-group">
+                            <label for="qTiming" class="block mb-1 font-medium text-sm sm:text-base">7. Urgency / Preferred Timing:</label>
+                            <select id="qTiming" name="qTiming" required class="w-full p-3 border border-gray-300 rounded-lg text-sm sm:text-base">
+                                <option value="" disabled selected>Select timeframe</option>
+                                <option value="Immediate">Within 24 Hours</option>
+                                <option value="3Days">Within 3 Days</option>
+                                <option value="7Days">Within 7 Days</option>
+                                <option value="NotUrgent">Not Urgent / Just Comparing</option>
+                            </select>
+                        </div>
+
+                        <!-- Q8: Bankruptcy last 2 years? --><div class="form-group">
+                            <label for="qBankruptcy" class="block mb-1 font-medium text-sm sm:text-base">8. Bankruptcy in the last 2 years?</label>
+                            <select id="qBankruptcy" name="qBankruptcy" required class="w-full p-3 border border-gray-300 rounded-lg text-sm sm:text-base">
+                                <option value="" disabled selected>Select yes/no</option>
+                                <option value="No">No</option>
+                                <option value="Yes">Yes</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="text-center mt-6">
+                        <!-- Button uses new primary color --><button type="submit" class="btn btn-primary">See Matching Results →</button>
+                    </div>
+
+                    <p class="text-xs text-muted text-center mt-4">
+                        *Educational tool only. Checking options here will not impact your credit score. Availability varies by state.
+                    </p>
+                </form>
+            </div>
+        </section>
+
+        <!-- Result Card (Hidden by Default) --><section id="resultCard" class="p-4 sm:p-6 rounded-xl shadow-soft border-line mt-8 hidden">
+            <h3 class="font-extrabold text-xl sm:text-2xl text-center mb-4">Recommended Path</h3>
+            <p id="resultSummary" class="text-base sm:text-lg text-center mb-6"></p>
+            
+            <div id="resultButtons" class="flex flex-col sm:flex-row justify-center gap-4">
+                <!-- Buttons - All use new green/teal theme --><a href="#" id="btnCPQL" class="btn bg-emerald-600 text-white hover:bg-emerald-700" style="display:none;">Continue to Prequalification Process →</a>
+                <a href="#" id="btnCPL" class="btn bg-teal-600 text-white hover:bg-teal-700" style="display:none;">Continue to Comparison Tool →</a>
+                <a href="#" id="btnREV" class="btn bg-slate-600 text-white hover:bg-slate-700" style="display:none;">Explore Educational Options</a>
+            </div>
+
+            <p class="text-xs text-muted text-center mt-4">
+                Approval is not guaranteed. Lending partners make their own assessment. A soft credit pull may be used and will not affect your score.
+            </p>
+        </section>
+
+ <!-- NEW FAQ SECTION -->
+<section id="faq-section" class="py-12">
+    <h2 class="text-center font-extrabold text-3xl sm:text-4xl mb-10">FAQ: Personal Loan Questions Answered</h2>
+    
+    <div class="bg-white rounded-xl shadow-soft border-line max-w-4xl mx-auto divide-y divide-gray-200">
+        
+        <!-- FAQ Item 1: Soft Credit Check -->
+        <div class="faq-item">
+            <button class="faq-question" data-target="answer-1">
+                1. Will the credit check affect my credit score?
+                <svg class="faq-arrow w-5 h-5 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            <div id="answer-1" class="faq-answer">
+                <p class="faq-answer-content">
+                    Most LoanFinderUS partners only perform a **soft credit pull** to pre-qualify your options. A soft pull **does NOT impact your credit score**. A hard pull (which can slightly reduce your score) only occurs if you choose a partner and submit a full loan application with them.
+                </p>
+            </div>
+        </div>
+
+        <!-- FAQ Item 2: Gig Worker/1099 Income -->
+        <div class="faq-item">
+            <button class="faq-question" data-target="answer-2">
+                2. I’m a Gig Worker / 1099 - can I be approved?
+                <svg class="faq-arrow w-5 h-5 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            <div id="answer-2" class="faq-answer">
+                <p class="faq-answer-content">
+                    Yes. Many of our partners specialize in borrowers with **non-traditional income** (1099, freelance, contractor). Instead of only looking at W-2, they may consider bank statements, tax returns, or other proof of income. Be accurate in your answers so you match with the right partner.
+                </p>
+            </div>
+        </div>
+
+        <!-- FAQ Item 3: Funding Speed -->
+        <div class="faq-item">
+            <button class="faq-question" data-target="answer-3">
+                3. How fast can I get the funds?
+                <svg class="faq-arrow w-5 h-5 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            <div id="answer-3" class="faq-answer">
+                <p class="faq-answer-content">
+                    Funding speed depends on the lender you choose. Many LoanFinderUS partners can finalize and deposit funds into your bank account within **1–2 business days** after final approval. Timing can vary depending on your bank’s processing hours.
+                </p>
+            </div>
+        </div>
+
+        <!-- FAQ Item 4: Loan Purpose (Holiday Spending) -->
+        <div class="faq-item">
+            <button class="faq-question" data-target="answer-4">
+                4. Can I use a personal loan for Holiday spending?
+                <svg class="faq-arrow w-5 h-5 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            <div id="answer-4" class="faq-answer">
+                <p class="faq-answer-content">
+                    Yes. Personal loans are typically **not restricted to a single use case**. You can use funds for gifts, travel, home needs, or even to consolidate high-APR credit card debt during the holidays.
+                </p>
+            </div>
+        </div>
+        
+        <!-- FAQ Item 5: APR Determination -->
+        <div class="faq-item">
+            <button class="faq-question" data-target="answer-5">
+                5. How is APR (Annual Percentage Rate) determined?
+                <svg class="faq-arrow w-5 h-5 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            <div id="answer-5" class="faq-answer">
+                <p class="faq-answer-content">
+                    The lender sets the APR after reviewing your full profile: credit score, income, debt history, requested loan amount, and more. The initial results shown on LoanFinderUS are estimates only. The best APRs are typically offered to borrowers with higher credit scores.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- END FAQ SECTION -->
+<section>
+    <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-md p-6">
+
+        <h2 class="font-extrabold text-xl sm:text-2xl mb-4 text-emerald-700 text-center">| Important Disclosures</h2>
+
+        <ul class="disclosures-list text-sm text-gray-700 space-y-2">
+            <li>
+                <span class="text-emerald-700 font-semibold">1)</span> <strong class="text-red-700">Not a lender:</strong> LoanFinderUS is a comparison & referral platform. We do not make credit decisions, fund loans, or set any loan terms. All final decisions are made by the individual lender.
+            </li>
+            <li>
+                <span class="text-emerald-700 font-semibold">2)</span> <strong class="text-red-700">Rates & terms vary:</strong> APRs and loan terms are determined by each lender based on your credit profile and financial situation. Typical APR ranges: <strong class="text-red-700">5.99%-35.99%</strong>. Typical loan terms: 3-60 months.
+            </li>
+            <li>
+                <span class="text-emerald-700 font-semibold">3)</span> <strong class="text-red-700">Credit impact:</strong> Using our pre-qualification tool results in a <strong class="text-blue-700">soft inquiry</strong>, which does <strong class="text-red-700">not affect your FICO score</strong>. If you continue with a lender and apply, the lender may perform a <strong class="text-red-700">hard inquiry</strong>.
+            </li>
+            <li>
+                <span class="text-emerald-700 font-semibold">4)</span> <strong class="text-red-700">Example:</strong> A $10,000 personal loan at 12.00% APR with a 36-month term has an estimated monthly payment of ~$332.14. Total repayment ~$11,957.04.
+            </li>
+            <li>
+                <span class="text-emerald-700 font-semibold">5)</span> <strong class="text-red-700">Accuracy:</strong> All rates, fees, and terms are subject to change. Always review the final details on the lender's site before accepting any offer.
+            </li>
+        </ul>
+
+        <p class="text-xs text-red-700 mt-4">* Loan availability and maximum amounts vary by state.</p>
+        <p class="text-xs text-blue-700 mt-2">** No SSN required to pre-qualify. Your information is encrypted and never sold.</p>
+
+    </div>
+</section>
+
+    </main>
+    <!-- Footer Disclosures - Removed to consolidate with Important Disclosures -->
+<footer class="mt-8 mb-4 px-4"> <!-- thêm px-4 cho mobile -->
+    <div class="container max-w-3xl mx-auto">
+        <p class="text-[11px] sm:text-xs leading-relaxed text-muted text-center">
+            <strong>LoanFinderUS</strong> is not a lender and does not make credit decisions. We provide educational content and connect users to third-party partners. Availability, terms, and interest rates are determined by the partners and vary by state. By clicking the links, you will be subject to the partner's terms and privacy policies.
+        </p>
+    </div>
 </footer>
+    <!-- Loan Purpose Modal (The popup with the table) --><div id="loanPurposeModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal-dialog shadow-soft">
+            <button class="modal-close" id="closePurposeModalBtn" aria-label="Close dialog" onclick="hidePurposeModal()">×</button>
+            <div class="modal-header text-center">
+                <h4 id="modalTitle" class="m-0 font-extrabold text-2xl sm:text-3xl p-4 sm:p-6 bg-gray-50 border-b">Common Loan Purposes</h4>
+            </div>
+            <div class="modal-body p-0">
+                <table class="purpose-table">
+                    <thead>
+                        <tr>
+                            <th>Purpose Category</th>
+                            <th class="hidden sm:table-cell">Description</th>
+                            <th class="text-center">Check Options</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr onclick="selectPurpose('Debt Consolidation')">
+                            <td class="font-semibold">Debt Consolidation</td>
+                            <td class="text-sm text-muted hidden sm:table-cell">Combine multiple debts into a single, simpler payment.</td>
+                            <td class="text-center">
+                                <a href="#prequal" class="btn btn-yellow text-sm" onclick="selectPurpose('Debt Consolidation'); return false;">Select & Continue</a>
+                            </td>
+                        </tr>
+                        <tr onclick="selectPurpose('Home Improvement')">
+                            <td class="font-semibold">Home Improvement</td>
+                            <td class="text-sm text-muted hidden sm:table-cell">Finance a kitchen remodel, roof repair, or other home projects.</td>
+                            <td class="text-center">
+                                <a href="#prequal" class="btn btn-yellow text-sm" onclick="selectPurpose('Home Improvement'); return false;">Select & Continue</a>
+                            </td>
+                        </tr>
+                        <tr onclick="selectPurpose('Major Personal Expense')">
+                            <td class="font-semibold">Major Personal Expense</td>
+                            <td class="text-sm text-muted hidden sm:table-cell">Cover costs for a wedding, moving, or other large life events.</td>
+                            <td class="text-center">
+                                <a href="#prequal" class="btn btn-yellow text-sm" onclick="selectPurpose('Major Personal Expense'); return false;">Select & Continue</a>
+                            </td>
+                        </tr>
+                        <tr onclick="selectPurpose('Unexpected Costs')">
+                            <td class="font-semibold">Unexpected Costs</td>
+                            <td class="text-sm text-muted hidden sm:table-cell">Address emergency repairs or medical bills responsibly.</td>
+                            <td class="text-center">
+                                <a href="#prequal" class="btn btn-yellow text-sm" onclick="selectPurpose('Unexpected Costs'); return false;">Select & Continue</a>
+                            </td>
+                        </tr>
+                        <tr onclick="selectPurpose('Vehicle Financing')">
+                            <td class="font-semibold">Vehicle Financing</td>
+                            <td class="text-sm text-muted hidden sm:table-cell">Help with purchasing a car or covering major repair costs.</td>
+                            <td class="text-center">
+                                <a href="#prequal" class="btn btn-yellow text-sm" onclick="selectPurpose('Vehicle Financing'); return false;">Select & Continue</a>
+                            </td>
+                        </tr>
+                        <tr onclick="selectPurpose('Holiday Spending')">
+                             <td class="font-semibold">Holiday Spending</td>
+                             <td class="text-sm text-muted hidden sm:table-cell">Cover seasonal expenses, travel, or gifts without high-interest credit cards.</td>
+                             <td class="text-center">
+                                 <a href="#prequal" class="btn btn-yellow text-sm" onclick="selectPurpose('Holiday Spending'); return false;">Select & Continue</a>
+                             </td>
+                         </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="p-4 text-center text-xs text-muted border-t">
+                 Data is illustrative and may change. We are not a lender and this is not a loan offer. Limits, APR and timing vary by state, lender and profile.
+            </div>
+        </div>
+    </div>
+
+
     <script>
-        // Dynamic year
-        document.getElementById('y').textContent = new Date().getFullYear();
+        // ====================================================================
+        // JAVASCRIPT LOGIC
+        // ====================================================================
 
-        /**
-         * Calculates the monthly payment for a fixed-rate loan (Amortization Formula).
-         * M = P [ i(1 + i)^n / ((1 + i)^n - 1) ]
-         * @param {number} principal - The initial amount of the loan.
-         * @param {number} annualRate - The annual interest rate (e.g., 15 for 15%).
-         * @param {number} months - The total number of payments (loan term in months).
-         * @returns {number} The monthly payment amount.
-         */
-        function calculatePayment(principal, annualRate, months) {
-            if (annualRate <= 0) {
-                return principal / months;
-            }
-            const monthlyRate = (annualRate / 100) / 12; // Convert APR to monthly decimal rate
-            
-            if (months === 0) return principal; 
+        // --- 1. Partner Link Constants (REPLACE THESE LINKS) ---
+        // Vui lòng thay thế các placeholder này bằng các URL đối tác thực tế của LoanFinderUS.com
+        const LINK_CPL  = 'https://REPLACE_WITH_YOUR_CPL_LINK';
+        const LINK_CPQL = 'https://REPLACE_WITH_YOUR_CPQL_LINK';
+        const LINK_REV  = 'https://REPLACE_WITH_YOUR_REVSHARE_LINK';
 
-            const numerator = monthlyRate * Math.pow(1 + monthlyRate, months);
-            const denominator = Math.pow(1 + monthlyRate, months) - 1;
-            
-            if (denominator === 0) {
-                return principal / months;
-            }
-            
-            const monthlyPayment = principal * (numerator / denominator);
-            return monthlyPayment;
+        // --- 2. Element References ---
+        const form = document.getElementById('prequalForm');
+        const resultCard = document.getElementById('resultCard');
+        const resultSummary = document.getElementById('resultSummary');
+        const btnCPQL = document.getElementById('btnCPQL');
+        const btnCPL = document.getElementById('btnCPL');
+        const btnREV = document.getElementById('btnREV');
+        const purposeInput = document.getElementById('qPurpose');
+        const purposeModal = document.getElementById('loanPurposeModal');
+
+        // --- 3. Modal Logic ---
+        let isPurposeModalOpen = false;
+
+        window.showPurposeModal = function() {
+            if (isPurposeModalOpen) return;
+            purposeModal.classList.add('open');
+            isPurposeModalOpen = true;
         }
 
-        function formatCurrency(value) {
-            return new Intl.NumberFormat('en-US', {
-                style: 'currency',
-                currency: 'USD',
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2
-            }).format(value);
+        window.hidePurposeModal = function() {
+            purposeModal.classList.remove('open');
+            isPurposeModalOpen = false;
         }
         
-        /**
-         * Reads current slider values, calculates payment, and updates all text displays.
-         */
-        function calculateLoan() {
-            const amountInput = document.getElementById('amount');
-            const termInput = document.getElementById('term');
-            const rateInput = document.getElementById('rate');
-
-            let P = parseFloat(amountInput.value);
-            let R = parseFloat(rateInput.value);
-            const N = parseInt(termInput.value); 
-
-            // Update display values
-            document.getElementById('amount-display').textContent = formatCurrency(P).replace('.00', '');
+        window.selectPurpose = function(purpose) {
+            // 1. Set the hidden input value
+            purposeInput.value = purpose;
             
-            // --- UPDATED Term Display Logic ---
-            let termText = "";
-            if (N === 1) {
-                termText = "1 Month";
-            } else if (N % 12 === 0) {
-                const years = N / 12;
-                termText = `${N} Months (${years} Year${years > 1 ? 's' : ''})`;
-            } else {
-                termText = `${N} Months`;
-            }
-            document.getElementById('term-display').textContent = termText;
-           
-            document.getElementById('rate-display').textContent = `${R.toFixed(2)}%`;
-
-            const monthlyPayment = calculatePayment(P, R, N);
+            // 2. Hide the modal
+            hidePurposeModal();
             
-            let totalInterest = 0;
-            let totalCost = P; 
+            // 3. Scroll down to the quiz
+            document.getElementById('prequal').scrollIntoView({ behavior: 'smooth', block: 'start' });
 
-            if (monthlyPayment > 0 && isFinite(monthlyPayment)) {
-                totalCost = monthlyPayment * N;
-                totalInterest = totalCost - P;
-                document.getElementById('monthly-payment').textContent = formatCurrency(monthlyPayment);
-                document.getElementById('total-payment').textContent = formatCurrency(totalCost);
-            } else {
-                document.getElementById('monthly-payment').textContent = formatCurrency(P / N);
-                totalInterest = 0;
-                document.getElementById('total-payment').textContent = formatCurrency(P);
-            }
-            document.getElementById('total-interest').textContent = formatCurrency(totalInterest);
+            console.log("Selected Purpose:", purpose); 
         }
 
-        document.addEventListener('DOMContentLoaded', function() {
-            // Initial calculation when the page loads
-            calculateLoan();
-            
+        // Thêm sự kiện click cho các hàng (row) trong bảng
+        document.querySelectorAll('.purpose-table tbody tr').forEach(row => {
+            row.addEventListener('click', (e) => {
+                // Đảm bảo không kích hoạt khi click trực tiếp vào nút bên trong
+                if (e.target.tagName === 'A' || e.target.closest('.btn')) {
+                    return;
+                }
+                // Lấy mục đích từ thuộc tính onclick của hàng
+                const onclickAttr = row.getAttribute('onclick');
+                const match = onclickAttr.match(/selectPurpose\('(.*)'\)/);
+                if (match && match[1]) {
+                    selectPurpose(match[1]);
+                }
+            });
         });
+
+
+        // --- 4. Scoring and Bucketing Logic ---
+        function getScoreAndRoute(formData) {
+            let pts = 0;
+            let bucket = 'Thin-file';
+            let product = 'Financial Education & Planning Resources';
+            let route = LINK_REV;
+
+            // Scoring table 
+            const scores = {
+                qPurpose: { 
+                    'Debt Consolidation': 2, 'Home Improvement': 1, 'Major Personal Expense': 1, 
+                    'Unexpected Costs': 0, 'Vehicle Financing': 2, 'Holiday Spending': 1
+                },
+                qState: { 'CA': 0, 'NY': 0, 'IL': 0, 'TX': 1, 'FL': 1, 'Other': 2 }, 
+                qIncome: { 'Low': -1, 'Mid': 1, 'High': 2, 'VeryHigh': 3 },
+                qEmployment: { 'Unemployed': -2, 'Self': 1, 'Gig': 2, 'W2': 3 },
+                qBank: { 'No': 0, 'Yes': 3 },
+                qCredit: { 'Poor': -2, 'Fair': 0, 'NotSure': 1, 'Good': 2, 'Excellent': 4 },
+                qAmount: { 'Small': 0, 'Mid1': 1, 'Mid2': 2, 'Large': 0 }, 
+                qTiming: { 'Immediate': 0, '3Days': 0, '7Days': 1, 'NotUrgent': 2 },
+                qBankruptcy: { 'Yes': -5, 'No': 3 },
+            };
+
+            for (const key in formData) {
+                if (scores[key] && scores[key][formData[key]]) {
+                    pts += scores[key][formData[key]];
+                }
+            }
+
+            // Bucket Logic
+            if (pts >= 16) { 
+                bucket = 'Prime';
+                product = 'Flexible Installment Options';
+            } else if (pts >= 10) {
+                bucket = 'Near-Prime';
+                product = 'Revolving Credit or Installment Comparison';
+            } else if (pts >= 5) {
+                bucket = 'Subprime';
+                product = 'Custom Comparison Options';
+            } else {
+                bucket = 'Thin-file';
+                product = 'Financial Education & Planning Resources';
+            }
+
+            // Routing Logic (Priority)
+            const bankYes = formData.qBank === 'Yes';
+            const amountMid = formData.qAmount === 'Mid1' || formData.qAmount === 'Mid2';
+
+            if (bucket === 'Prime' || bucket === 'Near-Prime') {
+                route = LINK_CPQL; 
+            } else if (bucket === 'Subprime' && bankYes && amountMid) {
+                route = LINK_CPL; 
+            } else {
+                route = LINK_REV; 
+            }
+
+            return { pts, bucket, product, route };
+        }
+
+        // --- 5. Form Submission Handler ---
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Check if purpose is set
+            if (!purposeInput.value) {
+                // Instead of alert, show the modal again
+                showPurposeModal();
+                resultSummary.textContent = "Please select a loan purpose first before continuing the quiz.";
+                resultCard.classList.remove('hidden');
+                resultCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                return;
+            }
+
+            // 1. Collect Data
+            const formData = {};
+            const elements = form.querySelectorAll('select, input[type="hidden"]');
+            elements.forEach(field => {
+                formData[field.name] = field.value;
+            });
+
+            // 2. Score and Route
+            const { pts, bucket, product, route } = getScoreAndRoute(formData);
+            
+            // 3. Update Result Card (Text color updated)
+            resultSummary.innerHTML = `Based on your answers, you likely fit our ‘<strong class="text-emerald-500">${bucket}</strong>’ profile (Total Score: ${pts}). People in this profile often explore: <strong class="text-gray-800">${product}</strong>. Comparing options will not affect your credit score.`;
+            
+            // 4. Set Link URLs and Visibility
+            btnCPQL.style.display = 'none';
+            btnCPL.style.display = 'none';
+            btnREV.style.display = 'none';
+
+            if (route === LINK_CPQL) {
+                btnCPQL.href = route;
+                btnCPQL.style.display = 'block';
+            } else if (route === LINK_CPL) {
+                btnCPL.href = route;
+                btnCPL.style.display = 'block';
+            } else {
+                btnREV.href = route;
+                btnREV.style.display = 'block';
+            }
+
+            // 5. Display Card and Scroll
+            resultCard.classList.remove('hidden');
+            resultCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+        
+        // --- 6. Event Listeners for Modals ---
+        // Close modal on ESC key
+        document.addEventListener('keydown', function(e) {
+            if (isPurposeModalOpen && e.key === "Escape") {
+                hidePurposeModal();
+            }
+        });
+        
+        // Close modal when clicking outside
+        purposeModal.addEventListener('click', function(e) {
+            if (e.target === purposeModal) {
+                hidePurposeModal();
+            }
+        });
+        
+        // --- 7. FAQ Accordion Logic (NEW) ---
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const item = button.closest('.faq-item');
+                const answer = document.getElementById(button.dataset.target);
+                const isActive = item.classList.contains('active');
+
+                // Close all open answers
+                document.querySelectorAll('.faq-item.active').forEach(activeItem => {
+                    if (activeItem !== item) {
+                        activeItem.classList.remove('active');
+                    }
+                });
+
+                // Toggle the clicked answer
+                if (isActive) {
+                    item.classList.remove('active');
+                } else {
+                    item.classList.add('active');
+                }
+            });
+        });
+
     </script>
-	 <!-- =========================
-       STRUCTURED DATA / SCHEMA (AI Overview Friendly)
-       1) Organization
-  ========================== -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Organization",
-    "name":"LoanFinderUS",
-    "url":"https://www.loanfinderus.com",
-    "logo":"https://www.loanfinderus.com/assets/logo/logo-512.png",
-    "description":"LoanFinderUS helps consumers explore loan options responsibly. We are not a lender; we provide education, comparisons, and partner referrals.",
-    "sameAs":[
-      "https://www.linkedin.com/company/loanfinderus",
-      "https://twitter.com/LoanFinderUS",
-      "https://www.facebook.com/LoanFinderUS",
-      "https://www.youtube.com/@LoanFinderUS",
-      "https://www.instagram.com/LoanFinderUS",
-      "https://www.pinterest.com/LoanFinderUS",
-      "https://loanfinderus.substack.com"
-    ],
-    "contactPoint":[{
-      "@type":"ContactPoint",
-      "contactType":"customer support",
-      "email":"support@loanfinderus.com",
-      "availableLanguage":["en"]
-    }],
-    "foundingDate":"2025",
-    "brand":{
-      "@type":"Brand",
-      "name":"LoanFinderUS",
-      "logo":"https://www.loanfinderus.com/assets/logo/logo-512.png"
-    }
-  }
+	  <!-- 7) Pre-landing Permate) -->
+  <script id="p-lander-script">!function(e,t,r){var i=t.createElement("script"),n=t.scripts[0];i.defer=!0,i.src=r+(-1===r.indexOf("?")?"?":"&")+"time="+(new Date).getTime(),n.parentNode.insertBefore(i,n)}(window,document,"https://pmcdn1.com/l.js")
   </script>
-
-  <!-- 2) WebSite + SearchAction (cho sitelinks & AI Overview) -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"WebSite",
-    "url":"https://www.loanfinderus.com",
-    "name":"LoanFinderUS",
-    "potentialAction":{
-      "@type":"SearchAction",
-      "target":"https://www.loanfinderus.com/search?q={query}",
-      "query-input":"required name=query"
-    }
-  }
-  </script>
-
-  <!-- 3) WebPage (trang 1 page) + About/Mentions (tăng ngữ nghĩa) -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"WebPage",
-    "name":"LoanFinderUS — Smarter, Responsible Loan Decisions",
-    "url":"https://www.loanfinderus.com/",
-    "isPartOf":{"@type":"WebSite","url":"https://www.loanfinderus.com"},
-    "description":"Explore loan options and learn how borrowing works — we are not a lender. Transparent education and partner referrals.",
-    "about":[
-      {"@type":"Thing","name":"Personal loan","sameAs":"https://en.wikipedia.org/wiki/Personal_loan"},
-      {"@type":"Thing","name":"Credit education","sameAs":"https://en.wikipedia.org/wiki/Credit_score_in_the_United_States"}
-    ],
-    "mentions":[
-      {"@type":"Thing","name":"APR"},
-      {"@type":"Thing","name":"Debt consolidation"},
-      {"@type":"Thing","name":"State regulations"}
-    ]
-  }
-  </script>
-  <!-- 4) FAQPage nhỏ (AI Overview rất thích; chỉ 2-3 câu hỏi cốt lõi) -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"FAQPage",
-    "mainEntity":[
-      {
-        "@type":"Question",
-        "name":"Is LoanFinderUS a lender?",
-        "acceptedAnswer":{
-          "@type":"Answer",
-          "text":"No. LoanFinderUS is not a lender and does not make credit decisions. We provide education, comparisons, and partner referrals."
-        }
-      },
-      {
-        "@type":"Question",
-        "name":"What should I compare before applying for a loan?",
-        "acceptedAnswer":{
-          "@type":"Answer",
-          "text":"Compare APR, total costs (including fees), term length, eligibility, and state-specific rules. Apply only via official lender pages."
-        }
-      }
-    ]
-  }
-  </script>
-  <!-- 5) HowTo ngắn (nếu bạn giữ 1 quy trình ngay trên trang) -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"HowTo",
-    "name":"How to compare loan options responsibly",
-    "description":"A quick 5-step guide to researching loan options and avoiding predatory terms.",
-    "totalTime":"PT5M",
-    "estimatedCost":{"@type":"MonetaryAmount","currency":"USD","value":"0"},
-    "step":[
-      {"@type":"HowToStep","name":"Clarify your goal","text":"Personal loan, debt consolidation, or short-term need?"},
-      {"@type":"HowToStep","name":"Check credit & docs","text":"Review reports; prepare ID, income proof, bank statements."},
-      {"@type":"HowToStep","name":"Understand rules","text":"APR ranges, fees, and your state’s restrictions."},
-      {"@type":"HowToStep","name":"Compare responsibly","text":"Match amount, term, total cost; avoid predatory terms."},
-      {"@type":"HowToStep","name":"Apply officially","text":"Submit only on the lender’s official application page."}
-    ]
-  }
-  </script>
-  <!-- 6) BreadcrumbList cho 1 trang (Home) -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"BreadcrumbList",
-    "itemListElement":[
-      {"@type":"ListItem","position":1,"name":"Home","item":"https://www.loanfinderus.com/"}
-    ]
-  }
-  </script>
-  <!-- 7) Pre-landing Permate) -->
-  <script id="p-lander-script">!function(e,t,r){var i=t.createElement("script"),n=t.scripts[0];i.defer=!0,i.src=r+(-1===r.indexOf("?")?"?":"&")+"time="+(new Date).getTime(),n.parentNode.insertBefore(i,n)}(window,document,"https://pmcdn1.com/l.js")</script>
 </body>
 </html>
