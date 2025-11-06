@@ -1,961 +1,876 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <!-- Meta Tags cơ bản và Responsive Viewport --><meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LoanFinderUS: Holiday Price Helper • Financial Planning for Gig Workers</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <!-- PRIMARY SEO -->
+<title>Compare Personal Loan Offers | Check Estimated Rates in Minutes</title>
+<meta name="description" content="Compare personal loan options from participating providers — all in one place. 
+Reviewing estimated rates here will not impact your credit score. LoanFinderUS is not a lender.">
 
-    <!-- Favicon and Apple Touch Icon (Sử dụng URL giả định của brand) --><link rel="icon" href="https://www.loanfinderus.com/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="https://www.loanfinderus.com/apple-touch-icon.png">
+<!-- SEARCH INTENT KEYWORDS -->
+<meta name="keywords" content="personal loan comparison, loan offers, compare loan, online loan options, 
+credit score friendly, debt consolidation options, holiday loan options, emergency expense options, home project financing">
 
-    <!-- Meta Tags cho SEO -->
-	<meta name="description" content="LoanFinderUS.com Gig Worker Financial Helper: Compare potential holiday spending options using a soft credit check quiz. Plan smarter for seasonal expenses and avoid overspending.">
-    <meta name="keywords" content="LoanFinderUS, gig worker finance, holiday spending, loan comparison, soft credit check, personal finance, 1099 planning">
-    <meta name="author" content="LoanFinderUS.com">
-    <meta name="robots" content="index, follow">
-   <!-- =========================
-       FAVICONS & PWA
-       (ĐỔI đường dẫn thực tế)
- ========================== -->
-  <link rel="apple-touch-icon" sizes="180x180" href="https://raw.githubusercontent.com/tramtaichinh/loanfinderus/refs/heads/main/Logo_LoanFinderUS_NoBG.png"> <!-- TODO -->
-  <link rel="icon" type="image/png" sizes="32x32" href="https://raw.githubusercontent.com/tramtaichinh/loanfinderus/refs/heads/main/Logo_LoanFinderUS_NoBG.png"> <!-- TODO -->
-  <link rel="icon" type="image/png" sizes="16x16" href="https://raw.githubusercontent.com/tramtaichinh/loanfinderus/refs/heads/main/Logo_LoanFinderUS_NoBG.png"> <!-- TODO -->
-  <link rel="manifest" href="/assets/favicons/site.webmanifest"> <!-- TODO -->
-  <link rel="mask-icon" href="/assets/favicons/safari-pinned-tab.svg" color="#F5B800"> <!-- TODO -->
-  <meta name="msapplication-TileColor" content="#F5B800">
-  <meta name="msapplication-config" content="/assets/favicons/browserconfig.xml"> <!-- optional -->
-<!-- =========================
-       OPEN GRAPH (Facebook, LinkedIn…)
-       Ảnh đề xuất: 1200×630 hoặc 1200×628
-  ========================== -->
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="LoanFinderUS">
-  <meta property="og:title" content="LoanFinderUS | Holiday Price Helper: Compare Spending Options">
-  <meta property="og:description" content="Gig Worker Financial Helper: Compare potential holiday spending options using a soft credit check quiz. Plan smarter for seasonal expenses and avoid overspending.">
-  <meta property="og:url" content="https://www.loanfinderus.com/">
-  <meta property="og:image" content="https://raw.githubusercontent.com/tramtaichinh/loanfinderus/refs/heads/main/Banner_loanfinderus_box01.jpg"> <!-- TODO -->
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <!-- =========================
-       TWITTER CARD
-       Ảnh đề xuất: 1200×630
-  ========================== -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="@LoanFinderUS">
-  <meta name="twitter:title" content="LoanFinderUS — Smarter, Responsible Loan Decisions">
-  <meta name="twitter:description" content="Gig Worker Financial Helper: Compare potential holiday spending options using a soft credit check quiz. Plan smarter for seasonal expenses and avoid overspending.">
-  <meta name="twitter:image" content="https://raw.githubusercontent.com/tramtaichinh/loanfinderus/refs/heads/main/Banner_loanfinderus_box01.jpg"> <!-- TODO -->
-<!-- =========================
-       HREFLANG (nếu chỉ English US)
-========================== -->
-  <link rel="alternate" href="https://www.loanfinderus.com/" hreflang="en-us">
-  <link rel="alternate" href="https://www.loanfinderus.com/" hreflang="x-default">
-<!-- =========================
-       PRECONNECT (tối ưu tốc độ, optional)
-  ========================== -->
-  <link rel="preconnect" href="https://www.youtube.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>	
-	<!-- Cần thay thế bằng URL ảnh thực tế của thương hiệu -->
-	<!-- JSON-LD Schema cho Website -->
-	<script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "LoanFinderUS.com • Holiday Price Helper",
-      "url": "https://www.loanfinderus.com/holiday-helper",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": {
-          "@type": "EntryPoint",
-          "urlTemplate": "https://www.loanfinderus.com/search?q={search_term_string}"
-        },
-        "query-input": "required name=search_term_string"
-      }
+<!-- CANONICAL -->
+<link rel="canonical" href="https://loanfinderus.com/">
+
+<!-- BRAND -->
+<meta name="application-name" content="LoanFinderUS">
+<meta name="theme-color" content="#1E3A8A">
+
+<!-- ROBOTS -->
+<meta name="robots" content="index, follow">
+<meta name="googlebot" content="index, follow">
+
+<!-- AUTHOR -->
+<meta name="author" content="LoanFinderUS">
+
+<!-- OPEN GRAPH (FB / IG / Messenger / LinkedIn) -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://loanfinderus.com/">
+<meta property="og:title" content="Compare Personal Loan Options in One Place">
+<meta property="og:description" content="Check estimated rates in minutes from multiple providers. LoanFinderUS is noSt a lender — we provide comparison tools & referral links only.">
+<meta property="og:image" content="https://assets.mountaincu.org/img/www/main/promotions/loans/other/holiday-loan/twitter-summary-large_1759291202.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<!-- TWITTER CARD -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Compare Personal Loan Options in One Place">
+<meta name="twitter:description" content="See potential offers from participating providers. Checking here doesn’t impact your credit score.">
+<meta name="twitter:image" content="https://assets.mountaincu.org/img/www/main/promotions/loans/other/holiday-loan/twitter-summary-large_1759291202.png">
+
+<!-- ICONS -->
+<!-- Inline SVG Favicon -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50,10A40,40,0,1,1,10,50,40,40,0,0,1,50,10M50,2.5A47.5,47.5,0,1,0,97.5,50,47.5,47.5,0,0,0,50,2.5Z' fill='%230048E6'/%3E%3Cpath d='M50,20a30,30,0,1,1-30,30A30,30,0,0,1,50,20m0-7.5a37.5,37.5,0,1,0,37.5,37.5A37.5,37.5,0,0,0,50,12.5Z' fill='%230048E6'/%3E%3Ctext x='50' y='65' font-size='40' font-family='Arial, sans-serif' fill='%230048E6' text-anchor='middle' font-weight='bold'%3E$%3C/text%3E%3C/svg%3E">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="shortcut icon" href="/assets/favicon.ico">
+<link rel="manifest" href="/manifest.json">
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Inter font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/>
+
+  <style>
+    :root { font-family: 'Inter', sans-serif; }
+    .page-content { max-width:1200px; margin:0 auto; }
+    .text-green-cta{color:#10B981}.bg-green-cta{background:#10B981}
+    .text-blue-offer{color:#2563EB}.bg-blue-offer{background:#2563EB}
+    .text-yellow-offer{color:#FBBF24}.bg-yellow-offer{background:#FBBF24}
+    .text-light-blue{color:#3b82f6}.text-dark-blue{color:#1e3a8a}
+
+    /* range track fill (using CSS var --track-fill set by JS) */
+    input[type="range"]{ -webkit-appearance:none; width:100%; height:8px; background:#e0e0e0; border-radius:5px; outline:none; }
+    input[type="range"]::-webkit-slider-runnable-track{height:8px;border-radius:5px;background:linear-gradient(to right,#10B981 var(--track-fill,0%),#e0e0e0 var(--track-fill,0%))}
+    input[type="range"]::-moz-range-track{height:8px;border-radius:5px;background:linear-gradient(to right,#10B981 var(--track-fill,0%),#e0e0e0 var(--track-fill,0%))}
+    input[type="range"]::-webkit-slider-thumb{ -webkit-appearance:none; height:20px;width:20px;border-radius:50%;background:#10B981;border:2px solid #fff;margin-top:-6px;box-shadow:0 0 4px rgba(0,0,0,.2)}
+    input[type="range"]:active::-webkit-slider-thumb{ transform:scale(1.1) }
+
+    /* ---------- Modal styles ---------- */
+    .modal-overlay{background:rgba(15,23,42,.5); transition:opacity .25s ease}
+    .modal-card{transform:translateY(10px); transition:transform .25s ease, opacity .25s ease}
+    .modal-open .modal-card{transform:translateY(0)}
+    .brand-blue{color:#1E3A8A}
+    .brand-green{background:#10B981}
+    .brand-green-text{color:#10B981}
+    .btn-cta{background:#10B981}
+    .btn-cta:hover{filter:brightness(0.95)}
+    .btn-pulse{animation:pulseGlow 2s infinite}
+    @keyframes pulseGlow{
+      0%{box-shadow:0 0 0 0 rgba(16,185,129,.5)}
+      70%{box-shadow:0 0 0 16px rgba(16,185,129,0)}
+      100%{box-shadow:0 0 0 0 rgba(16,185,129,0)}
     }
-    </script>
-
-    <!-- Tải Tailwind CSS --><script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        /* CSS Variables & Global Styles (Sử dụng CSS thuần để tùy biến) */
-        :root {
-            /* NEW FINTECH GREEN THEME */
-            --color-primary: #10b981; /* Emerald-500 */
-            --color-primary-hover: #059669; /* Emerald-600 */
-            
-            --color-ink: #1f2937; /* Gray-800 */
-            --color-muted: #6b7280; /* Gray-500 */
-            --color-line: #e5e7eb; /* Gray-200 */
-            --color-bg: #f9fafb; /* Gray-50 */
-            --color-yellow: #f59e0b; /* Amber-500 */
-            --color-yellow-hover: #d97706; /* Amber-600 */
-            --color-white: #ffffff;
-            --shadow-soft: 0 6px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
-            --radius-xl: 1rem;
-            --radius-lg: 0.5rem;
-            --font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
-        }
-
-        body {
-            font-family: var(--font-family);
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: var(--color-bg);
-            color: var(--color-ink);
-            overflow-x: hidden; /* Ngăn chặn cuộn ngang */
-        }
-
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 1.5rem 1rem;
-        }
-        
-        /* Cải tiến Responsive cho Grid và Form */
-        .quiz-grid {
-            display: grid;
-            grid-template-columns: repeat(1, 1fr);
-            gap: 1.5rem;
-        }
-
-        @media (min-width: 640px) {
-            .quiz-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 2rem;
-            }
-        }
-
-        /* Modal General Styles */
-        .modal-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.6);
-            backdrop-filter: blur(6px);
-            z-index: 2000; 
-            display: none;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            overflow-y: auto; /* Cho phép cuộn nếu nội dung modal dài */
-            padding: 20px 10px; /* Thêm padding cho mobile */
-        }
-
-        .modal-dialog {
-            background-color: var(--color-white);
-            max-width: 95vw;
-            width: 750px; /* Độ rộng cho bảng */
-            margin: 50px auto;
-            position: relative;
-            transform: scale(0.9);
-            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            animation: fadeIn 0.3s forwards;
-            overflow: hidden;
-            border-radius: var(--radius-xl);
-        }
-        
-        .modal-overlay.open {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 1;
-        }
-        /* Mobile: Căn giữa modal trên màn hình nhỏ */
-        @media (max-width: 639px) {
-             .modal-overlay.open {
-                align-items: flex-start; /* Cho phép modal bắt đầu từ phía trên để dễ xem nội dung dài */
-            }
-            .modal-dialog {
-                margin: 20px auto; /* Giảm margin trên mobile */
-            }
-            .modal-header h4 {
-                font-size: 1.5rem;
-            }
-        }
-
-        .modal-overlay.open .modal-dialog {
-            transform: scale(1);
-        }
-
-        .modal-close {
-            position: absolute;
-            top: 10px;
-            right: 15px;
-            background: none;
-            border: none;
-            font-size: 1.8rem;
-            color: var(--color-ink);
-            cursor: pointer;
-            line-height: 1;
-            z-index: 2010;
-        }
-        
-        /* --- Purpose Table Styles (Bảng Mục đích vay) --- */
-        .purpose-table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        .purpose-table thead {
-            background-color: var(--color-primary); /* Use new primary color */
-            color: var(--color-white);
-        }
-        .purpose-table th {
-            padding: 1rem 1.5rem;
-            text-align: left;
-            font-weight: 700;
-        }
-        .purpose-table td {
-            padding: 1rem 1.5rem;
-            border-bottom: 1px solid var(--color-line);
-            vertical-align: middle;
-            cursor: pointer; /* Cho biết hàng có thể click */
-        }
-        .purpose-table tbody tr:last-child td {
-            border-bottom: none;
-        }
-        .purpose-table tbody tr:hover {
-            background-color: #f3f4f6; /* Hover effect */
-        }
-        
-        /* Button Styling */
-        .btn {
-            display: inline-block;
-            padding: 0.9rem 2rem;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            text-decoration: none;
-            transition: all 0.2s;
-            text-align: center;
-            border: none;
-            border-radius: 0.5rem;
-            white-space: normal;
-        }
-        .btn-primary {
-            background-color: var(--color-primary); /* Use new primary color */
-            color: var(--color-white);
-            box-shadow: 0 4px 10px rgba(16, 185, 129, 0.4); /* Shadow adjusted for green */
-            width: 100%;
-            max-width: 450px;
-            margin: 0.5rem auto;
-            display: block;
-        }
-        .btn-primary:hover {
-            background-color: var(--color-primary-hover); /* Use new primary hover color */
-            box-shadow: 0 8px 15px rgba(16, 185, 129, 0.3);
-            transform: translateY(-1px);
-        }
-        .btn-yellow {
-            background-color: var(--color-yellow);
-            color: var(--color-ink);
-            font-weight: 700;
-            box-shadow: 0 2px 5px rgba(245, 158, 11, 0.4);
-            padding: 0.75rem 1.5rem;
-        }
-        .btn-yellow:hover {
-            background-color: var(--color-yellow-hover);
-        }
-
-        /* Mobile Specific Styles (Purpose Table) - Tối ưu cho màn hình nhỏ */
-        @media (max-width: 639px) {
-            /* Ẩn cột mô tả trên màn hình nhỏ */
-            .purpose-table th:nth-child(2), .purpose-table td:nth-child(2) {
-                display: none;
-            }
-            .purpose-table th:first-child, .purpose-table td:first-child {
-                width: 50%; /* Tăng không gian cho cột đầu */
-            }
-            .purpose-table th:last-child, .purpose-table td:last-child {
-                width: 50%; /* Tăng không gian cho nút */
-                text-align: center; /* Căn giữa nút */
-            }
-            .purpose-table td {
-                padding: 0.75rem 0.5rem; /* Giảm padding trên mobile */
-            }
-            .purpose-table .btn-yellow {
-                 padding: 0.5rem 0.7rem;
-                 font-size: 0.75rem;
-            }
-        }
-        
-        /* FAQ Accordion Styles */
-        .faq-item {
-            border-bottom: 1px solid var(--color-line);
-        }
-        .faq-question {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-            padding: 1.25rem 1rem;
-            font-weight: 600;
-            font-size: 1.125rem;
-            background: none;
-            border: none;
-            cursor: pointer;
-            text-align: left;
-        }
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease-out, padding 0.3s ease-out;
-            padding: 0 1rem;
-        }
-        .faq-answer-content {
-            padding-bottom: 1.25rem; /* Giảm padding để thu hẹp khoảng cách */
-            line-height: 1.75;
-            color: var(--color-muted);
-        }
-        .faq-item.active .faq-answer {
-            max-height: 500px; /* Điều chỉnh giá trị này nếu nội dung câu trả lời dài hơn */
-            padding: 0 1rem 0.75rem 1rem; /* Giảm padding bottom */
-        }
-        .faq-arrow {
-            transition: transform 0.3s ease;
-        }
-        .faq-item.active .faq-arrow {
-            transform: rotate(180deg);
-        }
-
-        /* Important Disclosures Specific Styles */
-        .disclosures-section {
-            padding: 1.5rem 1rem;
-            background-color: var(--color-white);
-            border-radius: var(--radius-xl);
-            box-shadow: var(--shadow-soft);
-            margin-top: 2rem; /* Giảm khoảng cách từ section trước */
-            margin-bottom: 2rem; /* Giảm khoảng cách đến footer */
-        }
-
-        .disclosures-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            line-height: 1.5; /* Giảm giãn dòng */
-        }
-
-        .disclosures-list li {
-            margin-bottom: 0.75rem; /* Giảm khoảng cách giữa các mục */
-            padding-left: 1.5rem; /* Cho số thứ tự */
-            position: relative;
-        }
-
-        .disclosures-list li:last-child {
-            margin-bottom: 0;
-        }
-
-        .disclosures-list li span {
-            position: absolute;
-            left: 0;
-            top: 0;
-            font-weight: 700;
-            color: var(--color-primary); /* Use primary color for numbers */
-        }
-        
-        .disclosures-list p {
-            margin: 0.5rem 0; /* Giảm khoảng cách cho các đoạn p nhỏ */
-        }
-        
-    </style>
+    .no-scroll{overflow:hidden}
+	@keyframes pulseCTA {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.03); }
+  100% { transform: scale(1); }
+}
+/* auto zoom in - zoom out */
+.animate-cta {
+  animation: pulseCTA 1.4s ease-in-out infinite;
+}
+  </style>
 </head>
-<body>
-    
-    <!-- Top Sticky Alert Banner --><div class="top-sticky-banner bg-red-500 text-white text-center p-2 font-bold z-50 sticky top-0">
-        ⚠️ Attention Gig Workers: Don't miss out on comparing holiday spending options! Powered by LoanFinderUS ⚠️
-    </div>
+<body class="bg-gray-50 text-gray-800">
 
-    <header class="bg-white shadow-soft" id="header-section">
-        <!-- Banner for Header - Updated Gradient to Fintech Green/Teal --><div class="w-full h-16 bg-gradient-to-r from-emerald-500 to-teal-500 flex items-center justify-center text-white text-xl font-bold p-2 text-center">
-            <span class="text-sm sm:text-lg lg:text-xl">🎁 Holiday Price Helper: Smart Comparison for Gig Workers! (LoanFinderUS.com) 🎉</span>
-        </div>
-        
-        <div class="container text-center py-10"> <!-- Giảm padding-y --><!-- Badges --><p class="mb-4 space-x-2">
-                <span class="inline-block px-3 py-1 text-sm font-semibold rounded-full bg-emerald-100 text-emerald-800">LoanFinderUS Holiday Price Helper</span>
-                <span class="inline-block px-3 py-1 text-sm font-semibold rounded-full bg-green-100 text-green-800">Soft Credit Check Only</span>
-            </p>
-            <!-- Hero Headline --><h1 class="text-3xl sm:text-4xl font-extrabold mb-4 leading-tight">
-                Secure Better Holiday Deals - Compare Options Before You Overspend
-            </h1>
-            <!-- Subline --><p class="text-lg text-muted mb-6 max-w-3xl mx-auto"> <!-- Giảm margin-bottom -->Weekly income fluctuates. Holiday spending is coming. Smart gig workers don't guess - they **pre-qualify and compare options** for smarter planning.
-            </p>
-            <!-- Primary CTA - Calls the new modal (Uses new primary color) --><a href="#" class="btn btn-primary btn-large mx-auto" onclick="showPurposeModal(); return false;">See My Potential Options →</a>
-        </div>
+  <!-- Firebase init (giữ nguyên an toàn) -->
+  <script type="module">
+    const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
+    const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : {};
+    const initialAuthToken = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : null;
+
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+    import { getAuth, signInAnonymously, signInWithCustomToken, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+    import { getFirestore, setLogLevel } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+    try{
+      if(Object.keys(firebaseConfig).length>0){
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+        const auth = getAuth(app);
+        setLogLevel('Debug');
+        onAuthStateChanged(auth, async (user)=>{
+          if(!user){
+            try{ initialAuthToken ? await signInWithCustomToken(auth, initialAuthToken) : await signInAnonymously(auth); }
+            catch(e){ console.error('Firebase Sign-In Failed:', e); }
+          }
+        });
+      }else{
+        console.warn('Firebase config is empty. Firestore services will not be initialized.');
+      }
+    }catch(e){ console.error('Error initializing Firebase:', e); }
+  </script>
+
+  <!-- ============ LANDING ============ -->
+  <div id="landing-page" class="page-content pt-4 px-4 sm:px-6 lg:px-8">
+    <header class="flex justify-between items-center py-4 border-b border-gray-200 mb-8">
+      <div class="text-xl font-bold text-dark-blue">LoanFinderUS</div>
+      <button
+  onclick="location.href='#loan-offers'"
+  class="inline-flex items-center bg-green-cta text-white text-sm font-semibold px-5 py-2.5 rounded-full shadow-sm hover:brightness-110 transition">
+  Explore Offers
+</button>
     </header>
 
-    <main class="container">
-        
-        <!-- Trust Section --><section class="py-8 mb-6"> <!-- Giảm padding-y và margin-bottom --><h2 class="text-center font-bold text-3xl mb-8">A Smarter Way to Prepare for Seasonal Spending</h2> <!-- Giảm margin-bottom --><div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-                <!-- Trust Item 1 --><div class="p-4 sm:p-6 bg-white rounded-xl shadow-soft border-line text-center">
-                    <div class="mb-2 text-xl text-teal-500">
-                        <!-- Icon: Comparison - Updated Color --><svg class="w-7 h-7 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path></svg>
-                    </div>
-                    <h3 class="font-bold text-base sm:text-lg">Pre-Comparison</h3>
-                    <p class="text-muted text-xs sm:text-sm mt-1 sm:mt-2">We provide educational tools to compare potential financial options from LoanFinderUS partners, putting you in control.</p>
-                </div>
-                <!-- Trust Item 2 - TEXT UPDATED HERE --><div class="p-4 sm:p-6 bg-white rounded-xl shadow-soft border-line text-center">
-                    <div class="mb-2 text-xl text-emerald-500">
-                        <!-- Icon: Soft Check - Updated Color --><svg class="w-7 h-7 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                    </div>
-                    <h3 class="font-bold text-base sm:text-lg">Credit-Friendly Comparison</h3>
-                    <p class="text-muted text-xs sm:text-sm mt-1 sm:mt-2">Preliminary comparison uses a soft credit pull and does not impact your score.</p>
-                </div>
-                 <!-- Trust Item 3 --><div class="p-4 sm:p-6 bg-white rounded-xl shadow-soft border-line text-center">
-                    <div class="mb-2 text-xl text-indigo-500">
-                        <!-- Icon: Flexibility --><svg class="w-7 h-7 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8V9a1 1 0 00-1-1h-4a1 1 0 00-1 1v6a1 1 0 001 1h4a1 1 0 001-1v-1"></path></svg>
-                    </div>
-                    <h3 class="font-bold text-base sm:text-lg">Flexible Options</h3>
-                    <p class="text-muted text-xs sm:text-sm mt-1 sm:mt-2">Many partners work with various income types, including 1099 and gig income.</p>
-                </div>
-                 <!-- Trust Item 4 --><div class="p-4 sm:p-6 bg-white rounded-xl shadow-soft border-line text-center">
-                    <div class="mb-2 text-xl text-yellow-500">
-                        <!-- Icon: Location --><svg class="w-7 h-7 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                    </div>
-                    <h3 class="font-bold text-base sm:text-lg">Availability Notice</h3>
-                    <p class="text-muted text-xs sm:text-sm mt-1 sm:mt-2">Partner availability and products offered vary based on your state of residence.</p>
-                </div>
-            </div>
-        </section>
+    <main class="pb-12">
+      <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-start px-4 sm:px-6">
 
+        <!-- LEFT copy -->
+        <section class="text-left">
+         <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight text-[#1E3A8A]">
+  Compare Personal Loan Offers<br/>
+  and See Estimated Rates <span class="text-[#00A86B]">in Minutes</span>
+</h1>
+          <ul class="mt-6 space-y-4 text-gray-700">
+  <li class="flex items-start gap-3">
+    <svg class="mt-1 h-5 w-5 text-[#00A86B]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+    <span>Free to check your personalized rate options.</span>
+  </li>
+  <li class="flex items-start gap-3">
+    <svg class="mt-1 h-5 w-5 text-[#00A86B]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+    <span>Compare multiple providers in one organized place.</span>
+  </li>
+  <li class="flex items-start gap-3">
+    <svg class="mt-1 h-5 w-5 text-[#00A86B]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+    <span>Some lenders may provide faster decisions than others.</span>
+  </li>
+</ul>
+          <div class="mt-6 bg-[#E9F7F0] text-gray-800 rounded-xl border border-[#00A86B]/25 shadow-sm p-4">
+  <p class="text-xs font-semibold uppercase tracking-wide text-[#1E3A8A] text-center">
+    TRUSTED BY 50,000+ AMERICANS
+  </p>
 
-        <!-- Pre-Qualification Quiz Section --><section id="prequal" class="py-8">
-            <div class="p-4 sm:p-6 bg-white rounded-xl shadow-soft border-line">
-                <h2 class="text-center font-extrabold text-2xl sm:text-3xl mb-2">Comparison Tool: See Your Potential Path</h2>
-                <p class="text-center text-muted text-base sm:text-lg mb-6 sm:mb-8">Answer a few quick questions to compare options and plan smarter for the holiday season.</p>
-                
-                <form id="prequalForm">
-                    <div class="quiz-grid">
-                        
-                        <!-- Hidden Field for Purpose --><input type="hidden" id="qPurpose" name="qPurpose" required>
+  <!-- Mobile: stack // Desktop: inline -->
+  <div class="mt-3 flex flex-col sm:flex-row sm:items-center sm:justify-center sm:gap-6 text-sm gap-3">
 
-                        <!-- Q1: State --><div class="form-group">
-                            <label for="qState" class="block mb-1 font-medium text-sm sm:text-base">1. State of Residence:</label>
-                            <select id="qState" name="qState" required class="w-full p-3 border border-gray-300 rounded-lg text-sm sm:text-base">
-                                <option value="" disabled selected>Select your state</option>
-                                <option value="CA">California (CA)</option>
-                                <option value="TX">Texas (TX)</option>
-                                <option value="FL">Florida (FL)</option>
-                                <option value="NY">New York (NY)</option>
-                                <option value="IL">Illinois (IL)</option>
-                                <option value="OH">Ohio (OH)</option>
-                                <option value="PA">Pennsylvania (PA)</option>
-                                <option value="GA">Georgia (GA)</option>
-                                <option value="MI">Michigan (MI)</option>
-                                <option value="NC">North Carolina (NC)</option>
-                                <option value="Other">Other State</option>
-                            </select>
-                        </div>
-
-                        <!-- Q2: Monthly income range --><div class="form-group">
-                            <label for="qIncome" class="block mb-1 font-medium text-sm sm:text-base">2. Estimated Monthly Income Range:</label>
-                            <select id="qIncome" name="qIncome" required class="w-full p-3 border border-gray-300 rounded-lg text-sm sm:text-base">
-                                <option value="" disabled selected>Select range</option>
-                                <option value="Low">Under $1,500</option>
-                                <option value="Mid">$1,500 - $3,000</option>
-                                <option value="High">$3,001 - $5,000</option>
-                                <option value="VeryHigh">Over $5,000</option>
-                            </select>
-                        </div>
-
-                        <!-- Q3: Employment type --><div class="form-group">
-                            <label for="qEmployment" class="block mb-1 font-medium text-sm sm:text-base">3. Employment Type:</label>
-                            <select id="qEmployment" name="qEmployment" required class="w-full p-3 border border-gray-300 rounded-lg text-sm sm:text-base">
-                                <option value="" disabled selected>Select type</option>
-                                <option value="W2">W-2 Full-time/Part-time</option>
-                                <option value="Gig">1099/Gig Worker (Uber, DoorDash, etc.)</option>
-                                <option value="Self">Self-Employed/Business Owner</option>
-                                <option value="Unemployed">Unemployed / Other</option>
-                            </select>
-                        </div>
-
-                        <!-- Q4: Active checking account? --><div class="form-group">
-                            <label for="qBank" class="block mb-1 font-medium text-sm sm:text-base">4. Active Checking Account?</label>
-                            <select id="qBank" name="qBank" required class="w-full p-3 border border-gray-300 rounded-lg text-sm sm:text-base">
-                                <option value="" disabled selected>Select yes/no</option>
-                                <option value="Yes">Yes</option>
-                                <option value="No">No</option>
-                            </select>
-                        </div>
-
-                        <!-- Q5: Estimated credit score --><div class="form-group">
-                            <label for="qCredit" class="block mb-1 font-medium text-sm sm:text-base">5. Estimated Credit Score:</label>
-                            <select id="qCredit" name="qCredit" required class="w-full p-3 border border-gray-300 rounded-lg text-sm sm:text-base">
-                                <option value="" disabled selected>Select estimate</option>
-                                <option value="Excellent">Excellent (740+)</option>
-                                <option value="Good">Good (670-739)</option>
-                                <option value="Fair">Fair (580-669)</option>
-                                <option value="Poor">Poor (Under 580)</option>
-                                <option value="NotSure">Not Sure / New Credit</option>
-                            </select>
-                        </div>
-
-                        <!-- Q6: Amount range --><div class="form-group">
-                            <label for="qAmount" class="block mb-1 font-medium text-sm sm:text-base">6. Estimated Comparison Need:</label>
-                            <select id="qAmount" name="qAmount" required class="w-full p-3 border border-gray-300 rounded-lg text-sm sm:text-base">
-                                <option value="" disabled selected>Select range</option>
-                                <option value="Small">Under $500</option>
-                                <option value="Mid1">$500 - $2,000</option>
-                                <option value="Mid2">$2,001 - $5,000</option>
-                                <option value="Large">$5,001 - $30,000</option>
-                            </select>
-                        </div>
-
-                        <!-- Q7: Timing --><div class="form-group">
-                            <label for="qTiming" class="block mb-1 font-medium text-sm sm:text-base">7. Urgency / Preferred Timing:</label>
-                            <select id="qTiming" name="qTiming" required class="w-full p-3 border border-gray-300 rounded-lg text-sm sm:text-base">
-                                <option value="" disabled selected>Select timeframe</option>
-                                <option value="Immediate">Within 24 Hours</option>
-                                <option value="3Days">Within 3 Days</option>
-                                <option value="7Days">Within 7 Days</option>
-                                <option value="NotUrgent">Not Urgent / Just Comparing</option>
-                            </select>
-                        </div>
-
-                        <!-- Q8: Bankruptcy last 2 years? --><div class="form-group">
-                            <label for="qBankruptcy" class="block mb-1 font-medium text-sm sm:text-base">8. Bankruptcy in the last 2 years?</label>
-                            <select id="qBankruptcy" name="qBankruptcy" required class="w-full p-3 border border-gray-300 rounded-lg text-sm sm:text-base">
-                                <option value="" disabled selected>Select yes/no</option>
-                                <option value="No">No</option>
-                                <option value="Yes">Yes</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="text-center mt-6">
-                        <!-- Button uses new primary color --><button type="submit" class="btn btn-primary">See Matching Results →</button>
-                    </div>
-
-                    <p class="text-xs text-muted text-center mt-4">
-                        *Educational tool only. Checking options here will not impact your credit score. Availability varies by state.
-                    </p>
-                </form>
-            </div>
-        </section>
-
-        <!-- Result Card (Hidden by Default) --><section id="resultCard" class="p-4 sm:p-6 rounded-xl shadow-soft border-line mt-8 hidden">
-            <h3 class="font-extrabold text-xl sm:text-2xl text-center mb-4">Recommended Path</h3>
-            <p id="resultSummary" class="text-base sm:text-lg text-center mb-6"></p>
-            
-            <div id="resultButtons" class="flex flex-col sm:flex-row justify-center gap-4">
-                <!-- Buttons - All use new green/teal theme --><a href="#" id="btnCPQL" class="btn bg-emerald-600 text-white hover:bg-emerald-700" style="display:none;">Continue to Prequalification Process →</a>
-                <a href="#" id="btnCPL" class="btn bg-teal-600 text-white hover:bg-teal-700" style="display:none;">Continue to Comparison Tool →</a>
-                <a href="#" id="btnREV" class="btn bg-slate-600 text-white hover:bg-slate-700" style="display:none;">Explore Educational Options</a>
-            </div>
-
-            <p class="text-xs text-muted text-center mt-4">
-                Approval is not guaranteed. Lending partners make their own assessment. A soft credit pull may be used and will not affect your score.
-            </p>
-        </section>
-
- <!-- NEW FAQ SECTION -->
-<section id="faq-section" class="py-12">
-    <h2 class="text-center font-extrabold text-3xl sm:text-4xl mb-10">FAQ: Personal Loan Questions Answered</h2>
-    
-    <div class="bg-white rounded-xl shadow-soft border-line max-w-4xl mx-auto divide-y divide-gray-200">
-        
-        <!-- FAQ Item 1: Soft Credit Check -->
-        <div class="faq-item">
-            <button class="faq-question" data-target="answer-1">
-                1. Will the credit check affect my credit score?
-                <svg class="faq-arrow w-5 h-5 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-            </button>
-            <div id="answer-1" class="faq-answer">
-                <p class="faq-answer-content">
-                    Most LoanFinderUS partners only perform a **soft credit pull** to pre-qualify your options. A soft pull **does NOT impact your credit score**. A hard pull (which can slightly reduce your score) only occurs if you choose a partner and submit a full loan application with them.
-                </p>
-            </div>
-        </div>
-
-        <!-- FAQ Item 2: Gig Worker/1099 Income -->
-        <div class="faq-item">
-            <button class="faq-question" data-target="answer-2">
-                2. I’m a Gig Worker / 1099 - can I be approved?
-                <svg class="faq-arrow w-5 h-5 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-            </button>
-            <div id="answer-2" class="faq-answer">
-                <p class="faq-answer-content">
-                    Yes. Many of our partners specialize in borrowers with **non-traditional income** (1099, freelance, contractor). Instead of only looking at W-2, they may consider bank statements, tax returns, or other proof of income. Be accurate in your answers so you match with the right partner.
-                </p>
-            </div>
-        </div>
-
-        <!-- FAQ Item 3: Funding Speed -->
-        <div class="faq-item">
-            <button class="faq-question" data-target="answer-3">
-                3. How fast can I get the funds?
-                <svg class="faq-arrow w-5 h-5 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-            </button>
-            <div id="answer-3" class="faq-answer">
-                <p class="faq-answer-content">
-                    Funding speed depends on the lender you choose. Many LoanFinderUS partners can finalize and deposit funds into your bank account within **1–2 business days** after final approval. Timing can vary depending on your bank’s processing hours.
-                </p>
-            </div>
-        </div>
-
-        <!-- FAQ Item 4: Loan Purpose (Holiday Spending) -->
-        <div class="faq-item">
-            <button class="faq-question" data-target="answer-4">
-                4. Can I use a personal loan for Holiday spending?
-                <svg class="faq-arrow w-5 h-5 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-            </button>
-            <div id="answer-4" class="faq-answer">
-                <p class="faq-answer-content">
-                    Yes. Personal loans are typically **not restricted to a single use case**. You can use funds for gifts, travel, home needs, or even to consolidate high-APR credit card debt during the holidays.
-                </p>
-            </div>
-        </div>
-        
-        <!-- FAQ Item 5: APR Determination -->
-        <div class="faq-item">
-            <button class="faq-question" data-target="answer-5">
-                5. How is APR (Annual Percentage Rate) determined?
-                <svg class="faq-arrow w-5 h-5 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-            </button>
-            <div id="answer-5" class="faq-answer">
-                <p class="faq-answer-content">
-                    The lender sets the APR after reviewing your full profile: credit score, income, debt history, requested loan amount, and more. The initial results shown on LoanFinderUS are estimates only. The best APRs are typically offered to borrowers with higher credit scores.
-                </p>
-            </div>
-        </div>
-
+    <div class="flex items-center gap-2 justify-center">
+      <span class="text-amber-400 text-lg">★★★★★</span>
+      <span>Rated Excellent</span>
     </div>
-</section>
-<!-- END FAQ SECTION -->
-<section>
-    <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-md p-6">
 
-        <h2 class="font-extrabold text-xl sm:text-2xl mb-4 text-emerald-700 text-center">| Important Disclosures</h2>
-
-        <ul class="disclosures-list text-sm text-gray-700 space-y-2">
-            <li>
-                <span class="text-emerald-700 font-semibold">1)</span> <strong class="text-red-700">Not a lender:</strong> LoanFinderUS is a comparison & referral platform. We do not make credit decisions, fund loans, or set any loan terms. All final decisions are made by the individual lender.
-            </li>
-            <li>
-                <span class="text-emerald-700 font-semibold">2)</span> <strong class="text-red-700">Rates & terms vary:</strong> APRs and loan terms are determined by each lender based on your credit profile and financial situation. Typical APR ranges: <strong class="text-red-700">5.99%-35.99%</strong>. Typical loan terms: 3-60 months.
-            </li>
-            <li>
-                <span class="text-emerald-700 font-semibold">3)</span> <strong class="text-red-700">Credit impact:</strong> Using our pre-qualification tool results in a <strong class="text-blue-700">soft inquiry</strong>, which does <strong class="text-red-700">not affect your FICO score</strong>. If you continue with a lender and apply, the lender may perform a <strong class="text-red-700">hard inquiry</strong>.
-            </li>
-            <li>
-                <span class="text-emerald-700 font-semibold">4)</span> <strong class="text-red-700">Example:</strong> A $10,000 personal loan at 12.00% APR with a 36-month term has an estimated monthly payment of ~$332.14. Total repayment ~$11,957.04.
-            </li>
-            <li>
-                <span class="text-emerald-700 font-semibold">5)</span> <strong class="text-red-700">Accuracy:</strong> All rates, fees, and terms are subject to change. Always review the final details on the lender's site before accepting any offer.
-            </li>
-        </ul>
-
-        <p class="text-xs text-red-700 mt-4">* Loan availability and maximum amounts vary by state.</p>
-        <p class="text-xs text-blue-700 mt-2">** No SSN required to pre-qualify. Your information is encrypted and never sold.</p>
-
+    <div class="flex items-center gap-2 justify-center">
+      <svg class="h-4 w-4 text-gray-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+      <span>Secure 256-bit SSL</span>
     </div>
-</section>
 
+  </div>
+</div>
+        </section>
+        <!-- RIGHT calculator -->
+        <section>
+          <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-xl border border-gray-100">
+            <h2 class="text-center text-2xl font-extrabold text-[#1E3A8A]">Quick Rate Check</h2>
+            <p class="text-center text-gray-500 mt-1 mb-6 text-sm">Checking rates does not impact your credit score.</p>
+
+            <p class="text-center text-sm font-medium text-gray-700">Loan Amount</p>
+            <p id="loan-amount-display" class="text-center text-4xl font-extrabold text-[#00A86B] mb-1">$1,000</p>
+            <p class="text-center text-gray-500 text-sm mb-3">Select your loan amount</p>
+            <div class="mb-6">
+              <input type="range" id="loan-amount-slider" min="100" max="5000" value="1000" step="100" class="w-full accent-[#00A86B]">
+              <div class="flex justify-between text-xs text-gray-500 mt-2"><span>$100</span><span>$5,000</span></div>
+            </div>
+
+            <p class="text-center text-sm font-medium text-gray-700 mt-2">Repayment Term</p>
+            <p id="loan-term-display" class="text-center text-4xl font-extrabold text-[#00A86B] mb-1">9 months</p>
+            <p class="text-center text-gray-500 text-sm mb-3">Choose repayment duration</p>
+            <div>
+              <input type="range" id="loan-term-slider" min="3" max="84" value="9" step="1" class="w-full accent-[#00A86B]">
+              <div class="flex justify-between text-xs text-gray-500 mt-2"><span>3 months</span><span>84 months</span></div>
+            </div>
+
+            <div class="mt-6 rounded-xl border border-[#00A86B]/30 bg-[#E9F7F0] p-4">
+              <div class="flex items-center justify-between pb-2 border-b border-white/60">
+                <p class="text-sm text-gray-700">Est. Monthly Payment</p>
+                <p id="monthly-payment-display" class="text-right font-semibold text-gray-900">$123</p>
+              </div>
+              <div class="flex items-center justify-between pt-2">
+                <p class="text-sm text-gray-700">Est. Total Interest Paid</p>
+                <p id="total-interest-display" class="text-right font-semibold text-gray-900">$107</p>
+              </div>
+            </div>
+
+<button
+  onclick="location.href='#loan-offers'"
+  class="mt-6 w-full text-white font-extrabold tracking-wide rounded-full py-4 text-base bg-[#00A86B] hover:bg-[#00945F] shadow-[inset_0_-4px_0_rgba(0,0,0,0.12),0_8px_24px_rgba(0,0,0,0.08)] 
+  animate-cta">
+  CHECK MY RATES NOW
+</button>
+
+            <p class="mt-3 text-center text-xs text-gray-500">Soft credit check – No impact on your credit score.</p>
+          </div>
+        </section>
+		
+
+      </div>
     </main>
-    <!-- Footer Disclosures - Removed to consolidate with Important Disclosures -->
-<footer class="mt-8 mb-4 px-4"> <!-- thêm px-4 cho mobile -->
-    <div class="container max-w-3xl mx-auto">
-        <p class="text-[11px] sm:text-xs leading-relaxed text-muted text-center">
-            <strong>LoanFinderUS</strong> is not a lender and does not make credit decisions. We provide educational content and connect users to third-party partners. Availability, terms, and interest rates are determined by the partners and vary by state. By clicking the links, you will be subject to the partner's terms and privacy policies.
-        </p>
-    </div>
-</footer>
-    <!-- Loan Purpose Modal (The popup with the table) -->
-	<div id="loanPurposeModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-        <div class="modal-dialog shadow-soft">
-            <button class="modal-close" id="closePurposeModalBtn" aria-label="Close dialog" onclick="hidePurposeModal()">×</button>
-            <div class="modal-header text-center">
-                <h4 id="modalTitle" class="m-0 font-extrabold text-2xl sm:text-3xl p-4 sm:p-6 bg-gray-50 border-b">Common Loan Purposes</h4>
-            </div>
-            <div class="modal-body p-0">
-                <table class="purpose-table">
-                    <thead>
-                        <tr>
-                            <th>Purpose Category</th>
-                            <th class="hidden sm:table-cell">Description</th>
-                            <th class="text-center">Check Options</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-					                        <tr onclick="selectPurpose('Holiday Spending')">
-                             <td class="font-semibold">Holiday Spending</td>
-                             <td class="text-sm text-muted hidden sm:table-cell">Cover seasonal expenses, travel, or gifts without high-interest credit cards.</td>
-                             <td class="text-center">
-                                 <a href="#prequal" class="btn btn-yellow text-sm" onclick="selectPurpose('Holiday Spending'); return false;">See My Options</a>
-                             </td>
-                         </tr>
-                        <tr onclick="selectPurpose('Debt Consolidation')">
-                            <td class="font-semibold">Debt Consolidation</td>
-                            <td class="text-sm text-muted hidden sm:table-cell">Combine multiple debts into a single, simpler payment.</td>
-                            <td class="text-center">
-                                <a href="#prequal" class="btn btn-yellow text-sm" onclick="selectPurpose('Debt Consolidation'); return false;">See My Options</a>
-                            </td>
-                        </tr>
-                        <tr onclick="selectPurpose('Home Improvement')">
-                            <td class="font-semibold">Home Improvement</td>
-                            <td class="text-sm text-muted hidden sm:table-cell">Finance a kitchen remodel, roof repair, or other home projects.</td>
-                            <td class="text-center">
-                                <a href="#prequal" class="btn btn-yellow text-sm" onclick="selectPurpose('Home Improvement'); return false;">See My Options</a>
-                            </td>
-                        </tr>
-                        <tr onclick="selectPurpose('Major Personal Expense')">
-                            <td class="font-semibold">Major Personal Expense</td>
-                            <td class="text-sm text-muted hidden sm:table-cell">Cover costs for a wedding, moving, or other large life events.</td>
-                            <td class="text-center">
-                                <a href="#prequal" class="btn btn-yellow text-sm" onclick="selectPurpose('Major Personal Expense'); return false;">See My Options</a>
-                            </td>
-                        </tr>
-                        <tr onclick="selectPurpose('Unexpected Costs')">
-                            <td class="font-semibold">Unexpected Costs</td>
-                            <td class="text-sm text-muted hidden sm:table-cell">Address emergency repairs or medical bills responsibly.</td>
-                            <td class="text-center">
-                                <a href="#prequal" class="btn btn-yellow text-sm" onclick="selectPurpose('Unexpected Costs'); return false;">See My Options</a>
-                            </td>
-                        </tr>
-                        <tr onclick="selectPurpose('Vehicle Financing')">
-                            <td class="font-semibold">Vehicle Financing</td>
-                            <td class="text-sm text-muted hidden sm:table-cell">Help with purchasing a car or covering major repair costs.</td>
-                            <td class="text-center">
-                                <a href="#prequal" class="btn btn-yellow text-sm" onclick="selectPurpose('Vehicle Financing'); return false;">See My Options</a>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="p-4 text-center text-xs text-muted border-t">
-                 Data is illustrative and may change. We are not a lender and this is not a loan offer. Limits, APR and timing vary by state, lender and profile.
-            </div>
+
+    <!-- Benefits, steps, testimonials... (giữ nguyên như bản của bạn) -->
+    <!-- ... (cắt bớt cho ngắn trong phần trả lời – bạn giữ nguyên các section ngay sau đây) -->
+  </div>
+<!-- ========== SHELL UTILS (giữ smooth scroll + safe-area) ========== -->
+<style>
+  html { scroll-behavior: smooth; }
+  /* Anchor dừng đúng khi có header fixed */
+  #loan-offers { scroll-margin-top: 72px; }
+
+  /* Optional: bảo vệ mép trên iPhone có notch */
+  .safe-gutters {
+    padding-left: max(16px, env(safe-area-inset-left));
+    padding-right: max(16px, env(safe-area-inset-right));
+  }
+</style>
+
+<!-- ========= KEY BENEFITS ========= -->
+<section aria-labelledby="key-benefits" class="safe-gutters">
+  <div class="mx-auto w-full max-w-screen-xl px-4 sm:px-6 lg:px-8">
+    <div class="bg-white/90 backdrop-blur p-4 sm:p-6 md:p-8 rounded-2xl shadow-lg border border-gray-100 max-w-5xl mx-auto mt-8 sm:mt-10 text-left">
+<h2 id="key-benefits"
+    class="text-center text-2xl sm:text-3xl font-extrabold"
+    style="color:#1E3A8A; margin-bottom:1.5rem;">
+  Key Benefits
+</h2>
+   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 text-sm">
+        <!-- 1: No Fees to Check -->
+        <div class="flex items-start gap-3">
+          <span class="inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-emerald-50 text-emerald-600" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+          </span>
+          <div>
+            <p class="font-semibold text-gray-900">No Application Fees</p>
+            <p class="text-gray-600">Checking your options does not cost anything.</p>
+          </div>
         </div>
+
+        <!-- 2 -->
+        <div class="flex items-start gap-3">
+          <span class="inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-emerald-50 text-emerald-600" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7a7 7 0 0 1-8 7 7 7 0 0 1-8-7V5l8-3 8 3Z"/><path d="M12 22V14"/></svg>
+          </span>
+          <div>
+            <p class="font-semibold text-gray-900">Soft Credit Inquiry</p>
+            <p class="text-gray-600">Checking estimated rates typically won’t affect your credit score.</p>
+          </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="flex items-start gap-3">
+          <span class="inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-emerald-50 text-emerald-600" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06A1.65 1.65 0 0 0 15 19.4"/>
+              <path d="M4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06A2 2 0 1 1 7.04 4.3l.06.06A1.65 1.65 0 0 0 9 4.6"/>
+              <path d="M19.4 9a1.65 1.65 0 0 0 .33-1.82l-.06-.06A2 2 0 1 0 16.84 4.3l.06.06A1.65 1.65 0 0 0 15 4.6"/>
+              <path d="M4.6 15a1.65 1.65 0 0 0-.33 1.82l.06.06A2 2 0 1 0 7.16 19.7l-.06-.06A1.65 1.65 0 0 0 9 19.4"/>
+            </svg>
+          </span>
+          <div>
+            <p class="font-semibold text-gray-900">Wide Range of Lenders</p>
+            <p class="text-gray-600">Multiple providers may review your profile.</p>
+          </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="flex items-start gap-3">
+          <span class="inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-emerald-50 text-emerald-600" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+            </svg>
+          </span>
+          <div>
+            <p class="font-semibold text-gray-900">Secure Information</p>
+            <p class="text-gray-600">Your data is transmitted using industry-standard encryption.</p>
+          </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="flex items-start gap-3">
+          <span class="inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-emerald-50 text-emerald-600" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+            </svg>
+          </span>
+          <div>
+            <p class="font-semibold text-gray-900">Potential Same-Day Decisions</p>
+            <p class="text-gray-600">Some lenders may decide quickly, depending on eligibility.</p>
+          </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="flex items-start gap-3">
+          <span class="inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-emerald-50 text-emerald-600" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="4" y1="21" x2="4" y2="14"/><line x1="4" y1="10" x2="4" y2="3"/><line x1="12" y1="21" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="3"/><line x1="20" y1="21" x2="20" y2="16"/><line x1="20" y1="12" x2="20" y2="3"/><line x1="2" y1="14" x2="6" y2="14"/><line x1="10" y1="8" x2="14" y2="8"/><line x1="18" y1="16" x2="22" y2="16"/>
+            </svg>
+          </span>
+          <div>
+            <p class="font-semibold text-gray-900">Flexible Terms Available</p>
+            <p class="text-gray-600">You may be able to choose a repayment term that fits your budget.</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="mt-5 sm:mt-6 text-[11px] sm:text-xs text-gray-500">
+        We are not a lender. Availability, rates, and terms are determined by each provider and may vary by state and eligibility.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ========= SIMPLE PROCESS ========= -->
+<section class="safe-gutters mt-8 sm:mt-10">
+  <div class="mx-auto w-full max-w-screen-xl px-4 sm:px-6 lg:px-8">
+    <div class="bg-white p-4 sm:p-6 rounded-xl shadow-lg border border-gray-100 max-w-3xl mx-auto text-left">
+      <h2 class="text-xl sm:text-2xl font-bold text-[#1E3A8A] mb-4 sm:mb-6 text-center">
+        How LoanFinderUS Helps You Choose
+      </h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 text-center">
+        
+        <!-- 1 -->
+        <div class="flex flex-col items-center">
+          <div class="bg-green-cta text-white w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center font-bold text-base sm:text-lg mb-2">1</div>
+          <p class="font-semibold text-gray-900">Select Your Needs</p>
+          <p class="text-sm text-gray-600">Adjust loan amount & duration in the calculator.</p>
+        </div>
+
+        <!-- 2 -->
+        <div class="flex flex-col items-center">
+          <div class="bg-green-cta text-white w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center font-bold text-base sm:text-lg mb-2">2</div>
+          <p class="font-semibold text-gray-900">See Matching Offers</p>
+          <p class="text-sm text-gray-600">We show options from our participating lender network.</p>
+        </div>
+
+        <!-- 3 -->
+        <div class="flex flex-col items-center">
+          <div class="bg-green-cta text-white w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center font-bold text-base sm:text-lg mb-2">3</div>
+          <p class="font-semibold text-gray-900">Apply On Their Site</p>
+          <p class="text-sm text-gray-600">Final approval & funding happen directly with the lender.</p>
+        </div>
+
+      </div>
+
+      <!-- LEGAL -->
+      <p class="text-[10px] sm:text-xs text-gray-500 text-center mt-4 sm:mt-5">
+        LoanFinderUS is not a lender. We provide comparison tools and referral links only.
+      </p>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ========= TESTIMONIALS ========= -->
+<section class="safe-gutters mt-8 sm:mt-10">
+  <div class="mx-auto w-full max-w-screen-xl px-4 sm:px-6 lg:px-8">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-xl sm:text-2xl font-bold text-gray-900 mb-4 sm:mb-6">What Our Customers Say</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+        <div class="bg-white p-4 sm:p-5 rounded-xl shadow-md border-t-4 border-light-blue">
+          <p class="text-sm italic text-gray-700 mb-3">"I got approved for $2,500 in 5 minutes! The money was in my bank account the next day."</p>
+          <p class="text-xs font-semibold text-gray-900">- Sarah M., TX</p>
+        </div>
+        <div class="bg-white p-4 sm:p-5 rounded-xl shadow-md border-t-4 border-light-blue">
+          <p class="text-sm italic text-gray-700 mb-3">"Even with fair credit, I was able to find a suitable offer. Great service!"</p>
+          <p class="text-xs font-semibold text-gray-900">- John W., CA</p>
+        </div>
+        <div class="bg-white p-4 sm:p-5 rounded-xl shadow-md border-t-4 border-light-blue">
+          <p class="text-sm italic text-gray-700 mb-3">"LoanFinderUS made the whole process super fast, reliable, and transparent. Highly recommended!"</p>
+          <p class="text-xs font-semibold text-gray-900">- Alex R., FL</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ========= TRUST BADGES ========= -->
+<section class="safe-gutters mt-8 sm:mt-10">
+  <div class="mx-auto w-full max-w-screen-xl px-4 sm:px-6 lg:px-8">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-lg sm:text-xl font-bold mb-4 sm:mb-6 text-center" style="color:#1E3A8A;">
+        Trusted by Thousands
+      </h2>
+
+      <!-- MOBILE 2x2 - PC INLINE -->
+      <div class="grid grid-cols-2 sm:flex sm:flex-row sm:justify-center sm:space-x-12 gap-6 sm:gap-0">
+
+        <div class="text-center">
+          <p class="text-2xl sm:text-3xl font-bold text-light-blue">50K+</p>
+          <p class="text-xs text-gray-600">Connections Made</p>
+        </div>
+
+        <div class="text-center">
+          <p class="text-2xl sm:text-3xl font-bold text-light-blue">4.8★</p>
+          <p class="text-xs text-gray-600">Customer Rating</p>
+        </div>
+
+        <!-- item thứ 3 mobile span full width -->
+        <div class="text-center col-span-2 sm:col-span-1">
+          <p class="text-2xl sm:text-3xl font-bold text-light-blue">20+ Lenders</p>
+          <p class="text-xs text-gray-600">Nationwide Network</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========= SECONDARY CTA ========= -->
+<section class="safe-gutters mt-10 sm:mt-12">
+  <div class="mx-auto w-full max-w-screen-xl px-4 sm:px-6 lg:px-8">
+    <div class="max-w-lg mx-auto">
+      <h2 class="text-center text-xl sm:text-2xl font-extrabold text-[#1E3A8A] mb-3 sm:mb-4">
+  Ready to Get Started?
+</h2>
+<p class="text-center text-gray-700 font-medium mb-4 sm:mb-6">
+  Join thousands of satisfied customers.
+</p>
+
+<button 
+  onclick="location.href='#loan-offers'"
+  class="w-full bg-yellow-offer hover:bg-yellow-600 text-gray-900 font-bold py-3 px-6 rounded-full shadow-lg transition duration-200 uppercase tracking-wider animate-cta">
+  CHECK YOUR RATES
+</button>
+    </div>
+  </div>
+</section>
+
+<!-- ========= FAQ ========= -->
+<section class="safe-gutters py-10">
+  <div class="mx-auto w-full max-w-screen-xl px-4 sm:px-6 lg:px-8">
+    <div class="max-w-3xl mx-auto text-left">
+      
+      <h2 class="text-center text-xl sm:text-2xl font-extrabold text-[#1E3A8A] mb-6">Frequently Asked Questions</h2>
+
+      <div class="space-y-4">
+
+        <details class="border rounded-lg p-4 sm:p-5 bg-white shadow-sm">
+          <summary class="font-semibold text-gray-900 cursor-pointer">Can checking rates affect my credit score?</summary>
+          <div class="mt-2 text-sm text-gray-600 leading-relaxed">
+            Most lenders perform a soft inquiry during initial rate checks, which typically does not impact your credit score.
+          </div>
+        </details>
+
+        <details class="border rounded-lg p-4 sm:p-5 bg-white shadow-sm">
+          <summary class="font-semibold text-gray-900 cursor-pointer">Is LoanFinderUS a lender?</summary>
+          <div class="mt-2 text-sm text-gray-600 leading-relaxed">
+            No. LoanFinderUS is a comparison/referral platform. We connect you to our network of providers so you can review available options.
+          </div>
+        </details>
+
+        <details class="border rounded-lg p-4 sm:p-5 bg-white shadow-sm">
+          <summary class="font-semibold text-gray-900 cursor-pointer">Do I have to pay any fees to use this site?</summary>
+          <div class="mt-2 text-sm text-gray-600 leading-relaxed">
+            We do not charge consumers a fee to use our comparison tools. Any lender fees, if applicable, are disclosed directly by the lender.
+          </div>
+        </details>
+
+        <details class="border rounded-lg p-4 sm:p-5 bg-white shadow-sm">
+          <summary class="font-semibold text-gray-900 cursor-pointer">Can all credit profiles check rates?</summary>
+          <div class="mt-2 text-sm text-gray-600 leading-relaxed">
+            Many lenders in our network may review profiles across different credit backgrounds. Eligibility still depends on each provider’s criteria.
+          </div>
+        </details>
+
+        <details class="border rounded-lg p-4 sm:p-5 bg-white shadow-sm">
+          <summary class="font-semibold text-gray-900 cursor-pointer">When will I know my final loan terms?</summary>
+          <div class="mt-2 text-sm text-gray-600 leading-relaxed">
+            Final terms are shown by the lender after you submit a full application. Until then, any numbers you see are estimates.
+          </div>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ========= EXPLORE BY PURPOSE (personalized) ========= -->
+<section id="loan-offers" class="safe-gutters mt-10 sm:mt-12" aria-labelledby="purpose-title">
+  <style>
+    /* Zoom in/out nhịp nhàng cho CTA */
+    @keyframes pulse-zoom {
+      0%, 100% { transform: scale(1); }
+      50%      { transform: scale(1.04); }
+    }
+    .btn-zoom { animation: pulse-zoom 2.2s ease-in-out infinite; }
+  </style>
+
+  <div class="mx-auto w-full max-w-screen-xl px-4 sm:px-6 lg:px-8">
+    <!-- Section title (personalized) -->
+    <h2 id="purpose-title" class="text-2xl sm:text-3xl font-extrabold text-center text-[#1E3A8A]">
+      Tell Us Your Goal - We’ll Surface Matching Options
+    </h2>
+    <p class="text-center text-gray-600 mt-2 mb-6">
+      Choose a purpose below to explore potential offers from participating providers. Availability and terms vary.
+    </p>
+
+    <!-- Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- 1) Holiday Spending - CTA RED (Xmas) -->
+      <article class="bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition">
+        <div class="aspect-[16/9] w-full overflow-hidden rounded-t-2xl">
+          <img src="https://pennypostcu.com/wp-content/uploads/Loans-to-lend-a-hand.jpg" alt="Holiday spending illustration - Best Credit Loan Expert"
+               class="h-full w-full object-cover" loading="lazy" />
+        </div>
+        <div class="p-5">
+          <h3 class="text-lg font-bold text-[#1E3A8A]">Holiday Spending</h3>
+          <p class="text-sm text-gray-600 mt-1">
+            Seasonal travel, gifts, or year-end costs-compare options responsibly.
+          </p>
+          <div class="mt-4 flex justify-center">
+            <a href="https://clearpmf.com/ql/suj71" target="_blank" rel="noopener nofollow sponsored"
+               class="btn-zoom inline-flex items-center gap-2 rounded-full px-5 py-2 text-sm font-semibold text-white
+                      bg-[#C81E1E] hover:brightness-110 transition">
+              See Options
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7-7 7M21 12H3"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 2) Debt Consolidation - CTA NAVY -->
+      <article class="bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition">
+        <div class="aspect-[16/9] w-full overflow-hidden rounded-t-2xl">
+          <img src="https://www.moneyfit.org/wp-content/uploads/2022/07/DebtConsolidationLoan.jpg" alt="Debt consolidation illustration"
+               class="h-full w-full object-cover" loading="lazy" />
+        </div>
+        <div class="p-5">
+          <h3 class="text-lg font-bold text-[#1E3A8A]">Debt Consolidation</h3>
+          <p class="text-sm text-gray-600 mt-1">
+            Explore ways to combine multiple debts into one simpler payment.
+          </p>
+          <div class="mt-4 flex justify-center">
+            <a href="https://clearpmf.com/ql/pbwBcnAjv" target="_blank" rel="noopener nofollow sponsored"
+               class="btn-zoom inline-flex items-center gap-2 rounded-full px-5 py-2 text-sm font-semibold text-white
+                      bg-[#1E3A8A] hover:brightness-110 transition">
+              See Options
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7-7 7M21 12H3"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 3) Home Improvement - CTA GOLD -->
+      <article class="bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition">
+        <div class="aspect-[16/9] w-full overflow-hidden rounded-t-2xl">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVSC7h5ktMA9BsVCv1JAcndBQwG8Z6deCSfQ&s" alt="Home improvement illustration"
+               class="h-full w-full object-cover" loading="lazy" />
+        </div>
+        <div class="p-5">
+          <h3 class="text-lg font-bold text-[#1E3A8A]">Home Improvement</h3>
+          <p class="text-sm text-gray-600 mt-1">
+            Kitchen remodel, roof repair, or other projects-compare potential options.
+          </p>
+          <div class="mt-4 flex justify-center">
+            <a href="https://clearpmf.com/ql/Ognqr9" target="_blank" rel="noopener nofollow sponsored"
+               class="btn-zoom inline-flex items-center gap-2 rounded-full px-5 py-2 text-sm font-semibold text-gray-900
+                      bg-[#FACC15] hover:bg-[#EAB308] transition">
+              See Options
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7-7 7M21 12H3"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 4) Major Personal Expense - CTA POWER BLUE -->
+      <article class="bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition">
+        <div class="aspect-[16/9] w-full overflow-hidden rounded-t-2xl">
+          <img src="https://www.admin-bg.investkraft.com/public/images/1729751725.personal-loan-to-manage-your-needs.webp" alt="Major personal expense illustration"
+               class="h-full w-full object-cover" loading="lazy" />
+        </div>
+        <div class="p-5">
+          <h3 class="text-lg font-bold text-[#1E3A8A]">Major Personal Expense</h3>
+          <p class="text-sm text-gray-600 mt-1">
+            Plan for weddings, moving, or other large life events.
+          </p>
+          <div class="mt-4 flex justify-center">
+            <a href="https://clearpmf.com/ql/V8ay1DYM" target="_blank" rel="noopener nofollow sponsored"
+               class="btn-zoom inline-flex items-center gap-2 rounded-full px-5 py-2 text-sm font-semibold text-white
+                      bg-[#3B82F6] hover:bg-[#2563EB] transition">
+              See Options
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7-7 7M21 12H3"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 5) Unexpected Costs - CTA ORANGE -->
+      <article class="bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition">
+        <div class="aspect-[16/9] w-full overflow-hidden rounded-t-2xl">
+          <img src="https://cdn2.ramseysolutions.net/dynamic-webp/media/blog/saving/emergency-fund/how-to-budget-for-unexpected-expenses.jpg/640w.webp" alt="Unexpected costs illustration"
+               class="h-full w-full object-cover" loading="lazy" />
+        </div>
+        <div class="p-5">
+          <h3 class="text-lg font-bold text-[#1E3A8A]">Unexpected Costs</h3>
+          <p class="text-sm text-gray-600 mt-1">
+            Explore options for emergency repairs or medical bills.
+          </p>
+          <div class="mt-4 flex justify-center">
+            <a href="https://clearpmf.com/ql/KuaoG" target="_blank" rel="noopener nofollow sponsored"
+               class="btn-zoom inline-flex items-center gap-2 rounded-full px-5 py-2 text-sm font-semibold text-white
+                      bg-[#FF6B00] hover:brightness-95 transition">
+              See Options
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7-7 7M21 12H3"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 6) Vehicle Financing - CTA SLATE -->
+      <article class="bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition">
+        <div class="aspect-[16/9] w-full overflow-hidden rounded-t-2xl">
+          <img src="https://cdn.arcadiafinance.co.za/wp-content/uploads/2025/01/Which-Bank-is-Best-for-Car-Finance-in-South-Africa.jpg?cdn=1.0.3" alt="Vehicle financing illustration"
+               class="h-full w-full object-cover" loading="lazy" />
+        </div>
+        <div class="p-5">
+          <h3 class="text-lg font-bold text-[#1E3A8A]">Vehicle Financing</h3>
+          <p class="text-sm text-gray-600 mt-1">
+            Options that may help with purchasing a car or covering major repair costs.
+          </p>
+          <div class="mt-4 flex justify-center">
+            <a href="https://clearpmf.com/ql/Gmwhy" target="_blank" rel="noopener nofollow sponsored"
+               class="btn-zoom inline-flex items-center gap-2 rounded-full px-5 py-2 text-sm font-semibold text-white
+                      bg-[#475569] hover:brightness-110 transition">
+              See Options
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7-7 7M21 12H3"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
     </div>
 
+    <!-- Compliance note -->
+    <p class="text-center text-xs text-gray-500 mt-6">
+      LoanFinderUS is not a lender. We provide comparison tools and referral links only. Final terms, approvals,
+      and funding decisions are made by the lender after a full application.
+    </p>
+  </div>
+</section>
 
-    <script>
-        // ====================================================================
-        // JAVASCRIPT LOGIC
-        // ====================================================================
 
-        // --- 1. Partner Link Constants (REPLACE THESE LINKS) ---
-        // Vui lòng thay thế các placeholder này bằng các URL đối tác thực tế của LoanFinderUS.com
-        const LINK_CPL  = 'https://REPLACE_WITH_YOUR_CPL_LINK';
-        const LINK_CPQL = 'https://REPLACE_WITH_YOUR_CPQL_LINK';
-        const LINK_REV  = 'https://REPLACE_WITH_YOUR_REVSHARE_LINK';
 
-        // --- 2. Element References ---
-        const form = document.getElementById('prequalForm');
-        const resultCard = document.getElementById('resultCard');
-        const resultSummary = document.getElementById('resultSummary');
-        const btnCPQL = document.getElementById('btnCPQL');
-        const btnCPL = document.getElementById('btnCPL');
-        const btnREV = document.getElementById('btnREV');
-        const purposeInput = document.getElementById('qPurpose');
-        const purposeModal = document.getElementById('loanPurposeModal');
 
-        // --- 3. Modal Logic ---
-        let isPurposeModalOpen = false;
 
-        window.showPurposeModal = function() {
-            if (isPurposeModalOpen) return;
-            purposeModal.classList.add('open');
-            isPurposeModalOpen = true;
-        }
-
-        window.hidePurposeModal = function() {
-            purposeModal.classList.remove('open');
-            isPurposeModalOpen = false;
-        }
-        
-        window.selectPurpose = function(purpose) {
-            // 1. Set the hidden input value
-            purposeInput.value = purpose;
+    <!-- DISCLAIMER & FOOTER (Chân trang và Miễn trừ trách nhiệm) --><footer class="bg-gray-100 mt-12 py-8 px-4 sm:px-6 lg:px-8">
+        <div class="page-content text-xs text-gray-600 space-y-4">
+            <h3 class="text-lg font-bold text-gray-900 mb-2">Disclaimer</h3>
             
-            // 2. Hide the modal
-            hidePurposeModal();
-            
-            // 3. Scroll down to the quiz
-            document.getElementById('prequal').scrollIntoView({ behavior: 'smooth', block: 'start' });
+            <!-- Văn bản Miễn trừ trách nhiệm dựa trên Hình 3 --><p>
+                <span class="font-bold text-orange-600">Disclaimer: LoanFinderUS is not a direct lender</span> and does not make credit decisions or loan offers directly. We are an independent online platform designed to help connect consumers with a network of participating lenders and financial service providers.
+            </p>
+            <p>
+                Submitting a request through LoanFinderUS <span class="font-bold text-orange-600">does not guarantee approval</span> or the amount you may qualify for. Loan terms, conditions, and availability vary depending on your <span class="font-bold text-orange-600">credit profile, income, state regulations</span>, and individual lender policies. Not all lenders are available in every state, and some products or offers may be limited or unavailable where prohibited by law.
+            </p>
+            <p>
+                Lenders may perform soft or hard credit checks with one or more of the major credit bureaus (Experian, Equifax, or TransUnion) or other sources to assess eligibility. Funding times will depend on the lender's internal review process and your financial institution's policies.
+            </p>
+            <p>
+                LoanFinderUS <span class="font-bold text-orange-600">does not charge any fees</span> for its services. We may receive compensation from lending partners or affiliates if you choose to engage with them. This compensation helps support the operation of our platform and <span class="font-bold text-orange-600">does not affect</span> how offers are presented to you.
+            </p>
+            <p>
+                <span class="font-bold text-red-600">Please borrow responsibly.</span> Always review all loan terms carefully before agreeing to any offer, and contact your lender directly for specific details or clarifications.
+            </p>
+            <p>
+                <span class="font-bold text-red-600">Please remember:</span> personal credit options are <span class="font-bold text-red-600">not a long-term financial solution</span>. If you are experiencing <span class="font-bold text-red-600">significant financial hardship</span>, consider seeking professional financial advice or speaking with a certified credit counselor for assistance.
+            </p>
 
-            console.log("Selected Purpose:", purpose); 
-        }
+        </div>
+        <div class="page-content text-center text-xs text-gray-500 mt-6 border-t pt-4">
+            &copy; 2025 LoanFinderUS. All rights reserved.
+        </div>
+    </footer>
 
-        // Thêm sự kiện click cho các hàng (row) trong bảng
-        document.querySelectorAll('.purpose-table tbody tr').forEach(row => {
-            row.addEventListener('click', (e) => {
-                // Đảm bảo không kích hoạt khi click trực tiếp vào nút bên trong
-                if (e.target.tagName === 'A' || e.target.closest('.btn')) {
-                    return;
-                }
-                // Lấy mục đích từ thuộc tính onclick của hàng
-                const onclickAttr = row.getAttribute('onclick');
-                const match = onclickAttr.match(/selectPurpose\('(.*)'\)/);
-                if (match && match[1]) {
-                    selectPurpose(match[1]);
-                }
-            });
-        });
+  <!-- ============ POPUP / MODAL ============ -->
+<div id="ctaModal"
+     class="hidden modal-overlay fixed inset-0 z-50 flex items-center justify-center opacity-0 pointer-events-none"
+     aria-modal="true" role="dialog">
+
+  <div class="bg-white rounded-2xl shadow-2xl p-0 max-w-lg w-11/12 modal-card relative overflow-hidden">
+
+    <!-- 16:9 THUMBNAIL -->
+    <div class="aspect-[16/9] w-full overflow-hidden bg-gray-200">
+      <img src="https://www.docfcu.org/wp-content/uploads/DOCFCU-BANNERAd-11-2025-HolidayLoan-760x400-v1.png" class="w-full h-full object-cover" loading="lazy" alt="Pre-qualification illustration">
+    </div>
+
+    <button id="btn-close-modal" class="absolute top-3 right-3 text-white hover:text-gray-200 transition duration-150" aria-label="Close modal">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+    </button>
+
+    <div class="px-8 pb-8 pt-6 text-center">
+
+      <h3 class="text-3xl font-extrabold brand-blue mb-2">
+  We Found Options That May Fit Your Profile
+</h3>
+<p class="text-gray-600 mb-6 text-lg">
+  Click below to view offers from participating providers that may align with what you’re looking for. 
+  Reviewing options here will not impact your credit score.
+</p>
 
 
-        // --- 4. Scoring and Bucketing Logic ---
-        function getScoreAndRoute(formData) {
-            let pts = 0;
-            let bucket = 'Thin-file';
-            let product = 'Financial Education & Planning Resources';
-            let route = LINK_REV;
+      <button id="btn-modal-cta"
+        onclick="window.open('https://clearpmf.com/ql?pm_cid=01a46435f4de4f878721','_blank')"
+        class="btn-cta btn-zoom text-white font-extrabold py-3.5 w-full rounded-full shadow-xl hover:shadow-2xl transition duration-300 uppercase tracking-widest text-base bg-[#00A86B] hover:bg-[#00945F]">
+  GET IT NOW
+</button>
 
-            // Scoring table 
-            const scores = {
-                qPurpose: { 
-                    'Debt Consolidation': 2, 'Home Improvement': 1, 'Major Personal Expense': 1, 
-                    'Unexpected Costs': 0, 'Vehicle Financing': 2, 'Holiday Spending': 1
-                },
-                qState: { 'CA': 0, 'NY': 0, 'IL': 0, 'TX': 1, 'FL': 1, 'Other': 2 }, 
-                qIncome: { 'Low': -1, 'Mid': 1, 'High': 2, 'VeryHigh': 3 },
-                qEmployment: { 'Unemployed': -2, 'Self': 1, 'Gig': 2, 'W2': 3 },
-                qBank: { 'No': 0, 'Yes': 3 },
-                qCredit: { 'Poor': -2, 'Fair': 0, 'NotSure': 1, 'Good': 2, 'Excellent': 4 },
-                qAmount: { 'Small': 0, 'Mid1': 1, 'Mid2': 2, 'Large': 0 }, 
-                qTiming: { 'Immediate': 0, '3Days': 0, '7Days': 1, 'NotUrgent': 2 },
-                qBankruptcy: { 'Yes': -5, 'No': 3 },
-            };
 
-            for (const key in formData) {
-                if (scores[key] && scores[key][formData[key]]) {
-                    pts += scores[key][formData[key]];
-                }
-            }
+      <p id="btn-decline" class="text-center text-xs text-gray-500 mt-4 font-medium cursor-pointer">
+        Maybe later
+      </p>
 
-            // Bucket Logic
-            if (pts >= 16) { 
-                bucket = 'Prime';
-                product = 'Flexible Installment Options';
-            } else if (pts >= 10) {
-                bucket = 'Near-Prime';
-                product = 'Revolving Credit or Installment Comparison';
-            } else if (pts >= 5) {
-                bucket = 'Subprime';
-                product = 'Custom Comparison Options';
-            } else {
-                bucket = 'Thin-file';
-                product = 'Financial Education & Planning Resources';
-            }
+    </div>
+  </div>
+</div>
 
-            // Routing Logic (Priority)
-            const bankYes = formData.qBank === 'Yes';
-            const amountMid = formData.qAmount === 'Mid1' || formData.qAmount === 'Mid2';
 
-            if (bucket === 'Prime' || bucket === 'Near-Prime') {
-                route = LINK_CPQL; 
-            } else if (bucket === 'Subprime' && bankYes && amountMid) {
-                route = LINK_CPL; 
-            } else {
-                route = LINK_REV; 
-            }
+  <!-- ============ MAIN JS ============ -->
+  <script>
+    /* ---------- Grab elements safely ---------- */
+    const landingPage = document.getElementById('landing-page');
+    const offersPage  = document.getElementById('offers-page');
 
-            return { pts, bucket, product, route };
-        }
+    const ctaButtons = [
+      document.getElementById('cta-button'),
+      document.getElementById('cta-button-secondary'),
+      document.getElementById('btn-explore-header')
+    ].filter(Boolean);
 
-        // --- 5. Form Submission Handler ---
-        form.addEventListener('submit', function (e) {
-            e.preventDefault();
+    const backButton = document.getElementById('back-button');
 
-            // Check if purpose is set
-            if (!purposeInput.value) {
-                // Instead of alert, show the modal again
-                showPurposeModal();
-                resultSummary.textContent = "Please select a loan purpose first before continuing the quiz.";
-                resultCard.classList.remove('hidden');
-                resultCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                return;
-            }
+    // sliders
+    const loanAmountSlider = document.getElementById('loan-amount-slider');
+    const loanAmountDisplay = document.getElementById('loan-amount-display');
+    const loanTermSlider = document.getElementById('loan-term-slider');
+    const loanTermDisplay = document.getElementById('loan-term-display');
+    const monthlyPaymentDisplay = document.getElementById('monthly-payment-display');
+    const totalInterestDisplay = document.getElementById('total-interest-display');
 
-            // 1. Collect Data
-            const formData = {};
-            const elements = form.querySelectorAll('select, input[type="hidden"]');
-            elements.forEach(field => {
-                formData[field.name] = field.value;
-            });
+    // modal
+    const ctaModal = document.getElementById('ctaModal');
+    const btnModalCTA = document.getElementById('btn-modal-cta');
+    const btnCloseModal = document.getElementById('btn-close-modal');
+    const btnDecline = document.getElementById('btn-decline');
 
-            // 2. Score and Route
-            const { pts, bucket, product, route } = getScoreAndRoute(formData);
-            
-            // 3. Update Result Card (Text color updated)
-            resultSummary.innerHTML = `Based on your answers, you likely fit our ‘<strong class="text-emerald-500">${bucket}</strong>’ profile (Total Score: ${pts}). People in this profile often explore: <strong class="text-gray-800">${product}</strong>. Comparing options will not affect your credit score.`;
-            
-            // 4. Set Link URLs and Visibility
-            btnCPQL.style.display = 'none';
-            btnCPL.style.display = 'none';
-            btnREV.style.display = 'none';
+    /* ---------- Calculator ---------- */
+    function updateSliderTrackFill(slider){
+      const min = +slider.min, max = +slider.max, val = +slider.value;
+      slider.style.setProperty('--track-fill', `${((val-min)/(max-min))*100}%`);
+    }
 
-            if (route === LINK_CPQL) {
-                btnCPQL.href = route;
-                btnCPQL.style.display = 'block';
-            } else if (route === LINK_CPL) {
-                btnCPL.href = route;
-                btnCPL.style.display = 'block';
-            } else {
-                btnREV.href = route;
-                btnREV.style.display = 'block';
-            }
+    function updateLoanCalculations(){
+      const amount = parseInt(loanAmountSlider.value);
+      const term   = parseInt(loanTermSlider.value);
+      const annualInterestRate = 0.15;
+      const m = annualInterestRate / 12;
 
-            // 5. Display Card and Scroll
-            resultCard.classList.remove('hidden');
-            resultCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        });
-        
-        // --- 6. Event Listeners for Modals ---
-        // Close modal on ESC key
-        document.addEventListener('keydown', function(e) {
-            if (isPurposeModalOpen && e.key === "Escape") {
-                hidePurposeModal();
-            }
-        });
-        
-        // Close modal when clicking outside
-        purposeModal.addEventListener('click', function(e) {
-            if (e.target === purposeModal) {
-                hidePurposeModal();
-            }
-        });
-        
-        // --- 7. FAQ Accordion Logic (NEW) ---
-        document.querySelectorAll('.faq-question').forEach(button => {
-            button.addEventListener('click', () => {
-                const item = button.closest('.faq-item');
-                const answer = document.getElementById(button.dataset.target);
-                const isActive = item.classList.contains('active');
+      let monthly = 0, interest = 0;
+      if (term>0 && m>0){
+        monthly  = (amount*m)/(1 - Math.pow(1+m, -term));
+        interest = monthly*term - amount;
+      }else if(term>0){ monthly = amount/term; interest = 0; }
 
-                // Close all open answers
-                document.querySelectorAll('.faq-item.active').forEach(activeItem => {
-                    if (activeItem !== item) {
-                        activeItem.classList.remove('active');
-                    }
-                });
+      loanAmountDisplay.textContent = `$${amount.toLocaleString()}`;
+      loanTermDisplay.textContent   = `${term} months`;
+      monthlyPaymentDisplay.textContent = `$${monthly.toFixed(0)}`;
+      totalInterestDisplay.textContent  = `$${interest.toFixed(0)}`;
 
-                // Toggle the clicked answer
-                if (isActive) {
-                    item.classList.remove('active');
-                } else {
-                    item.classList.add('active');
-                }
-            });
-        });
+      updateSliderTrackFill(loanAmountSlider);
+      updateSliderTrackFill(loanTermSlider);
+    }
 
-    </script>
-	<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '858141336510146');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=858141336510146&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
-		 <!-- 7) Pre-landing Permate) -->
+    /* ---------- View switch ---------- */
+    function switchView(view){
+      if(view==='offers'){
+        landingPage?.classList.add('hidden');
+        offersPage?.classList.remove('hidden');
+        window.scrollTo({top:0, behavior:'smooth'});
+      }else{
+        landingPage?.classList.remove('hidden');
+        offersPage?.classList.add('hidden');
+        window.scrollTo({top:0, behavior:'smooth'});
+      }
+    }
+
+    /* ---------- Modal controls ---------- */
+    function openModal(){
+      if(!ctaModal || !ctaModal.classList.contains('hidden')) return;
+      ctaModal.classList.remove('hidden');
+      // force reflow
+      void ctaModal.offsetWidth;
+      ctaModal.classList.add('modal-open','opacity-100','pointer-events-auto');
+      document.body.classList.add('no-scroll');
+    }
+    function closeModal(){
+      if(!ctaModal) return;
+      ctaModal.classList.remove('modal-open','opacity-100','pointer-events-auto');
+      setTimeout(()=> ctaModal.classList.add('hidden'), 250);
+      document.body.classList.remove('no-scroll');
+    }
+    function scheduleModal(ms){ setTimeout(openModal, ms); }
+
+    /* ---------- Events ---------- */
+    document.addEventListener('DOMContentLoaded', () => {
+      // init view + calc
+      switchView('landing');
+      if(loanAmountSlider && loanTermSlider){ updateLoanCalculations(); }
+
+      // slider listeners
+      loanAmountSlider?.addEventListener('input', updateLoanCalculations);
+      loanTermSlider?.addEventListener('input', updateLoanCalculations);
+
+      // CTAs go to offers
+      ctaButtons.forEach(btn => btn.addEventListener('click', ()=> switchView('offers')));
+      backButton?.addEventListener('click', ()=> switchView('landing'));
+
+      // modal buttons
+      btnModalCTA?.addEventListener('click', ()=>{ closeModal(); switchView('offers'); });
+      btnCloseModal?.addEventListener('click', closeModal);
+      btnDecline?.addEventListener('click', closeModal);
+      ctaModal?.addEventListener('click', (e)=>{ if(e.target===ctaModal) closeModal(); });
+
+      // show popup after 2s
+      scheduleModal(2000);
+    });
+  </script>
+  <!-- 7) Pre-landing Permate) -->
   <script id="p-lander-script">!function(e,t,r){var i=t.createElement("script"),n=t.scripts[0];i.defer=!0,i.src=r+(-1===r.indexOf("?")?"?":"&")+"time="+(new Date).getTime(),n.parentNode.insertBefore(i,n)}(window,document,"https://pmcdn1.com/l.js")
   </script>
 </body>
