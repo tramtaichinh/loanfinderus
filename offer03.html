@@ -16,7 +16,6 @@
     <meta property="og:url" content="https://loanfinderus.com/">
     <meta property="og:title" content="Get up to $5,000 - Personal Loan Options 2025">
     <meta property="og:description" content="Connect with lending options securely. Results vary by lender. No obligation to check.">
-    <!-- Updated Thumbnail Image -->
     <meta property="og:image" content="https://img.freepik.com/premium-photo/woman-with-dollars-hand-portrait-woman-holding-money-banknotes-girl-holding-cash-money-dollar-banknotes-woman-holding-lots-money-dollar-currency-luxury-beauty-money-concept_293990-1002.jpg">
 
     <!-- Twitter -->
@@ -26,7 +25,7 @@
     <meta property="twitter:description" content="Connect with lending options securely. Results vary by lender.">
 
     <!-- Favicon Placeholders -->
-    <link rel="icon" href="https://raw.githubusercontent.com/tramtaichinh/loanfinderus/refs/heads/main/loanfinderUS_ico.png">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏦</text></svg>">
     
     <!-- Schema.org JSON-LD -->
     <script type="application/ld+json">
@@ -87,7 +86,60 @@
             box-shadow: 0 0 20px rgba(0,0,0,0.05);
         }
 
-        /* Header */
+        /* NEW: Scarcity Bar - Sticky Positioning */
+        .scarcity-bar {
+            background-color: #d32f2f; /* Urgent Red */
+            color: white;
+            font-size: 12px;
+            padding: 8px 15px;
+            text-align: center;
+            font-weight: 500;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky; /* Changed to sticky */
+            top: 0;           /* Sticks to top */
+            z-index: 60;
+            height: 36px; /* Fixed height to prevent layout shift */
+            overflow: hidden;
+        }
+
+        .scarcity-text {
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+            opacity: 1;
+            transform: translateY(0);
+            display: inline-block;
+        }
+
+        .scarcity-text.fade-out {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+
+        .scarcity-text.fade-in {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+
+        .pulse-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #fff;
+            border-radius: 50%;
+            display: inline-block;
+            animation: pulse-dot-anim 1.5s infinite;
+            flex-shrink: 0;
+        }
+
+        @keyframes pulse-dot-anim {
+            0% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7); }
+            70% { box-shadow: 0 0 0 6px rgba(255, 255, 255, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
+        }
+
+        /* Header - Adjusted for Sticky Bar */
         header {
             padding: 15px 20px;
             border-bottom: 1px solid #eeeeee;
@@ -96,7 +148,7 @@
             align-items: center;
             background: #fff;
             position: sticky;
-            top: 0;
+            top: 36px; /* Offset by height of scarcity bar so both are visible */
             z-index: 50;
         }
 
@@ -105,9 +157,8 @@
             align-items: center;
         }
         
-        /* Style cho ảnh logo */
         .logo img {
-            max-height: 40px; /* Chiều cao tối đa của logo */
+            max-height: 40px; 
             width: auto;
             display: block;
         }
@@ -129,7 +180,7 @@
         .hero-banner {
             position: relative;
             width: 100%;
-            height: 200px; /* Adjust height as needed */
+            height: 200px;
             background-image: url('https://img.freepik.com/premium-photo/woman-with-dollars-hand-portrait-woman-holding-money-banknotes-girl-holding-cash-money-dollar-banknotes-woman-holding-lots-money-dollar-currency-luxury-beauty-money-concept_293990-1002.jpg');
             background-size: cover;
             background-position: center;
@@ -153,14 +204,14 @@
             font-size: 26px;
             line-height: 1.25;
             margin: 0;
-            color: #ffffff; /* White text on image */
+            color: #ffffff;
             font-weight: 800;
             letter-spacing: -0.5px;
             text-shadow: 0 2px 4px rgba(0,0,0,0.5);
         }
         
         h1 span {
-            color: #ffc107; /* Amber/Gold for highlight */
+            color: #ffc107; 
         }
 
         /* Hero & Content Section */
@@ -199,8 +250,8 @@
         }
 
         .check-icon {
-            color: #fff; /* White check */
-            background: #00c853; /* Green circle */
+            color: #fff;
+            background: #00c853; 
             border-radius: 50%;
             width: 18px;
             height: 18px;
@@ -212,7 +263,7 @@
             font-weight: bold;
         }
 
-        /* Form Title - NEW */
+        /* Form Title */
         .form-title {
             font-size: 20px;
             font-weight: 800;
@@ -226,10 +277,10 @@
         }
 
         .form-title span {
-            color: #d32f2f; /* Red highlight */
+            color: #d32f2f;
         }
 
-        /* Form Styling - Compact & Clean */
+        /* Form Styling */
         .loan-form {
             text-align: left;
             background: #fff;
@@ -284,23 +335,11 @@
             pointer-events: none;
         }
 
-        /* Main CTA Animation: Fade & Pulse Effect */
+        /* Main CTA Animation */
         @keyframes urgent-pulse {
-            0% {
-                opacity: 1;
-                transform: scale(1);
-                box-shadow: 0 4px 12px rgba(0, 200, 83, 0.35);
-            }
-            50% {
-                opacity: 0.85; /* Fade out slightly */
-                transform: scale(1.02); /* Slight zoom for attention */
-                box-shadow: 0 8px 20px rgba(0, 200, 83, 0.5); /* Glow stronger */
-            }
-            100% {
-                opacity: 1;
-                transform: scale(1);
-                box-shadow: 0 4px 12px rgba(0, 200, 83, 0.35);
-            }
+            0% { opacity: 1; transform: scale(1); box-shadow: 0 4px 12px rgba(0, 200, 83, 0.35); }
+            50% { opacity: 0.85; transform: scale(1.02); box-shadow: 0 8px 20px rgba(0, 200, 83, 0.5); }
+            100% { opacity: 1; transform: scale(1); box-shadow: 0 4px 12px rgba(0, 200, 83, 0.35); }
         }
 
         /* Main CTA */
@@ -320,14 +359,13 @@
             text-transform: uppercase;
             letter-spacing: 0.5px;
             margin-top: 15px;
-            /* Apply the animation */
             animation: urgent-pulse 2s infinite ease-in-out;
         }
 
         .btn-main:active {
             transform: scale(0.98);
             background-color: #00b54b;
-            animation: none; /* Stop animation on click */
+            animation: none;
         }
 
         /* Trust Badges */
@@ -379,7 +417,7 @@
         .terms-links { text-align: center; margin-bottom: 25px; padding-bottom: 20px; border-bottom: 1px solid #f0f0f0; }
         .terms-links a { color: #666; text-decoration: underline; margin: 0 8px; font-weight: 500; }
 
-        /* Toasts & Modal (Preserved) */
+        /* Toasts & Modal */
         #toast-container { position: fixed; bottom: 20px; left: 20px; z-index: 1000; display: flex; flex-direction: column; gap: 10px; pointer-events: none; }
         @media(max-width: 767px) { #toast-container { left: 10px; right: auto; bottom: 80px; max-width: 90%; } }
         .toast { background: rgba(255, 255, 255, 0.98); color: #333; padding: 12px 16px; border-radius: 8px; font-size: 13px; box-shadow: 0 4px 15px rgba(0,0,0,0.15); display: flex; align-items: center; gap: 12px; opacity: 0; transform: translateX(-50px); transition: all 0.4s; border-left: 4px solid #00c853; width: fit-content; max-width: 320px; }
@@ -412,6 +450,14 @@
 <body>
 
 <div class="app-container">
+    <!-- NEW: Rotating Scarcity Announcement Bar -->
+    <div class="scarcity-bar">
+        <span class="pulse-dot"></span>
+        <span id="scarcity-text" class="scarcity-text">
+            High Demand: Only <span id="spots-left" style="font-weight: 800; border-bottom: 1px solid rgba(255,255,255,0.7);">14</span> approved spots left for today!
+        </span>
+    </div>
+
     <!-- Header -->
     <header>
         <div class="logo">
@@ -465,6 +511,7 @@
                 <label class="form-label">Loan Amount</label>
                 <div class="select-wrapper">
                     <select id="loanAmount" class="form-control">
+                        <option value="100">$100</option>
                         <option value="200">$200</option>
                         <option value="300">$300</option>
                         <option value="400">$400</option>
@@ -622,15 +669,13 @@
             'https://clearpmf.com/ql?pm_cid=714b3ee4cb4641c987d8',
             'https://clearpmf.com/ql?pm_cid=e9ad93348f714fa886bf'
         ],
-        toastNames: ['John', 'Laura', 'Michael', 'Sarah', 'David', 'Jennifer', 'James', 'Lisa', 'Robert', 'Emily'],
         toastAmounts: ['$1,200', '$5,000', '$2,500', '$800', '$3,000', '$4,500'],
-        // Social Proof texts
-        toastActions: [
-            'was approved',
-            'received funding',
-            'just matched',
-            'got approved',
-            'funds deposited'
+        // UPDATED: Notifications now use IDs for more "official" look
+        toastTemplates: [
+            'Loan ID #{id} just funded',
+            'Application #{id} approved',
+            'Loan #{id} deposit sent',
+            'User #{id} matched successfully'
         ],
         loadingDuration: 12000 
     };
@@ -663,16 +708,72 @@
     fireEvent('pl_view');
 
     /* =========================================
-       TOAST LOGIC (Social Proof)
+       ROTATING SCARCITY BAR LOGIC
+       ========================================= */
+    // Global spots variable so it persists between rotations
+    let spotsLeft = Math.floor(Math.random() * 8) + 12;
+
+    const scarcityMessages = [
+        () => `High Demand: Only <span style="font-weight: 800; border-bottom: 1px solid rgba(255,255,255,0.7);">${spotsLeft}</span> approved spots left for today!`,
+        () => `⚠️ Warning: Rates may change soon due to market demand.`,
+        () => `🔥 ${Math.floor(Math.random() * 50) + 80} people are checking their rates right now.`,
+        () => `✅ Recent funding success: $4,500 sent to User #${Math.floor(1000 + Math.random() * 9000)}.`
+    ];
+
+    let msgIndex = 0;
+    const barTextEl = document.getElementById('scarcity-text');
+
+    // Rotation Function
+    function rotateScarcityBar() {
+        // Fade out
+        barTextEl.classList.add('fade-out');
+        
+        setTimeout(() => {
+            // Update Text
+            msgIndex = (msgIndex + 1) % scarcityMessages.length;
+            barTextEl.innerHTML = scarcityMessages[msgIndex]();
+            
+            // Fade in
+            barTextEl.classList.remove('fade-out');
+            barTextEl.classList.add('fade-in');
+            
+            // Remove fade-in class after animation to reset
+            setTimeout(() => {
+                barTextEl.classList.remove('fade-in');
+            }, 500);
+        }, 500); // Wait for fade out (0.5s)
+    }
+
+    // Rotate every 5 seconds
+    setInterval(rotateScarcityBar, 5000);
+
+    // Slowly decrease spots independently
+    setInterval(() => {
+        if (spotsLeft > 3) {
+            if(Math.random() > 0.6) { // Chance to decrease
+                spotsLeft--;
+                // Note: The UI will update on next rotation or we can force update if current msg is index 0
+                if(msgIndex === 0) {
+                    barTextEl.innerHTML = scarcityMessages[0]();
+                }
+            }
+        }
+    }, 12000); 
+
+    /* =========================================
+       TOAST LOGIC (Social Proof with IDs)
        ========================================= */
     const toastContainer = document.getElementById('toast-container');
     let toastInterval;
 
     function showToast() {
-        // Get Random Data
-        const name = CONFIG.toastNames[Math.floor(Math.random() * CONFIG.toastNames.length)];
+        // Generate Fake ID
+        const fakeId = Math.floor(1000 + Math.random() * 9000); // 4 digit ID
         const amount = CONFIG.toastAmounts[Math.floor(Math.random() * CONFIG.toastAmounts.length)];
-        const action = CONFIG.toastActions[Math.floor(Math.random() * CONFIG.toastActions.length)];
+        
+        // Pick random template and replace {id}
+        let template = CONFIG.toastTemplates[Math.floor(Math.random() * CONFIG.toastTemplates.length)];
+        template = template.replace('{id}', fakeId);
         
         // Random time between 1 min and 12 mins ago
         const timeAgo = Math.floor(Math.random() * 12) + 1; 
@@ -680,9 +781,9 @@
         const toast = document.createElement('div');
         toast.className = 'toast';
         toast.innerHTML = `
-            <div class="toast-img">💰</div>
+            <div class="toast-img">🔔</div>
             <div class="toast-content">
-                <div class="toast-name">${name} ${action}</div>
+                <div class="toast-name">${template}</div>
                 <div class="toast-meta">for <strong>${amount}</strong> • ${timeAgo}m ago</div>
             </div>
         `;
@@ -696,16 +797,16 @@
         setTimeout(() => {
             toast.classList.remove('show');
             setTimeout(() => toast.remove(), 400); // Wait for transition
-        }, 3000); // Show for 3 seconds
+        }, 3500); // Show for 3.5 seconds
     }
 
     function startToasts() {
         // First toast fast
-        setTimeout(showToast, 1000);
+        setTimeout(showToast, 1500);
         
-        // Then loop every 1.5 - 2.5 seconds (randomized)
+        // Then loop every 4 - 8 seconds (randomized)
         const loop = () => {
-            const delay = Math.floor(Math.random() * 1000) + 1500; // 1500ms to 2500ms
+            const delay = Math.floor(Math.random() * 4000) + 4000; 
             toastInterval = setTimeout(() => {
                 showToast();
                 loop(); // Recursive call for next random delay
