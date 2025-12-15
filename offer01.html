@@ -106,6 +106,47 @@
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
+
+        /* --- CUSTOM RED SHADOW --- */
+        .card-red-shadow {
+            /* Combination of standard depth shadow and a diffuse red glow */
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 
+                        0 10px 10px -5px rgba(0, 0, 0, 0.04), 
+                        0 0 60px -15px rgba(239, 68, 68, 0.25);
+        }
+
+        /* --- SOCIAL PROOF NOTIFICATION --- */
+        #social-proof {
+            position: fixed;
+            left: 20px;
+            bottom: 20px; /* Desktop position */
+            z-index: 60; /* Higher than sticky footer to float nicely */
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+            padding: 12px 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            max-width: 320px;
+            transform: translateX(-150%); /* Hidden to the left */
+            transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Bouncy slide in */
+            border-left: 4px solid #16a34a; /* Green success border */
+        }
+
+        #social-proof.visible {
+            transform: translateX(0);
+        }
+
+        /* Mobile specific positioning to avoid sticky bar */
+        @media (max-width: 768px) {
+            #social-proof {
+                bottom: 110px; /* Position above the sticky footer */
+                left: 10px;
+                padding: 10px 12px;
+                max-width: 280px;
+            }
+        }
     </style>
 
     <!-- ================= SCHEMA.ORG (ENGLISH) ================= -->
@@ -147,7 +188,8 @@
 </head>
 <body class="min-h-screen flex items-center justify-center py-6 px-3">
 
-    <main class="w-full max-w-[500px] bg-white rounded-3xl shadow-2xl overflow-hidden relative border border-gray-100">
+    <!-- Added 'card-red-shadow' class here instead of shadow-2xl -->
+    <main class="w-full max-w-[500px] bg-white rounded-3xl card-red-shadow overflow-hidden relative border border-gray-100">
         
         <!-- LOADING OVERLAY -->
         <div id="loading-overlay">
@@ -334,44 +376,6 @@
                 </div>
             </div>
 
-            <!-- 6. HOW IT WORKS -->
-            <div class="section-gap">
-                <h2 class="text-lg font-bold text-gray-900 mb-2">How it works</h2>
-                <p class="text-xs text-gray-500 font-light mb-6">We remove the paperwork and connect you with lenders online so you can focus on what matters.</p>
-
-                <div class="space-y-6 relative pl-2">
-                    <!-- Vertical Line Connector -->
-                    <div class="absolute left-[1.35rem] top-3 bottom-4 w-0.5 bg-gray-100 -z-10"></div>
-
-                    <!-- Step 1 -->
-                    <div class="flex gap-4 relative bg-white z-0">
-                        <div class="flex-shrink-0 w-9 h-9 rounded-full bg-red-50 text-red-600 flex items-center justify-center font-bold text-sm shadow-sm ring-4 ring-white">1</div>
-                        <div class="pt-0.5">
-                            <h4 class="font-bold text-gray-900 text-sm">Submit a request</h4>
-                            <p class="text-[11px] text-gray-500 mt-1 leading-relaxed">Share some basic details about yourself through our secure form and hit "Check availability". No printing, faxing or in-person visits required.</p>
-                        </div>
-                    </div>
-
-                    <!-- Step 2 -->
-                    <div class="flex gap-4 relative bg-white z-0">
-                        <div class="flex-shrink-0 w-9 h-9 rounded-full bg-red-50 text-red-600 flex items-center justify-center font-bold text-sm shadow-sm ring-4 ring-white">2</div>
-                        <div class="pt-0.5">
-                            <h4 class="font-bold text-gray-900 text-sm">Check the offers</h4>
-                            <p class="text-[11px] text-gray-500 mt-1 leading-relaxed">Review the offers from participating lenders. If you're happy with the amount, rates and terms, simply e-sign the agreement online.</p>
-                        </div>
-                    </div>
-
-                    <!-- Step 3 -->
-                    <div class="flex gap-4 relative bg-white z-0">
-                        <div class="flex-shrink-0 w-9 h-9 rounded-full bg-red-50 text-red-600 flex items-center justify-center font-bold text-sm shadow-sm ring-4 ring-white">3</div>
-                        <div class="pt-0.5">
-                            <h4 class="font-bold text-gray-900 text-sm">Receive your money</h4>
-                            <p class="text-[11px] text-gray-500 mt-1 leading-relaxed">After your request is approved and you sign the offer, funds can be deposited directly into your bank account as soon as the next business day.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
             <!-- FINAL CTA BUTTON: START REQUEST (New Logic) -->
             <button onclick="handleStartRequest()" class="block w-full bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white font-bold text-center py-3.5 rounded-full shadow-lg transition-all duration-300 mb-6 flex items-center justify-center gap-2 transform active:scale-95 shadow-red-100 btn-breathing">
                 Start my request now <i class="fa-solid fa-arrow-right"></i>
@@ -396,6 +400,17 @@
 
         </div>
     </main>
+
+    <!-- ================= SOCIAL PROOF NOTIFICATION ================= -->
+    <div id="social-proof">
+        <div class="bg-green-100 p-2 rounded-full text-green-600 flex-shrink-0">
+            <i class="fa-solid fa-check text-sm"></i>
+        </div>
+        <div>
+            <p class="font-bold text-gray-800 text-xs leading-snug"><span id="sp-name">John D.</span> approved for <span class="text-green-600 font-extrabold" id="sp-amount">$2,000</span></p>
+            <p class="text-[10px] text-gray-400 mt-0.5" id="sp-time">Just now</p>
+        </div>
+    </div>
 
     <!-- ================= MOBILE STICKY FOOTER ================= -->
     <div class="fixed bottom-0 left-0 w-full bg-gradient-to-t from-gray-900 via-gray-900/95 to-transparent pt-12 pb-5 px-4 z-50 md:hidden safe-area-pb">
@@ -524,6 +539,44 @@
             }, 600); 
         }
 
+        // --- SOCIAL PROOF LOGIC ---
+        const socialProofs = [
+            { name: "John D.", amount: "$2,000", time: "Just now" },
+            { name: "Laura M.", amount: "$5,000", time: "1 min ago" },
+            { name: "Michael S.", amount: "$1,500", time: "2 mins ago" },
+            { name: "Sarah J.", amount: "$800", time: "Just now" },
+            { name: "David B.", amount: "$3,000", time: "4 mins ago" },
+            { name: "Jennifer L.", amount: "$4,000", time: "1 min ago" },
+            { name: "Robert K.", amount: "$2,500", time: "Just now" },
+            { name: "James R.", amount: "$1,000", time: "5 mins ago" },
+            { name: "Emily W.", amount: "$5,000", time: "3 mins ago" },
+            { name: "William T.", amount: "$500", time: "Just now" }
+        ];
+
+        function showSocialProof() {
+            const el = document.getElementById('social-proof');
+            const nameEl = document.getElementById('sp-name');
+            const amountEl = document.getElementById('sp-amount');
+            const timeEl = document.getElementById('sp-time');
+
+            // Pick random
+            const item = socialProofs[Math.floor(Math.random() * socialProofs.length)];
+            nameEl.innerText = item.name;
+            amountEl.innerText = item.amount;
+            timeEl.innerText = item.time;
+
+            // Show
+            el.classList.add('visible');
+
+            // Hide after 2.5s (Faster display)
+            setTimeout(() => {
+                el.classList.remove('visible');
+            }, 2500);
+
+            // Reschedule (FAST CYCLE: every 3.5s approx)
+            setTimeout(showSocialProof, 3500); 
+        }
+
         // --- TIMER LOGIC ---
         function startTimer(duration) {
             var timer = duration, minutes, seconds;
@@ -550,6 +603,8 @@
 
         window.onload = function () {
             startTimer(60 * 9 + 58);
+            // Start social proof after 2 seconds
+            setTimeout(showSocialProof, 2000);
         };
     </script>
 </body>
