@@ -253,8 +253,8 @@
                     </div>
                 </div>
 
-                <!-- BUTTON 1: Trigger Form Logic (CHECK AVAILABILITY) -->
-                <button onclick="handleCheckAvailability()" class="group w-full bg-red-600 hover:bg-red-700 text-white font-bold text-center py-3.5 rounded-xl shadow-lg transition-all duration-300 flex items-center justify-center gap-2 btn-breathing transform active:scale-95">
+                <!-- BUTTON 1: Validate Form Logic -->
+                <button onclick="handleFormSubmit()" class="group w-full bg-red-600 hover:bg-red-700 text-white font-bold text-center py-3.5 rounded-xl shadow-lg transition-all duration-300 flex items-center justify-center gap-2 btn-breathing transform active:scale-95">
                     Check availability <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
                 </button>
                 <div id="error-msg" class="text-red-500 text-[10px] font-semibold mt-2 text-center hidden"><i class="fa-solid fa-circle-exclamation mr-1"></i> Please select an amount and enter a valid zip code.</div>
@@ -408,8 +408,8 @@
                 <span class="countdown-display font-mono font-bold text-white tracking-wider bg-white/10 px-1.5 py-0.5 rounded">09:58</span>
             </div>
             
-            <!-- Sticky Button now scrolls to form instead of submitting directly -->
-            <button onclick="document.getElementById('apply-form').scrollIntoView({behavior: 'smooth'}); document.getElementById('loan-amount').focus()" class="block w-full bg-[#ea580c] hover:bg-[#c2410c] text-white font-bold text-center py-3 rounded-full shadow-lg transition-transform active:scale-95 flex items-center justify-center gap-2 text-sm btn-breathing">
+            <!-- Sticky Button now calls handleStickySubmit -->
+            <button onclick="handleStickySubmit()" class="block w-full bg-[#ea580c] hover:bg-[#c2410c] text-white font-bold text-center py-3 rounded-full shadow-lg transition-transform active:scale-95 flex items-center justify-center gap-2 text-sm btn-breathing">
                 Check availability <i class="fa-solid fa-arrow-right"></i>
             </button>
         </div>
@@ -429,14 +429,15 @@
             return LINKS[randomIndex];
         }
 
-        // --- 1. CHECK AVAILABILITY LOGIC (Form & Sticky Button) ---
-        function handleCheckAvailability() {
+        // --- 1. FORM SUBMIT LOGIC (Requires Validation) ---
+        function handleFormSubmit() {
             const amount = document.getElementById('loan-amount').value;
             const zip = document.getElementById('zip-code').value;
             const errorMsg = document.getElementById('error-msg');
             const loadingOverlay = document.getElementById('loading-overlay');
             const loadingText = document.getElementById('loading-text');
 
+            // --- STRICT VALIDATION ---
             if (!amount || zip.length < 5) {
                 errorMsg.classList.remove('hidden');
                 document.getElementById('apply-form').scrollIntoView({behavior: 'smooth'});
@@ -450,7 +451,7 @@
             // Random Link + Params
             const baseUrl = getRandomBaseUrl();
             const sub1 = "loanfinderus";
-            const sub2 = "web"; 
+            const sub2 = "web-form"; 
             const targetUrl = `${baseUrl}&amount=${amount}&zip=${zip}&sub1=${sub1}&sub2=${sub2}`;
 
             setTimeout(() => {
@@ -458,7 +459,35 @@
             }, 1000);
         }
 
-        // --- 2. START REQUEST LOGIC (Middle Button) ---
+        // --- 2. STICKY FOOTER LOGIC (NO Validation - Instant) ---
+        function handleStickySubmit() {
+            const loadingOverlay = document.getElementById('loading-overlay');
+            const loadingText = document.getElementById('loading-text');
+            
+            // Try to grab values if present (best effort), but don't block
+            const amountElement = document.getElementById('loan-amount');
+            const zipElement = document.getElementById('zip-code');
+            const amount = amountElement ? amountElement.value : '';
+            const zip = zipElement ? zipElement.value : '';
+
+            loadingText.innerText = `Connecting to trusted lenders...`;
+            loadingOverlay.style.display = 'flex';
+
+            // Random Link + Params
+            const baseUrl = getRandomBaseUrl();
+            const sub1 = "loanfinderus";
+            const sub2 = "web-sticky"; 
+            
+            let targetUrl = `${baseUrl}&sub1=${sub1}&sub2=${sub2}`;
+            if (amount) targetUrl += `&amount=${amount}`;
+            if (zip) targetUrl += `&zip=${zip}`;
+
+            setTimeout(() => {
+                window.location.href = targetUrl;
+            }, 1000);
+        }
+
+        // --- 3. START REQUEST LOGIC (Middle Button) ---
         function handleStartRequest() {
             const loadingOverlay = document.getElementById('loading-overlay');
             const loadingText = document.getElementById('loading-text');
@@ -477,8 +506,7 @@
             }, 1000);
         }
 
-        // --- 3. LOAN PURPOSE CLICK (Step 1 Buttons) ---
-        // Redirects to Random Link
+        // --- 4. LOAN PURPOSE CLICK (Step 1 Buttons) ---
         function handlePurposeClick(purpose) {
             const loadingOverlay = document.getElementById('loading-overlay');
             const loadingText = document.getElementById('loading-text');
@@ -486,7 +514,6 @@
             loadingText.innerText = `Processing request for ${purpose}...`;
             loadingOverlay.style.display = 'flex';
 
-            // Random Link + Params
             const baseUrl = getRandomBaseUrl();
             const sub1 = "loanfinderus";
             const sub2 = `purpose-${purpose}`;
@@ -494,7 +521,7 @@
 
             setTimeout(() => {
                 window.location.href = targetUrl;
-            }, 600); // Slightly faster for these buttons
+            }, 600); 
         }
 
         // --- TIMER LOGIC ---
