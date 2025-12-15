@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- ================= SEO METADATA (ENGLISH) ================= -->
+    <title>LoanfinderUS - Fast Personal Loans Up To $5,000 | Same Day Funding</title>
+    <meta name="description" content="LoanfinderUS connects you with trusted lenders for personal loans up to $5,000. 100% online, fast approval, and same-day transfer available. Rates from 4.95%.">
+    <meta name="keywords" content="LoanfinderUS, personal loans, online loans, fast cash, emergency loans, debt consolidation, bad credit loans, same day loans">
+    <meta name="author" content="LoanfinderUS">
+    <meta name="robots" content="index, follow">
+    <!-- Updated Domain -->
+    <link rel="canonical" href="https://loanfinderus.com/">
+
+    <!-- ================= OPEN GRAPH / THUMBNAIL (ENGLISH) ================= -->
+    <meta property="og:title" content="Get Up To $5,000 Fast - No Paperwork | LoanfinderUS">
+    <meta property="og:description" content="Instant decision from trusted lenders. Get money in your account as soon as today. 100% online application.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80">
+    <!-- Updated Domain -->
+    <meta property="og:url" content="https://loanfinderus.com/">
+    <meta property="og:type" content="website">
+
+    <!-- ================= FAVICON ================= -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💸</text></svg>">
+
+    <!-- ================= LIBRARIES ================= -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- ================= CUSTOM STYLES ================= -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+        }
+        
+        /* INCREASED padding bottom specifically for mobile to clear the sticky footer */
+        @media (max-width: 768px) {
+            body {
+                padding-bottom: 220px !important; 
+            }
+        }
+
+        /* --- NEW ANIMATION: FADE IN FADE OUT (BREATHING) --- */
+        .btn-breathing {
+            animation: breathing-glow 3s ease-in-out infinite;
+        }
+
+        @keyframes breathing-glow {
+            0% {
+                box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4);
+                transform: scale(1);
+            }
+            50% {
+                box-shadow: 0 0 20px 0 rgba(239, 68, 68, 0.7);
+                transform: scale(1.02); /* Slight grow */
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4);
+                transform: scale(1);
+            }
+        }
+
+        /* Custom dash border specifically for the timer box */
+        .dashed-box {
+            background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='24' ry='24' stroke='%23FECACA' stroke-width='2' stroke-dasharray='8%2c 8' stroke-dashoffset='0' stroke-linecap='round'/%3e%3c/svg%3e");
+            border-radius: 24px;
+        }
+
+        /* Smooth spacing utility - REDUCED for Compact view */
+        .section-gap {
+            margin-bottom: 1.5rem; 
+        }
+
+        /* Loading Overlay Styles */
+        #loading-overlay {
+            display: none; /* Hidden by default */
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            z-index: 50;
+            border-radius: 1.5rem; /* Matches card rounded-3xl */
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(5px);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #dc2626; /* Red-600 */
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+
+    <!-- ================= SCHEMA.ORG (ENGLISH) ================= -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "FinancialProduct",
+          "name": "Personal Loan Service",
+          "description": "Connects borrowers with lenders for personal loans up to $5,000 with competitive rates.",
+          "provider": { "@type": "Organization", "name": "LoanfinderUS", "url": "https://loanfinderus.com" },
+          "interestRate": { "@type": "QuantitativeValue", "minValue": 4.95, "unitText": "PERCENT" },
+          "amount": { "@type": "MonetaryAmount", "currency": "USD", "minValue": 200, "maxValue": 5000 }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "How much can I borrow?",
+              "acceptedAnswer": { "@type": "Answer", "text": "You can request loan amounts ranging from $200 up to $5,000, depending on your credit profile and the lender." }
+            },
+            {
+              "@type": "Question",
+              "name": "How soon will I get the money?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Once approved and the agreement is signed, funds are typically deposited into your bank account as soon as the next business day." }
+            },
+            {
+              "@type": "Question",
+              "name": "Are there any fees to apply?",
+              "acceptedAnswer": { "@type": "Answer", "text": "No. Our service is completely free to use ($0.00 Fees). Lenders may charge their own fees which will be disclosed to you." }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="min-h-screen flex items-center justify-center py-6 px-3">
+
+    <main class="w-full max-w-[500px] bg-white rounded-3xl shadow-2xl overflow-hidden relative border border-gray-100">
+        
+        <!-- LOADING OVERLAY -->
+        <div id="loading-overlay">
+            <div class="spinner mb-5"></div>
+            <!-- Dynamic Text Container -->
+            <h3 id="loading-text" class="text-gray-900 font-bold text-lg leading-tight">Searching Lenders...</h3>
+            <p class="text-gray-500 text-xs mt-3 animate-pulse">Please do not close this window.</p>
+        </div>
+
+        <!-- Header Gradient Overlay -->
+        <div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-red-500 to-pink-500"></div>
+
+        <div class="p-5 md:p-7">
+
+            <!-- 1. TOP BADGE -->
+            <div class="inline-flex items-center gap-2 bg-red-50 text-red-600 text-[10px] font-bold px-3 py-1.5 rounded-full uppercase tracking-wide mb-3 border border-red-100">
+                <i class="fa-solid fa-bolt"></i> Fast & Easy Personal Loans
+            </div>
+
+            <!-- 2. HEADLINE -->
+            <h1 class="text-2xl md:text-3xl font-bold text-gray-900 leading-tight mb-2">
+                Get up to <span class="text-red-600">$5,000</span> transferred to your bank as soon as today.
+            </h1>
+            
+            <p class="text-gray-500 text-xs md:text-sm mb-5 leading-relaxed font-light">
+                Fill out a <span class="font-bold text-green-600">quick request form</span>, check the offers from our network of <span class="font-bold text-green-600">trusted lenders</span>, and e-sign the one that works for you. No store visits, no stacks of paperwork.
+            </p>
+
+            <!-- 3. HERO SECTION -->
+            <div class="flex flex-col sm:flex-row gap-4 section-gap">
+                <div class="flex-1 space-y-2">
+                    <h3 class="font-bold text-gray-900 text-sm">3 simple steps. 100% online. No obligation.</h3>
+                    <ul class="space-y-1.5">
+                        <li class="flex items-start gap-2 text-xs text-gray-600">
+                            <i class="fa-solid fa-circle-check text-green-500 text-sm"></i>
+                            <span class="mt-0.5">Same day decision from participating lenders</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-xs text-gray-600">
+                            <i class="fa-solid fa-circle-check text-green-500 text-sm"></i>
+                            <span class="mt-0.5">Up to $5,000 based on your profile</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-xs text-gray-600">
+                            <i class="fa-solid fa-circle-check text-green-500 text-sm"></i>
+                            <span class="mt-0.5">Free, secure and easy to use</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="sm:w-36 w-full relative group">
+                    <a href="javascript:void(0)" class="block w-full h-full transform transition hover:scale-105 duration-500 ease-out" onclick="document.getElementById('loan-amount').focus()">
+                        <div class="relative rounded-xl overflow-hidden shadow-lg h-28 w-full bg-gray-100 flex items-center justify-center border-2 border-white ring-1 ring-gray-100">
+                            <img src="https://images.unsplash.com/photo-1580519542036-c47de6196ba5?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Happy woman" class="absolute inset-0 w-full h-full object-cover">
+                            <!-- Overlay Badge -->
+                            <div class="absolute top-2 left-2 right-2 flex justify-between items-start">
+                                <div class="bg-red-600 text-white text-[9px] font-bold px-2 py-1 rounded shadow-sm">
+                                    ONLINE
+                                </div>
+                            </div>
+                            <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 to-transparent p-2 pt-6">
+                                <div class="text-white text-[9px] font-medium text-center">
+                                    Range: $200 - $5k
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- ================= NEW INPUT FORM ================= -->
+            <div id="apply-form" class="bg-gray-50 p-4 rounded-2xl border border-gray-200 mb-5 shadow-inner">
+                <div class="grid grid-cols-2 gap-3 mb-3">
+                    <!-- Loan Amount Dropdown -->
+                    <div class="col-span-1">
+                        <label for="loan-amount" class="block text-[10px] font-bold text-gray-500 uppercase mb-1 ml-1">Loan Amount</label>
+                        <div class="relative">
+                            <select id="loan-amount" class="appearance-none w-full bg-white border border-gray-300 text-gray-900 text-sm font-bold rounded-lg focus:ring-red-500 focus:border-red-500 block p-2.5 shadow-sm">
+                                <option value="" disabled selected>Select amount</option>
+                                <option value="200">$200</option>
+                                <option value="500">$500</option>
+                                <option value="800">$800</option>
+                                <option value="1000">$1,000</option>
+                                <option value="1500">$1,500</option>
+                                <option value="2000">$2,000</option>
+                                <option value="3000">$3,000</option>
+                                <option value="4000">$4,000</option>
+                                <option value="5000">$5,000</option>
+                            </select>
+                            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-500">
+                                <i class="fa-solid fa-chevron-down text-xs"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Zip Code Input -->
+                    <div class="col-span-1">
+                        <label for="zip-code" class="block text-[10px] font-bold text-gray-500 uppercase mb-1 ml-1">Zip Code</label>
+                        <div class="relative">
+                            <input type="text" id="zip-code" maxlength="5" pattern="\d*" placeholder="e.g. 90001" class="w-full bg-white border border-gray-300 text-gray-900 text-sm font-bold rounded-lg focus:ring-red-500 focus:border-red-500 block p-2.5 shadow-sm" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                            <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none text-gray-400">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BUTTON 1: Trigger Form Logic (CHECK AVAILABILITY) -->
+                <button onclick="handleCheckAvailability()" class="group w-full bg-red-600 hover:bg-red-700 text-white font-bold text-center py-3.5 rounded-xl shadow-lg transition-all duration-300 flex items-center justify-center gap-2 btn-breathing transform active:scale-95">
+                    Check availability <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                </button>
+                <div id="error-msg" class="text-red-500 text-[10px] font-semibold mt-2 text-center hidden"><i class="fa-solid fa-circle-exclamation mr-1"></i> Please select an amount and enter a valid zip code.</div>
+            </div>
+
+            <p class="text-[10px] text-gray-500 text-justify section-gap leading-relaxed opacity-80">
+                Approval of the application and the loan terms depend on your credit history, income, and the decision of the specific lender. We do not guarantee 100% approval or exact terms.
+            </p>
+
+            <!-- 4. TIMER & TRUST BADGES -->
+            <!-- Khoảng cách giữa các phần tử bên trong rộng hơn một chút -->
+            <div class="dashed-box p-1.5 mb-5 bg-[#fff5f5]/60">
+                <div class="flex items-center justify-between px-3 py-2">
+                    <div class="flex items-center gap-2 text-xs text-gray-600 font-medium">
+                        <span class="relative flex h-2 w-2">
+                          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                          <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                        </span>
+                        Lock in your offers before the timer ends
+                    </div>
+                    <div id="countdown" class="text-red-600 font-mono font-bold text-xs bg-white/50 px-2 rounded">09:58</div>
+                </div>
+            </div>
+                
+            <div class="grid grid-cols-2 gap-3 section-gap">
+                <div class="bg-[#fff8f3] rounded-2xl p-3 border border-orange-50/50 shadow-sm flex flex-col justify-center">
+                    <div class="text-[#9a3412] font-bold text-xs mb-0.5">$0.00 Fees</div>
+                    <div class="text-gray-500 text-[10px]">No fee to use our service</div>
+                </div>
+                <div class="bg-[#fff8f3] rounded-2xl p-3 border border-orange-50/50 shadow-sm flex flex-col justify-center">
+                    <div class="text-[#9a3412] font-bold text-xs mb-0.5">APR from 4.95%</div>
+                    <div class="text-gray-500 text-[10px]">For qualified borrowers*</div>
+                </div>
+            </div>
+
+            <!-- 5. STEP 1 (Pill Buttons - RANDOM REDIRECT) -->
+            <div class="section-gap">
+                <div class="text-red-500 text-[10px] font-bold uppercase tracking-wider mb-2">STEP 1</div>
+                <h2 class="text-lg font-bold text-gray-900 mb-4">What do you need the money for?</h2>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                    <!-- Option 1 -->
+                    <a href="javascript:void(0)" class="group flex items-center justify-between pl-2 pr-4 py-2.5 bg-white border border-gray-200 hover:bg-green-600 hover:border-green-600 rounded-full shadow-sm hover:shadow-md transition-all duration-300 ease-in-out" onclick="handlePurposeClick('emergency')">
+                        <div class="flex items-center gap-2">
+                            <div class="w-7 h-7 rounded-full bg-red-50 text-red-600 flex items-center justify-center text-[10px] font-bold group-hover:bg-white group-hover:text-green-600 transition-colors duration-300">1</div>
+                            <span class="text-xs font-medium text-gray-700 group-hover:text-white transition-colors">Emergency expenses</span>
+                        </div>
+                        <i class="fa-solid fa-arrow-right text-gray-300 text-[10px] group-hover:text-white transition-colors duration-300"></i>
+                    </a>
+
+                    <!-- Option 2 -->
+                    <a href="javascript:void(0)" class="group flex items-center justify-between pl-2 pr-4 py-2.5 bg-white border border-gray-200 hover:bg-green-600 hover:border-green-600 rounded-full shadow-sm hover:shadow-md transition-all duration-300 ease-in-out" onclick="handlePurposeClick('utilities')">
+                        <div class="flex items-center gap-2">
+                            <div class="w-7 h-7 rounded-full bg-red-50 text-red-600 flex items-center justify-center text-[10px] font-bold group-hover:bg-white group-hover:text-green-600 transition-colors duration-300">2</div>
+                            <span class="text-xs font-medium text-gray-700 group-hover:text-white transition-colors">Bills & utilities</span>
+                        </div>
+                        <i class="fa-solid fa-arrow-right text-gray-300 text-[10px] group-hover:text-white transition-colors duration-300"></i>
+                    </a>
+
+                    <!-- Option 3 -->
+                    <a href="javascript:void(0)" class="group flex items-center justify-between pl-2 pr-4 py-2.5 bg-white border border-gray-200 hover:bg-green-600 hover:border-green-600 rounded-full shadow-sm hover:shadow-md transition-all duration-300 ease-in-out" onclick="handlePurposeClick('debt')">
+                        <div class="flex items-center gap-2">
+                            <div class="w-7 h-7 rounded-full bg-red-50 text-red-600 flex items-center justify-center text-[10px] font-bold group-hover:bg-white group-hover:text-green-600 transition-colors duration-300">3</div>
+                            <span class="text-xs font-medium text-gray-700 group-hover:text-white transition-colors">Debt consolidation</span>
+                        </div>
+                        <i class="fa-solid fa-arrow-right text-gray-300 text-[10px] group-hover:text-white transition-colors duration-300"></i>
+                    </a>
+
+                    <!-- Option 4 -->
+                    <a href="javascript:void(0)" class="group flex items-center justify-between pl-2 pr-4 py-2.5 bg-white border border-gray-200 hover:bg-green-600 hover:border-green-600 rounded-full shadow-sm hover:shadow-md transition-all duration-300 ease-in-out" onclick="handlePurposeClick('other')">
+                        <div class="flex items-center gap-2">
+                            <div class="w-7 h-7 rounded-full bg-red-50 text-red-600 flex items-center justify-center text-[10px] font-bold group-hover:bg-white group-hover:text-green-600 transition-colors duration-300">4</div>
+                            <span class="text-xs font-medium text-gray-700 group-hover:text-white transition-colors">Other personal needs</span>
+                        </div>
+                        <i class="fa-solid fa-arrow-right text-gray-300 text-[10px] group-hover:text-white transition-colors duration-300"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 6. HOW IT WORKS -->
+            <div class="section-gap">
+                <h2 class="text-lg font-bold text-gray-900 mb-2">How it works</h2>
+                <p class="text-xs text-gray-500 font-light mb-6">We remove the paperwork and connect you with lenders online so you can focus on what matters.</p>
+
+                <div class="space-y-6 relative pl-2">
+                    <!-- Vertical Line Connector -->
+                    <div class="absolute left-[1.35rem] top-3 bottom-4 w-0.5 bg-gray-100 -z-10"></div>
+
+                    <!-- Step 1 -->
+                    <div class="flex gap-4 relative bg-white z-0">
+                        <div class="flex-shrink-0 w-9 h-9 rounded-full bg-red-50 text-red-600 flex items-center justify-center font-bold text-sm shadow-sm ring-4 ring-white">1</div>
+                        <div class="pt-0.5">
+                            <h4 class="font-bold text-gray-900 text-sm">Submit a request</h4>
+                            <p class="text-[11px] text-gray-500 mt-1 leading-relaxed">Share some basic details about yourself through our secure form and hit "Check availability". No printing, faxing or in-person visits required.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="flex gap-4 relative bg-white z-0">
+                        <div class="flex-shrink-0 w-9 h-9 rounded-full bg-red-50 text-red-600 flex items-center justify-center font-bold text-sm shadow-sm ring-4 ring-white">2</div>
+                        <div class="pt-0.5">
+                            <h4 class="font-bold text-gray-900 text-sm">Check the offers</h4>
+                            <p class="text-[11px] text-gray-500 mt-1 leading-relaxed">Review the offers from participating lenders. If you're happy with the amount, rates and terms, simply e-sign the agreement online.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="flex gap-4 relative bg-white z-0">
+                        <div class="flex-shrink-0 w-9 h-9 rounded-full bg-red-50 text-red-600 flex items-center justify-center font-bold text-sm shadow-sm ring-4 ring-white">3</div>
+                        <div class="pt-0.5">
+                            <h4 class="font-bold text-gray-900 text-sm">Receive your money</h4>
+                            <p class="text-[11px] text-gray-500 mt-1 leading-relaxed">After your request is approved and you sign the offer, funds can be deposited directly into your bank account as soon as the next business day.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FINAL CTA BUTTON: START REQUEST (New Logic) -->
+            <button onclick="handleStartRequest()" class="block w-full bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white font-bold text-center py-3.5 rounded-full shadow-lg transition-all duration-300 mb-6 flex items-center justify-center gap-2 transform active:scale-95 shadow-red-100 btn-breathing">
+                Start my request now <i class="fa-solid fa-arrow-right"></i>
+            </button>
+
+            <!-- FOOTER BOX -->
+            <div class="bg-gray-50 rounded-xl p-4 mb-4 border border-gray-100">
+                <h5 class="font-bold text-gray-800 text-xs mb-1.5">We don't wait for action, we create it.</h5>
+                <p class="text-[10px] text-gray-500 leading-relaxed font-light">
+                    Time matters when you need money. Our role is to give you fast and convenient access to a network of reputable lenders so you can move forward sooner.
+                </p>
+            </div>
+
+            <!-- DISCLAIMER -->
+            <div class="text-[10px] text-black text-justify leading-snug pt-4 border-t border-gray-200 pb-2">
+                <p class="mb-2">
+                    <strong>Disclaimer:</strong> <span class="font-bold text-green-600">LoanfinderUS</span> is <span class="font-bold text-green-600">not an offer</span> or solicitation to lend. We do not make any loan or credit decisions and are not representatives, brokers or agents of any lender. Participating lenders offer loans from <span class="font-bold text-green-600">$200</span> up to <span class="font-bold text-green-600">$5,000</span>. Not all lenders can offer you amounts up to <span class="font-bold text-green-600">$5,000</span>. Our service is not available in all states.
+                </p>
+                <p class="mb-2">Funds transfer time may vary depending on your lender and/or financial institution. If you have any questions about your loan, please contact your lender directly. This service is not a solicitation for loan products and does not constitute a loan offer for any loan products that are prohibited by state law.</p>
+                <p class="mt-3 text-center font-semibold text-gray-500">© 2024 LoanfinderUS. All rights reserved.</p>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- ================= MOBILE STICKY FOOTER ================= -->
+    <div class="fixed bottom-0 left-0 w-full bg-gradient-to-t from-gray-900 via-gray-900/95 to-transparent pt-12 pb-5 px-4 z-50 md:hidden safe-area-pb">
+        <!-- Nền đen mờ dài hơn để che phủ tốt -->
+        <div class="absolute bottom-0 left-0 w-full h-36 bg-gray-900 -z-10 opacity-95"></div>
+        
+        <div class="max-w-[500px] mx-auto">
+            <div class="flex justify-between items-center text-white text-[11px] mb-2 px-1 font-medium">
+                <span class="opacity-90 drop-shadow-md">Complete your request before time runs out</span>
+                <span class="countdown-display font-mono font-bold text-white tracking-wider bg-white/10 px-1.5 py-0.5 rounded">09:58</span>
+            </div>
+            
+            <!-- Sticky Button now scrolls to form instead of submitting directly -->
+            <button onclick="document.getElementById('apply-form').scrollIntoView({behavior: 'smooth'}); document.getElementById('loan-amount').focus()" class="block w-full bg-[#ea580c] hover:bg-[#c2410c] text-white font-bold text-center py-3 rounded-full shadow-lg transition-transform active:scale-95 flex items-center justify-center gap-2 text-sm btn-breathing">
+                Check availability <i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- ================= JAVASCRIPT LOGIC ================= -->
+    <script>
+        // --- CONSTANTS: ROTATING LINKS ---
+        const LINKS = [
+            "https://clearpmf.com/ql?pm_cid=714b3ee4cb4641c987d8",
+            "https://clearpmf.com/ql?pm_cid=0b928f876ba74e5eb46b"
+        ];
+
+        // --- HELPER: GET RANDOM LINK ---
+        function getRandomBaseUrl() {
+            const randomIndex = Math.floor(Math.random() * LINKS.length);
+            return LINKS[randomIndex];
+        }
+
+        // --- 1. CHECK AVAILABILITY LOGIC (Form & Sticky Button) ---
+        function handleCheckAvailability() {
+            const amount = document.getElementById('loan-amount').value;
+            const zip = document.getElementById('zip-code').value;
+            const errorMsg = document.getElementById('error-msg');
+            const loadingOverlay = document.getElementById('loading-overlay');
+            const loadingText = document.getElementById('loading-text');
+
+            if (!amount || zip.length < 5) {
+                errorMsg.classList.remove('hidden');
+                document.getElementById('apply-form').scrollIntoView({behavior: 'smooth'});
+                return;
+            }
+            
+            errorMsg.classList.add('hidden');
+            loadingText.innerText = `Connecting to trusted lenders in ${zip}...`;
+            loadingOverlay.style.display = 'flex';
+
+            // Random Link + Params
+            const baseUrl = getRandomBaseUrl();
+            const sub1 = "loanfinderus";
+            const sub2 = "web"; 
+            const targetUrl = `${baseUrl}&amount=${amount}&zip=${zip}&sub1=${sub1}&sub2=${sub2}`;
+
+            setTimeout(() => {
+                window.location.href = targetUrl;
+            }, 2000);
+        }
+
+        // --- 2. START REQUEST LOGIC (Middle Button) ---
+        function handleStartRequest() {
+            const loadingOverlay = document.getElementById('loading-overlay');
+            const loadingText = document.getElementById('loading-text');
+
+            loadingText.innerText = `Initializing secure application...`;
+            loadingOverlay.style.display = 'flex';
+
+            // Random Link + Params
+            const baseUrl = getRandomBaseUrl();
+            const sub1 = "loanfinderus";
+            const sub2 = "web-start";
+            const targetUrl = `${baseUrl}&sub1=${sub1}&sub2=${sub2}`;
+
+            setTimeout(() => {
+                window.location.href = targetUrl;
+            }, 2000);
+        }
+
+        // --- 3. LOAN PURPOSE CLICK (Step 1 Buttons) ---
+        // Redirects to Random Link
+        function handlePurposeClick(purpose) {
+            const loadingOverlay = document.getElementById('loading-overlay');
+            const loadingText = document.getElementById('loading-text');
+
+            loadingText.innerText = `Processing request for ${purpose}...`;
+            loadingOverlay.style.display = 'flex';
+
+            // Random Link + Params
+            const baseUrl = getRandomBaseUrl();
+            const sub1 = "loanfinderus";
+            const sub2 = `purpose-${purpose}`;
+            const targetUrl = `${baseUrl}&sub1=${sub1}&sub2=${sub2}`;
+
+            setTimeout(() => {
+                window.location.href = targetUrl;
+            }, 1500); // Slightly faster for these buttons
+        }
+
+        // --- TIMER LOGIC ---
+        function startTimer(duration) {
+            var timer = duration, minutes, seconds;
+            var displays = document.querySelectorAll('#countdown, .countdown-display');
+
+            setInterval(function () {
+                minutes = parseInt(timer / 60, 10);
+                seconds = parseInt(timer % 60, 10);
+
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+
+                var timeString = minutes + ":" + seconds;
+
+                displays.forEach(function(display) {
+                    display.textContent = timeString;
+                });
+
+                if (--timer < 0) {
+                    timer = duration; 
+                }
+            }, 1000);
+        }
+
+        window.onload = function () {
+            startTimer(60 * 9 + 58);
+        };
+    </script>
+</body>
+</html>
