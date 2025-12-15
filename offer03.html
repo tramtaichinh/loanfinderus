@@ -16,7 +16,8 @@
     <meta property="og:url" content="https://loanfinderus.com/">
     <meta property="og:title" content="Get up to $5,000 - Personal Loan Options 2025">
     <meta property="og:description" content="Connect with lending options securely. Results vary by lender. No obligation to check.">
-    <meta property="og:image" content="https://loanfinderus.com/assets/og-image.jpg">
+    <!-- Updated Thumbnail Image -->
+    <meta property="og:image" content="https://img.freepik.com/premium-photo/woman-with-dollars-hand-portrait-woman-holding-money-banknotes-girl-holding-cash-money-dollar-banknotes-woman-holding-lots-money-dollar-currency-luxury-beauty-money-concept_293990-1002.jpg">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
@@ -25,7 +26,7 @@
     <meta property="twitter:description" content="Connect with lending options securely. Results vary by lender.">
 
     <!-- Favicon Placeholders -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏦</text></svg>">
+    <link rel="icon" href="https://raw.githubusercontent.com/tramtaichinh/loanfinderus/refs/heads/main/loanfinderUS_ico.png">
     
     <!-- Schema.org JSON-LD -->
     <script type="application/ld+json">
@@ -100,13 +101,15 @@
         }
 
         .logo {
-            font-weight: 800;
-            font-size: 19px;
-            color: #0056b3;
             display: flex;
             align-items: center;
-            gap: 8px;
-            letter-spacing: -0.5px;
+        }
+        
+        /* Style cho ảnh logo */
+        .logo img {
+            max-height: 40px; /* Chiều cao tối đa của logo */
+            width: auto;
+            display: block;
         }
 
         .badge-secure {
@@ -412,8 +415,9 @@
     <!-- Header -->
     <header>
         <div class="logo">
-            <svg class="svg-icon" viewBox="0 0 24 24" width="24" height="24"><path d="M11.5 1L2 6v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V6l-9.5-5zm-2 16l-4-4 1.41-1.41L10.5 15.17l6.59-6.59L18.5 10l-8 8z" fill="#0056b3"/></svg>
-            &nbsp;LoanFinder<span style="color:#333">US</span>
+            <a href="https://offers.loanfinderus.com" style="text-decoration: none; display: block;">
+                <img src="https://raw.githubusercontent.com/tramtaichinh/loanfinderus/7e68416a38196ce4b91581c36d77a72b46584d2a/Logo_loanfinderus.svg" alt="LoanFinderUS Logo" style="max-height: 40px; width: auto;">
+            </a>
         </div>
         <div class="badge-secure">
             <svg class="svg-icon" viewBox="0 0 24 24" width="12" height="12"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>
@@ -461,7 +465,6 @@
                 <label class="form-label">Loan Amount</label>
                 <div class="select-wrapper">
                     <select id="loanAmount" class="form-control">
-                        <option value="100">$100</option>
                         <option value="200">$200</option>
                         <option value="300">$300</option>
                         <option value="400">$400</option>
