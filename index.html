@@ -369,11 +369,14 @@
             animation: none;
         }
 
-        /* NEW: Sticky Footer for Mobile */
+        /* NEW: Sticky Footer with Width Constraint */
         .sticky-footer {
             position: fixed;
             bottom: 0;
             left: 0;
+            right: 0; /* Add right: 0 */
+            margin: 0 auto; /* Center horizontally */
+            max-width: 500px; /* Constrain width to match main container */
             width: 100%;
             background: #fff;
             padding: 12px 20px;
@@ -381,18 +384,11 @@
             z-index: 999;
             transform: translateY(100%);
             transition: transform 0.3s ease-out;
-            display: none;
+            display: block; 
         }
 
         .sticky-footer.visible {
             transform: translateY(0);
-        }
-
-        /* Only show on mobile screens */
-        @media (max-width: 768px) {
-            .sticky-footer {
-                display: block;
-            }
         }
 
         .btn-sticky {
@@ -878,10 +874,10 @@
 
             <!-- Disclaimer before CTA -->
             <p style="font-size: 11px; color: #777; margin-bottom: 15px; line-height: 1.4;">
-                By clicking 'Request Now', you agree to our <a href="#" id="link-privacy-form" style="color:#555; text-decoration: underline;">Privacy Policy</a>, <a href="#" id="link-terms-form" style="color:#555; text-decoration: underline;">Terms</a>, and to receive offers from us and our marketing partners.
+                By clicking 'GET STARTED', you agree to our <a href="#" id="link-privacy-form" style="color:#555; text-decoration: underline;">Privacy Policy</a>, <a href="#" id="link-terms-form" style="color:#555; text-decoration: underline;">Terms</a>, and to receive offers from us and our marketing partners.
             </p>
 
-            <button type="submit" id="startBtn" class="btn-main">GET STARTED ➜</button>
+            <button type="submit" id="startBtn" class="btn-main">GET STARTED NOW ➜</button>
 
             <!-- COMPACT: Countdown Timer & Trust Badges Block -->
             <div class="timer-box">
@@ -939,7 +935,7 @@
             <div class="hiw-step">
                 <div class="step-circle">2</div>
                 <div class="step-heading">Find Your Match</div>
-                <div class="step-desc">Click 'Request Now' to instantly find a lender suited to your needs.</div>
+                <div class="step-desc">Click 'GET STARTED' to instantly find a lender suited to your needs.</div>
             </div>
             <div class="hiw-step">
                 <div class="step-circle">3</div>
@@ -1001,9 +997,9 @@
         </div>
     </footer>
 
-    <!-- Sticky Footer for Mobile -->
+    <!-- Sticky Footer for All Devices -->
     <div class="sticky-footer" id="stickyFooter">
-        <button class="btn-sticky" onclick="document.getElementById('leadForm').scrollIntoView({behavior: 'smooth'})">GET STARTED ➜</button>
+        <button class="btn-sticky" onclick="document.getElementById('leadForm').scrollIntoView({behavior: 'smooth'})">GET STARTED NOW ➜</button>
     </div>
 
     <!-- Toasts Container -->
@@ -1031,7 +1027,7 @@
                 <p>We share your information with our network of lenders and marketing partners solely for the purpose of connecting you with a loan option. We do not sell your personal information to unauthorized third parties.</p>
             </div>
             <div class="info-modal-footer">
-                <button class="btn-modal-action">I Understood</button>
+                <button class="btn-modal-action">I Understand</button>
             </div>
         </div>
     </div>
@@ -1057,7 +1053,7 @@
                 <p>Completion of the form does not guarantee that you will be connected with a lender or approved for a loan.</p>
             </div>
             <div class="info-modal-footer">
-                <button class="btn-modal-action">I Understood</button>
+                <button class="btn-modal-action">I Understand</button>
             </div>
         </div>
     </div>
@@ -1091,19 +1087,20 @@
                     </tr>
                     <tr style="background-color: #f9f9f9; border-bottom: 1px solid #eee;">
                         <td style="padding: 10px; color: #555;">Interest Rate (APR)</td>
-                        <td style="padding: 10px; font-weight: 700; text-align: right;">15.00%</td>
+                        <td style="padding: 10px; font-weight: 700; text-align: right;">29.82%</td>
                     </tr>
                     <tr style="border-bottom: 1px solid #eee;">
                         <td style="padding: 10px; color: #555;">Monthly Payment</td>
-                        <td style="padding: 10px; font-weight: 700; text-align: right;">$179.93</td>
+                        <td style="padding: 10px; font-weight: 700; text-align: right;">$189.12</td>
                     </tr>
-					<tr style="border-bottom: 1px solid #eee;">
+                    <!-- NEW: Total Interest Row -->
+                    <tr style="border-bottom: 1px solid #eee;">
                         <td style="padding: 10px; color: #555;">Total Interest</td>
-                        <td style="padding: 10px; font-weight: 700; text-align: right;">$159.16</td>
+                        <td style="padding: 10px; font-weight: 700; text-align: right;">$269.44</td>
                     </tr>
                     <tr style="background-color: #e8f5e9;">
                         <td style="padding: 10px; color: #0d1e2b; font-weight: 700;">Total Repayment</td>
-                        <td style="padding: 10px; font-weight: 800; color: #00c853; text-align: right;">$2,159.16</td>
+                        <td style="padding: 10px; font-weight: 800; color: #00c853; text-align: right;">$2,269.44</td>
                     </tr>
                 </table>
 
@@ -1114,7 +1111,7 @@
                 <p>Participating lenders may verify your social security number, driver license number, national ID, or any other state or federal identifications and review your information against national databases (such as Equifax, TransUnion, and Experian) to determine your credit worthiness.</p>
             </div>
             <div class="info-modal-footer">
-                <button class="btn-modal-action">I Understood</button>
+                <button class="btn-modal-action">I Understand</button>
             </div>
         </div>
     </div>
