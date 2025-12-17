@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    
+    <!-- =========================================
+       SEO & META DATA
+    ========================================== -->
+    <title>LoanFinderUS 2026 - Request Personal Loans up to $5,000 | Online Process</title>
+    <meta name="description" content="Looking for a personal loan in 2026? LoanFinderUS connects you with trusted lenders. Secure online request, fast decision. Apply today!">
+    <meta name="keywords" content="personal loan 2026, online loans, installment loans, fast cash request, loan matching service, LoanFinderUS">
+    <meta name="author" content="LoanFinderUS">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://loanfinderus.com">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://loanfinderus.com">
+    <meta property="og:title" content="Check Eligibility: Personal Loans up to $5,000">
+    <meta property="og:description" content="Request a personal loan securely online. All credit histories considered.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/tramtaichinh/loanfinderus/refs/heads/main/woman-dollar.webp">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="LoanFinderUS - Online Loan Matching">
+    <meta name="twitter:description" content="Connect with lenders for personal loans up to $5,000. Secure request form.">
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/tramtaichinh/loanfinderus/refs/heads/main/woman-dollar.webp">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/tramtaichinh/loanfinderus/refs/heads/main/loanfinderUS_ico.png">
+
+    <!-- Tailwind CSS (Restored for Layout Stability) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Optimization -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FinancialService",
+      "name": "LoanFinderUS",
+      "url": "https://loanfinderus.com",
+      "logo": "https://raw.githubusercontent.com/tramtaichinh/loanfinderus/7e68416a38196ce4b91581c36d77a72b46584d2a/Logo_loanfinderus.svg",
+      "description": "Secure online marketplace for personal loan requests up to $5,000.",
+      "address": { "@type": "PostalAddress", "addressCountry": "US" },
+      "priceRange": "$$"
+    }
+    </script>
+    
+    <style>
+        /* Custom Overrides & Speed Fixes */
+        :root {
+            --primary: #10b981;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f0fdf4;
+            background-image: url('https://raw.githubusercontent.com/tramtaichinh/loanfinderus/refs/heads/main/woman-dollar.webp');
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(8px);
+        }
+
+        body::before {
+            content: ""; position: absolute; inset: 0; background: rgba(15, 23, 42, 0.8); z-index: -1;
+        }
+
+        /* App Frame */
+        .app-frame {
+            width: 100%; max-width: 480px; background: #ffffff; height: 100vh;
+            display: flex; flex-direction: column; position: relative;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); overflow: hidden;
+        }
+
+        @media (min-width: 480px) {
+            .app-frame {
+                height: auto; min-height: 850px; max-height: 95vh;
+                border-radius: 30px; margin: 20px;
+                border: 4px solid rgba(255, 255, 255, 0.1);
+            }
+        }
+
+        /* Interactive Buttons */
+        .btn-card {
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative; z-index: 1; overflow: hidden;
+        }
+        .btn-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 15px -3px rgba(16, 185, 129, 0.15);
+            border-color: #10b981;
+            background: linear-gradient(to right, #f0fdf4, #ffffff);
+        }
+        .btn-card:active { transform: scale(0.98); }
+
+        /* Progress Bar */
+        .progress-gradient {
+            background: linear-gradient(90deg, #10b981 0%, #34d399 50%, #10b981 100%);
+            background-size: 200% 100%; animation: shimmer 2s infinite linear;
+        }
+        @keyframes shimmer { 0% { background-position: 100% 0; } 100% { background-position: -100% 0; } }
+
+        /* Animations */
+        .step-transition { animation: slideUpFade 0.4s ease-out forwards; }
+        @keyframes slideUpFade { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* Custom Scrollbar */
+        .custom-scroll::-webkit-scrollbar { width: 4px; }
+        .custom-scroll::-webkit-scrollbar-track { background: transparent; }
+        .custom-scroll::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+
+        /* Modal & Highlights */
+        .highlight-text { color: #00c853; font-weight: 700; }
+        .btn-modal-action {
+            width: 100%; padding: 12px; background: #00c853; color: white; border: none;
+            border-radius: 8px; font-weight: 600; cursor: pointer; margin-top: 15px;
+            transition: background 0.3s;
+        }
+        .btn-modal-action:hover { background: #00a844; }
+
+        /* Red Toast Notification */
+        .toast-popup {
+            background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(8px);
+            border-left: 4px solid #ef4444;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            animation: toastSlideIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+            max-width: 90%; width: auto; pointer-events: auto;
+        }
+        @keyframes toastSlideIn { from { transform: translateX(100%); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+        .toast-out { animation: toastSlideOut 0.5s ease forwards; }
+        @keyframes toastSlideOut { to { transform: translateX(100%); opacity: 0; } }
+    </style>
+</head>
+<body class="antialiased text-slate-800">
+
+    <div class="app-frame">
+        
+        <!-- HEADER -->
+        <header class="px-5 py-3 bg-white/95 backdrop-blur-md border-b border-slate-100 flex items-center justify-between sticky top-0 z-30 shrink-0">
+            <a href="https://offers.loanfinderus.com" class="block transition-opacity hover:opacity-80">
+                <img src="https://raw.githubusercontent.com/tramtaichinh/loanfinderus/7e68416a38196ce4b91581c36d77a72b46584d2a/Logo_loanfinderus.svg" alt="LoanFinder" class="h-8 w-auto object-contain">
+            </a>
+            
+            <div class="flex items-center gap-1.5 text-[10px] font-bold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-100 animate-pulse">
+                <!-- SVG Icon: Lock -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 fill-current" viewBox="0 0 448 512"><path d="M400 224h-24v-72C376 68.2 307.8 0 224 0S72 68.2 72 152v72H48c-26.5 0-48 21.5-48 48v192c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V272c0-26.5-21.5-48-48-48zm-104 0H152v-72c0-39.7 32.3-72 72-72s72 32.3 72 72v72z"/></svg>
+                <span>SSL SECURE</span>
+            </div>
+        </header>
+
+        <!-- PROGRESS BAR -->
+        <div class="w-full h-1 bg-slate-100 relative shrink-0">
+            <div id="progress-bar" class="h-full w-[20%] progress-gradient transition-all duration-700 ease-out rounded-r-full"></div>
+        </div>
+
+        <!-- NOTIFICATION CONTAINER (Top Right) -->
+        <div id="toast-container" class="absolute top-[60px] right-0 flex flex-col items-end pointer-events-none z-40 px-3 pt-2"></div>
+
+        <!-- MAIN SCROLLABLE AREA -->
+        <div class="flex-grow overflow-y-auto custom-scroll relative bg-slate-50/50 flex flex-col">
+            
+            <div class="p-5 flex-grow">
+                <!-- Title -->
+                <div class="text-center mb-6 mt-1">
+                    <h1 class="text-xl font-bold text-slate-800 mb-0.5">Check Eligibility</h1>
+                    <p class="text-[11px] font-medium text-slate-500 flex items-center justify-center gap-1">
+                        <!-- SVG Icon: Bolt -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-yellow-400 fill-current" viewBox="0 0 320 512"><path d="M296 160H180.6l42.6-129.8C227.2 15 215.7 0 200 0H56C44 0 33.8 8.9 32.2 20.8l-32 240C-1.7 275.2 9.5 288 24 288h118.7L96.6 482.5c-3.6 15.2 8 29.5 23.3 29.5 8.4 0 16.4-4.4 20.8-12l176-304c9.3-15.9-2.2-36-20.7-36z"/></svg>
+                        No impact to credit score
+                    </p>
+                </div>
+
+                <!-- QUIZ CONTAINER -->
+                <div id="quiz-container" class="min-h-[320px]">
+                    
+                    <!-- STEP 1: AMOUNT -->
+                    <div id="step-1" class="step-transition">
+                        <label class="block text-sm font-bold text-slate-700 mb-3 ml-1">How much do you need?</label>
+                        <div class="grid grid-cols-2 gap-3">
+                            <button onclick="nextStep(1)" class="btn-card w-full p-4 bg-white border border-slate-200 rounded-xl flex flex-col items-center justify-center gap-1 text-center shadow-sm group">
+                                <span class="font-bold text-base text-slate-700 group-hover:text-emerald-700 transition-colors">$200 - $500</span>
+                                <span class="text-[10px] text-slate-400 group-hover:text-emerald-500">Starter</span>
+                            </button>
+                            <button onclick="nextStep(1)" class="btn-card w-full p-4 bg-white border border-slate-200 rounded-xl flex flex-col items-center justify-center gap-1 text-center shadow-sm group">
+                                <span class="font-bold text-base text-slate-700 group-hover:text-emerald-700 transition-colors">$500 - $1,000</span>
+                                <span class="text-[10px] text-slate-400 group-hover:text-emerald-500">Basic</span>
+                            </button>
+                            <button onclick="nextStep(1)" class="btn-card w-full p-4 bg-white border border-slate-200 rounded-xl flex flex-col items-center justify-center gap-1 text-center shadow-sm group">
+                                <span class="font-bold text-base text-slate-700 group-hover:text-emerald-700 transition-colors">$1,000 - $2,000</span>
+                                <span class="text-[10px] text-slate-400 group-hover:text-emerald-500">Standard</span>
+                            </button>
+                            <button onclick="nextStep(1)" class="btn-card w-full p-4 bg-white border border-slate-200 rounded-xl flex flex-col items-center justify-center gap-1 text-center shadow-sm group">
+                                <span class="font-bold text-base text-slate-700 group-hover:text-emerald-700 transition-colors">$2,000 - $3,000</span>
+                                <span class="text-[10px] text-slate-400 group-hover:text-emerald-500">Plus</span>
+                            </button>
+                            <button onclick="nextStep(1)" class="btn-card w-full p-4 bg-white border border-slate-200 rounded-xl flex flex-col items-center justify-center gap-1 text-center shadow-sm group">
+                                <span class="font-bold text-base text-slate-700 group-hover:text-emerald-700 transition-colors">$3,000 - $4,000</span>
+                                <span class="text-[10px] text-slate-400 group-hover:text-emerald-500">Premium</span>
+                            </button>
+                            <button onclick="nextStep(1)" class="btn-card w-full p-4 bg-white border border-slate-200 rounded-xl flex flex-col items-center justify-center gap-1 text-center shadow-sm group">
+                                <span class="font-bold text-base text-slate-700 group-hover:text-emerald-700 transition-colors">$4,000 - $5,000</span>
+                                <span class="text-[10px] text-slate-400 group-hover:text-emerald-500">Max</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- STEP 2: PURPOSE -->
+                    <div id="step-2" class="hidden step-transition">
+                        <label class="block text-sm font-bold text-slate-700 mb-3 ml-1">What is this for?</label>
+                        <div class="grid grid-cols-2 gap-3">
+                            <button onclick="nextStep(2)" class="btn-card h-32 bg-white border border-slate-200 rounded-xl flex flex-col items-center justify-center shadow-sm p-2 group">
+                                <div class="w-12 h-12 rounded-full bg-orange-50 text-orange-500 flex items-center justify-center text-xl mb-3 group-hover:text-white group-hover:bg-orange-400 transition-all">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 fill-current" viewBox="0 0 512 512"><path d="M256 32c14.2 0 27.3 7.5 34.5 19.8l216 368c7.3 12.4 7.3 27.7 .2 40.1S486.3 480 472 480H40c-14.3 0-27.6-7.7-34.7-20.1s-7-27.8 .2-40.1l216-368C228.7 39.5 241.8 32 256 32zm0 128c-13.3 0-24 10.7-24 24V296c0 13.3 10.7 24 24 24s24-10.7 24-24V184c0-13.3-10.7-24-24-24zm32 224a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"/></svg>
+                                </div>
+                                <span class="text-xs font-bold text-slate-700">Emergency</span>
+                            </button>
+                            <button onclick="nextStep(2)" class="btn-card h-32 bg-white border border-slate-200 rounded-xl flex flex-col items-center justify-center shadow-sm p-2 group">
+                                <div class="w-12 h-12 rounded-full bg-blue-50 text-blue-500 flex items-center justify-center text-xl mb-3 group-hover:text-white group-hover:bg-blue-500 transition-all">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 fill-current" viewBox="0 0 384 512"><path d="M64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V160H256c-17.7 0-32-14.3-32-32V0H64zM256 0V128H384L256 0zM112 256H272c8.8 0 16 7.2 16 16s-7.2 16-16 16H112c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64H272c8.8 0 16 7.2 16 16s-7.2 16-16 16H112c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64H272c8.8 0 16 7.2 16 16s-7.2 16-16 16H112c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/></svg>
+                                </div>
+                                <span class="text-xs font-bold text-slate-700">Debt / Bills</span>
+                            </button>
+                            <button onclick="nextStep(2)" class="btn-card h-32 bg-white border border-slate-200 rounded-xl flex flex-col items-center justify-center shadow-sm p-2 group">
+                                <div class="w-12 h-12 rounded-full bg-emerald-50 text-emerald-500 flex items-center justify-center text-xl mb-3 group-hover:text-white group-hover:bg-emerald-500 transition-all">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 fill-current" viewBox="0 0 576 512"><path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 13-8 21.6-8.1h36.1c8.6 .1 14.6 1.2 21.6 8.1l220.5 223.5c7.1 7 10.1 15 10.1 24z"/></svg>
+                                </div>
+                                <span class="text-xs font-bold text-slate-700">Home / Rent</span>
+                            </button>
+                            <button onclick="nextStep(2)" class="btn-card h-32 bg-white border border-slate-200 rounded-xl flex flex-col items-center justify-center shadow-sm p-2 group">
+                                <div class="w-12 h-12 rounded-full bg-purple-50 text-purple-500 flex items-center justify-center text-xl mb-3 group-hover:text-white group-hover:bg-purple-500 transition-all">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 fill-current" viewBox="0 0 576 512"><path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/></svg>
+                                </div>
+                                <span class="text-xs font-bold text-slate-700">Other</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- STEP 3: EMPLOYMENT -->
+                    <div id="step-3" class="hidden step-transition">
+                        <label class="block text-sm font-bold text-slate-700 mb-3 ml-1">Employment Status</label>
+                        <div class="space-y-3">
+                            <button onclick="nextStep(3)" class="btn-card w-full p-4 bg-white border border-slate-200 rounded-xl flex items-center gap-4 text-left shadow-sm group">
+                                <div class="w-10 h-10 rounded-full bg-indigo-50 text-indigo-500 flex items-center justify-center shrink-0 group-hover:bg-indigo-500 group-hover:text-white transition-all">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 fill-current" viewBox="0 0 512 512"><path d="M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96H64C28.7 96 0 124.7 0 160v96H192 320 512V160c0-35.3-28.7-64-64-64H384V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56zM512 288H320v32c0 17.7-14.3 32-32 32H224c-17.7 0-32-14.3-32-32V288H0V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V288z"/></svg>
+                                </div>
+                                <div>
+                                    <div class="font-bold text-slate-800">Employed</div>
+                                    <div class="text-[10px] font-medium text-slate-400">Full-time or Part-time job</div>
+                                </div>
+                            </button>
+                            <button onclick="nextStep(3)" class="btn-card w-full p-4 bg-white border border-slate-200 rounded-xl flex items-center gap-4 text-left shadow-sm group">
+                                <div class="w-10 h-10 rounded-full bg-pink-50 text-pink-500 flex items-center justify-center shrink-0 group-hover:bg-pink-500 group-hover:text-white transition-all">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 fill-current" viewBox="0 0 576 512"><path d="M547.6 103.8L490.3 13.1C485.2 5 476.1 0 466.4 0H109.6C99.9 0 90.8 5 85.7 13.1L28.3 103.8c-29.6 46.8-3.4 111.9 51.9 119.4c4 .5 8.1 .8 12.1 .8c26.1 0 49.3-11.4 65.2-29c15.9 17.6 39.1 29 65.2 29c26.1 0 49.3-11.4 65.2-29c15.9 17.6 39.1 29 65.2 29c26.1 0 49.3-11.4 65.2-29c16 17.6 39.2 29 65.2 29c4.1 0 8.1-.3 12.1-.8c55.5-7.4 81.8-72.5 52.1-119.4zM499.7 254.9l-.1 0c-5.3 .7-10.7 1.1-16.2 1.1c-12.4 0-24.3-1.9-35.4-5.3V384H128V250.6c-11.2 3.5-23.2 5.4-35.6 5.4c-5.5 0-11-.4-16.3-1.1l-.1 0c-4.1-.6-8.1-1.3-12-2.3V384v64c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V384 252.6c-4 1-8 1.8-12.3 2.3z"/></svg>
+                                </div>
+                                <div>
+                                    <div class="font-bold text-slate-800">Self Employed</div>
+                                    <div class="text-[10px] font-medium text-slate-400">Business owner, Freelancer</div>
+                                </div>
+                            </button>
+                            <button onclick="nextStep(3)" class="btn-card w-full p-4 bg-white border border-slate-200 rounded-xl flex items-center gap-4 text-left shadow-sm group">
+                                <div class="w-10 h-10 rounded-full bg-cyan-50 text-cyan-500 flex items-center justify-center shrink-0 group-hover:bg-cyan-500 group-hover:text-white transition-all">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 fill-current" viewBox="0 0 576 512"><path d="M312 24V34.5c6.4 1.2 12.6 2.7 18.2 4.2c12.8 3.4 20.4 16.6 17 29.4s-16.6 20.4-29.4 17c-10.9-2.9-21.1-4.9-30.2-5c-7.3-.1-14.7 1.7-19.4 4.4c-2.1 1.3-3.1 2.4-3.5 3c-.3 .5-.7 1.2-.7 2.8c0 .3 0 .5 0 .6c.2 .2 .9 1.2 3.3 2.6c5.8 3.5 14.4 6.2 27.4 10.1l.9 .3c11.1 3.3 25.9 7.8 37.9 15.3c13.7 8.6 26.1 19.7 36.4 34.9c1.2 1.8 2.2 3.6 3.2 5.4H456c13.3 0 24 10.7 24 24v16c0 13.3-10.7 24-24 24H424V408c0 39.8-32.2 72-72 72H224c-39.8 0-72-32.2-72-72V208H120c-13.3 0-24-10.7-24-24V168c0-13.3 10.7-24 24-24h33.7C148.6 126.6 142.9 109.5 141.4 92c-1.5-17.8 4.3-35 15.6-47.8C170.1 29 190.2 24 216 24h96zM266.1 151.5c-6.6-2-14.8-4.2-22.9-9.1c-1.9-1.1-2.7-2.3-3.1-2.9c-.4-.6-.9-1.6-.9-3.2c0-2.3 .7-4.1 2.7-6.1c1.8-1.8 4.3-3 7.2-3.7c13.2-3 29.9 .5 40.2 9.6c.9 .8 1.8 1.6 2.6 2.6c-2.9 4-7.4 9.1-25.9 12.8z"/></svg>
+                                </div>
+                                <div>
+                                    <div class="font-bold text-slate-800">Benefits</div>
+                                    <div class="text-[10px] font-medium text-slate-400">SSA, Disability, etc.</div>
+                                </div>
+                            </button>
+                            <button onclick="nextStep(3)" class="btn-card w-full p-4 bg-white border border-slate-200 rounded-xl flex items-center gap-4 text-left shadow-sm group">
+                                <div class="w-10 h-10 rounded-full bg-slate-100 text-slate-500 flex items-center justify-center shrink-0 group-hover:bg-slate-500 group-hover:text-white transition-all">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 fill-current" viewBox="0 0 640 512"><path d="M96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3zM471 143c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg>
+                                </div>
+                                <div>
+                                    <div class="font-bold text-slate-800">Not Employed</div>
+                                    <div class="text-[10px] font-medium text-slate-400">Currently no income</div>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- STEP 4: CREDIT -->
+                    <div id="step-4" class="hidden step-transition">
+                        <label class="block text-sm font-bold text-slate-700 mb-1 ml-1">Estimated Credit Score</label>
+                        <p class="text-[11px] text-slate-400 mb-4 ml-1">It's okay to guess. This won't affect your score.</p>
+                        <div class="space-y-3">
+                            <button onclick="startLoading()" class="btn-card w-full p-3 bg-white border border-slate-200 rounded-xl flex items-center justify-between shadow-sm group hover:border-emerald-500">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold text-sm shadow-inner">A</div>
+                                    <div class="text-left">
+                                        <div class="font-bold text-slate-800">Excellent</div>
+                                        <div class="text-[10px] font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full inline-block">720+ Score</div>
+                                    </div>
+                                </div>
+                                <!-- SVG Check -->
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-emerald-500 opacity-0 group-hover:opacity-100 transition-opacity" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z" fill="currentColor"/></svg>
+                            </button>
+
+                            <button onclick="startLoading()" class="btn-card w-full p-3 bg-white border border-slate-200 rounded-xl flex items-center justify-between shadow-sm group hover:border-blue-500">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-sm shadow-inner">B</div>
+                                    <div class="text-left">
+                                        <div class="font-bold text-slate-800">Good</div>
+                                        <div class="text-[10px] font-bold text-blue-600 bg-blue-50 px-2 py-0.5 rounded-full inline-block">640 - 719</div>
+                                    </div>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-500 opacity-0 group-hover:opacity-100 transition-opacity" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z" fill="currentColor"/></svg>
+                            </button>
+
+                            <button onclick="startLoading()" class="btn-card w-full p-3 bg-white border border-slate-200 rounded-xl flex items-center justify-between shadow-sm group hover:border-yellow-500">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 rounded-full bg-yellow-100 text-yellow-600 flex items-center justify-center font-bold text-sm shadow-inner">C</div>
+                                    <div class="text-left">
+                                        <div class="font-bold text-slate-800">Fair</div>
+                                        <div class="text-[10px] font-bold text-yellow-600 bg-yellow-50 px-2 py-0.5 rounded-full inline-block">580 - 639</div>
+                                    </div>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-500 opacity-0 group-hover:opacity-100 transition-opacity" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z" fill="currentColor"/></svg>
+                            </button>
+
+                            <button onclick="startLoading()" class="btn-card w-full p-3 bg-white border border-slate-200 rounded-xl flex items-center justify-between shadow-sm group hover:border-slate-500">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 rounded-full bg-slate-100 text-slate-500 flex items-center justify-center font-bold text-sm shadow-inner">?</div>
+                                    <div class="text-left">
+                                        <div class="font-bold text-slate-800">Poor / Unsure</div>
+                                        <div class="text-[10px] font-bold text-slate-500 bg-slate-100 px-2 py-0.5 rounded-full inline-block">&lt; 580 Score</div>
+                                    </div>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-slate-400 opacity-0 group-hover:opacity-100 transition-opacity" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z" fill="currentColor"/></svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- LOADING SCREEN -->
+                    <div id="loading-view" class="hidden flex-col items-center justify-center pt-8 text-center h-full step-transition">
+                        <div class="relative w-20 h-20 mb-5">
+                            <div class="absolute inset-0 border-4 border-slate-100 rounded-full"></div>
+                            <div class="absolute inset-0 border-4 border-emerald-500 rounded-full border-t-transparent animate-spin"></div>
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-emerald-600 animate-pulse fill-current" viewBox="0 0 512 512"><path d="M256 0c4.6 0 9.2 1 13.4 2.9L457.7 82.8c22.9 9.8 38.3 31.7 38.3 56.8v126.8c0 132.4-89 240.2-215.3 260.8c-6.9 1.1-13.8 1.6-20.7 1.6s-13.8-.5-20.7-1.6C113 506.6 24 398.8 24 266.4V139.6c0-25.1 15.3-47 38.3-56.8L242.6 2.9C246.8 1 251.4 0 256 0z"/></svg>
+                            </div>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">Analyzing Profile...</h3>
+                        <p class="text-xs text-slate-500 mb-6">Connecting with our secure lender network.</p>
+                        
+                        <div class="w-56 bg-white p-3 rounded-xl border border-slate-100 shadow-sm space-y-3 mx-auto text-left">
+                            <div id="chk-1" class="flex items-center gap-3 text-slate-300 transition-colors duration-500">
+                                <div class="w-5 h-5 rounded-full border-2 border-current flex items-center justify-center text-[9px]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 opacity-0 chk-icon transition-opacity fill-current" viewBox="0 0 448 512"><path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></svg>
+                                </div>
+                                <span class="text-xs font-bold">Verifying Information</span>
+                            </div>
+                            <div id="chk-2" class="flex items-center gap-3 text-slate-300 transition-colors duration-500">
+                                <div class="w-5 h-5 rounded-full border-2 border-current flex items-center justify-center text-[9px]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 opacity-0 chk-icon transition-opacity fill-current" viewBox="0 0 448 512"><path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></svg>
+                                </div>
+                                <span class="text-xs font-bold">Matching Lenders</span>
+                            </div>
+                            <div id="chk-3" class="flex items-center gap-3 text-slate-300 transition-colors duration-500">
+                                <div class="w-5 h-5 rounded-full border-2 border-current flex items-center justify-center text-[9px]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 opacity-0 chk-icon transition-opacity fill-current" viewBox="0 0 448 512"><path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></svg>
+                                </div>
+                                <span class="text-xs font-bold">Checking Options</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- TRUST SEALS -->
+                <div class="mt-8 flex justify-center gap-6 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+                    <div class="flex items-center gap-1 text-slate-400 font-bold text-[10px]">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-emerald-500 fill-current" viewBox="0 0 512 512"><path d="M256 0c4.6 0 9.2 1 13.4 2.9L457.7 82.8c22.9 9.8 38.3 31.7 38.3 56.8v126.8c0 132.4-89 240.2-215.3 260.8c-6.9 1.1-13.8 1.6-20.7 1.6s-13.8-.5-20.7-1.6C113 506.6 24 398.8 24 266.4V139.6c0-25.1 15.3-47 38.3-56.8L242.6 2.9C246.8 1 251.4 0 256 0z"/></svg> McAfee
+                    </div>
+                    <div class="flex items-center gap-1 text-slate-400 font-bold text-[10px]">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-yellow-500 fill-current" viewBox="0 0 448 512"><path d="M144 144v48H304V144c0-44.2-35.8-80-80-80s-80 35.8-80 80zM80 192V144C80 64.5 144.5 0 224 0s144 64.5 144 144v48h16c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V256c0-35.3 28.7-64 64-64H80z"/></svg> Norton
+                    </div>
+                    <div class="flex items-center gap-1 text-slate-400 font-bold text-[10px]">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-orange-500 fill-current" viewBox="0 0 576 512"><path d="M272 176c0-8.8-7.2-16-16-16H96c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16H256c8.8 0 16-7.2 16-16V176zM48 128C21.5 128 0 149.5 0 176v64c0 26.5 21.5 48 48 48H272c26.5 0 48-21.5 48-48V176c0-26.5-21.5-48-48-48H48zM528 96c-26.5 0-48 21.5-48 48v64c0 26.5 21.5 48 48 48h32c8.8 0 16-7.2 16-16V112c0-8.8-7.2-16-16-16H528zM384 288c-26.5 0-48 21.5-48 48v64c0 26.5 21.5 48 48 48h32c8.8 0 16-7.2 16-16V304c0-8.8-7.2-16-16-16H384z"/></svg> AWS
+                    </div>
+                </div>
+
+                <!-- HOW IT WORKS -->
+                <div class="mt-8 pt-6 border-t border-slate-100">
+                    <h3 class="text-center font-bold text-slate-800 text-sm mb-4">How It Works</h3>
+                    <div class="grid grid-cols-3 gap-3">
+                        <div class="text-center group">
+                            <div class="w-10 h-10 bg-white border border-emerald-100 rounded-xl flex items-center justify-center text-emerald-600 mx-auto mb-1.5 shadow-sm group-hover:bg-emerald-500 group-hover:text-white transition-all transform group-hover:-translate-y-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 fill-current" viewBox="0 0 512 512"><path d="M362.7 19.3L314.3 67.7 444.3 197.7l48.4-48.4c25-25 25-65.5 0-90.5L453.3 19.3c-25-25-65.5-25-90.5 0zm-71 71L58.6 323.5c-10.4 10.4-18 23.3-22.2 37.4L1 481.2C-1.5 489.7 .8 498.8 7 505s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L421.7 220.3 291.7 90.3z"/></svg>
+                            </div>
+                            <div class="text-[10px] font-bold text-slate-700">1. Apply</div>
+                        </div>
+                        <div class="text-center group">
+                            <div class="w-10 h-10 bg-white border border-emerald-100 rounded-xl flex items-center justify-center text-emerald-600 mx-auto mb-1.5 shadow-sm group-hover:bg-emerald-500 group-hover:text-white transition-all transform group-hover:-translate-y-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 fill-current" viewBox="0 0 512 512"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>
+                            </div>
+                            <div class="text-[10px] font-bold text-slate-700">2. Match</div>
+                        </div>
+                        <div class="text-center group">
+                            <div class="w-10 h-10 bg-white border border-emerald-100 rounded-xl flex items-center justify-center text-emerald-600 mx-auto mb-1.5 shadow-sm group-hover:bg-emerald-500 group-hover:text-white transition-all transform group-hover:-translate-y-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 fill-current" viewBox="0 0 640 512"><path d="M535 41c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l64 64c4.5 4.5 7 10.6 7 17s-2.5 12.5-7 17l-64 64c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l23-23L384 112c-13.3 0-24-10.7-24-24s10.7-24 24-24l174.1 0L535 41zM105 377l-23 23L256 400c13.3 0 24 10.7 24 24s-10.7 24-24 24L81.9 448l23 23c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-64-64c-4.5-4.5-7-10.6-7-17s2.5-12.5 7-17l64-64c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9zM96 144H320c17.7 0 32 14.3 32 32V320c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32V176c0-17.7 14.3-32 32-32z"/></svg>
+                            </div>
+                            <div class="text-[10px] font-bold text-slate-700">3. Fund</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+            <!-- FOOTER -->
+            <footer class="bg-slate-50 border-t border-slate-200 p-5 text-center mt-auto">
+                <div class="flex justify-center gap-4 text-[10px] font-bold text-emerald-700 mb-3 uppercase tracking-wide">
+                    <button onclick="openModal('privacy')" class="hover:underline">Privacy Policy</button>
+                    <span class="text-slate-300">|</span>
+                    <button onclick="openModal('terms')" class="hover:underline">Terms of Use</button>
+                    <span class="text-slate-300">|</span>
+                    <button onclick="openModal('rates')" class="hover:underline">Rates & Fees</button>
+                </div>
+                
+                <div class="text-[9px] text-slate-400 leading-relaxed text-justify mb-4 space-y-2">
+                    <p><strong>Disclaimer:</strong> LoanfinderUS is not an offer or solicitation to lend. We do not make any loan or credit decisions and are not representatives, brokers or agents of any lender. Participating lenders offer loans from $200 up to $5,000. Not all lenders can offer you amounts up to $5,000. Our service is not available in all states.</p>
+                    <p>Funds transfer time may vary depending on your lender and/or financial institution. If you have any questions about your loan, please contact your lender directly. This service is not a solicitation for loan products and does not constitute a loan offer for any loan products that are prohibited by state law.</p>
+                </div>
+
+                <div class="text-[10px] font-medium text-slate-300 border-t border-slate-200 pt-3">
+                    © 2025 LoanFinderUS. All rights reserved.
+                </div>
+            </footer>
+        </div>
+
+    </div>
+
+    <!-- MODAL -->
+    <div id="modal-overlay" class="fixed inset-0 z-[60] bg-slate-900/60 backdrop-blur-sm hidden items-center justify-center p-4">
+        <div class="bg-white w-full max-w-sm rounded-2xl overflow-hidden shadow-2xl flex flex-col max-h-[85vh] transform scale-100 transition-all">
+            <div class="p-4 border-b border-slate-100 flex justify-between items-center bg-slate-50">
+                <h3 id="modal-title" class="font-bold text-slate-800">Information</h3>
+                <button onclick="closeModal()" class="w-8 h-8 bg-white border border-slate-200 rounded-full flex items-center justify-center text-slate-400 hover:text-red-500 hover:bg-red-50 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 fill-current" viewBox="0 0 320 512"><path d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"/></svg>
+                </button>
+            </div>
+            <div id="modal-content" class="p-5 overflow-y-auto text-xs text-slate-600 leading-6 custom-scroll"></div>
+        </div>
+    </div>
+
+    <script>
+        const LINKS = [
+            'https://clearpmf.com/ql?pm_cid=0b928f876ba74e5eb46b',
+            'https://clearpmf.com/ql?pm_cid=f647e9bf443e4c8c9889',
+            'https://clearpmf.com/ql?pm_cid=ac888f972da44d5eace4',
+            'https://clearpmf.com/ql?pm_cid=cbf8772d19aa4c71bab4',
+            'https://clearpmf.com/ql?pm_cid=714b3ee4cb4641c987d8',
+            'https://clearpmf.com/ql?pm_cid=e9ad93348f714fa886bf'
+        ];
+
+        /* --- NAVIGATION --- */
+        function nextStep(step) {
+            const current = document.getElementById(`step-${step}`);
+            const next = document.getElementById(`step-${step+1}`);
+            
+            // Slide out left
+            current.style.transform = 'translateX(-20px)';
+            current.style.opacity = '0';
+            
+            setTimeout(() => {
+                current.classList.add('hidden');
+                if(next) {
+                    next.classList.remove('hidden');
+                    const w = step === 1 ? '50%' : step === 2 ? '75%' : '90%';
+                    document.getElementById('progress-bar').style.width = w;
+                }
+            }, 300);
+        }
+
+        /* --- LOADING & REDIRECT --- */
+        function startLoading() {
+            document.getElementById('step-4').classList.add('hidden');
+            const loader = document.getElementById('loading-view');
+            loader.classList.remove('hidden');
+            loader.classList.add('flex');
+            
+            document.getElementById('progress-bar').style.width = '100%';
+
+            // Checkmark Animations
+            function activateCheck(id) {
+                const el = document.getElementById(id);
+                el.classList.remove('text-slate-300');
+                el.classList.add('text-emerald-600');
+                el.querySelector('.chk-icon').classList.remove('opacity-0');
+            }
+
+            setTimeout(() => activateCheck('chk-1'), 1000);
+            setTimeout(() => activateCheck('chk-2'), 2500);
+            setTimeout(() => activateCheck('chk-3'), 3800);
+
+            // Redirect
+            setTimeout(() => {
+                const url = LINKS[Math.floor(Math.random() * LINKS.length)];
+                window.location.href = url;
+            }, 5000);
+        }
+
+        /* --- NOTIFICATIONS SYSTEM --- */
+        // Random Data Generators
+        const names = ["Sarah M.", "James L.", "Mike D.", "Emily R.", "Robert P.", "Jessica W.", "David K.", "Jennifer S.", "William T."];
+        const states = ["TX", "CA", "FL", "NY", "OH", "IL", "GA", "NC", "PA", "MI"];
+        const amounts = ["$500", "$1,000", "$2,000", "$3,500", "$5,000"];
+        
+        // Diverse Action Types (Safe Language)
+        const actions = [
+            { text: "just checked eligibility", type: "apply" },
+            { text: "matched with a lender", type: "approve" },
+            { text: "funds deposited:", type: "deposit" },
+            { text: "received loan offer", type: "offer" }
+        ];
+
+        function showToast() {
+            // Randomly select data
+            const name = names[Math.floor(Math.random() * names.length)];
+            const state = states[Math.floor(Math.random() * states.length)];
+            const amount = amounts[Math.floor(Math.random() * amounts.length)];
+            const action = actions[Math.floor(Math.random() * actions.length)];
+            
+            // Build text based on type
+            let msgHTML = '';
+            if (action.type === 'apply' || action.type === 'offer') {
+                msgHTML = `${action.text}`; // "just checked eligibility"
+            } else {
+                msgHTML = `${action.text} <span class="text-red-600 font-bold">${amount}</span>`; // "matched with a lender for $2,000"
+            }
+
+            const container = document.getElementById('toast-container');
+            
+            const toast = document.createElement('div');
+            toast.className = 'toast-popup rounded-full py-2.5 px-4 flex items-center gap-3 mb-2 pointer-events-auto';
+            toast.innerHTML = `
+                <div class="relative">
+                    <div class="w-8 h-8 rounded-full bg-red-50 flex items-center justify-center text-red-600 shrink-0 border border-red-100">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 fill-current" viewBox="0 0 448 512"><path d="M224 0c-17.7 0-32 14.3-32 32V51.2C119 66 64 130.6 64 208v18.8c0 47-17.3 92.4-48.5 127.6l-7.4 8.3c-8.4 9.4-10.4 22.9-5.3 34.4S19.4 416 32 416H416c12.6 0 24.3-6.5 29.7-17.6s3.1-25-5.3-34.4l-7.4-8.3C401.3 319.2 384 273.9 384 226.8V208c0-77.4-55-142-128-156.8V32c0-17.7-14.3-32-32-32zm45.3 493.3c12-12 18.7-28.3 18.7-45.3H224 160c0 17 6.7 33.3 18.7 45.3s28.3 18.7 45.3 18.7s33.3-6.7 45.3-18.7z"/></svg>
+                    </div>
+                    <span class="absolute top-0 right-0 w-2.5 h-2.5 bg-red-500 rounded-full border border-white animate-pulse"></span>
+                </div>
+                <div>
+                    <div class="text-[11px] text-slate-800 font-bold leading-tight">${name} <span class="text-slate-400 font-normal">from</span> ${state}</div>
+                    <div class="text-[10px] text-slate-500 leading-tight">${msgHTML}</div>
+                </div>
+            `;
+            
+            container.innerHTML = '';
+            container.appendChild(toast);
+
+            setTimeout(() => {
+                toast.classList.remove('toast-popup');
+                toast.classList.add('toast-out');
+                setTimeout(() => toast.remove(), 500);
+            }, 5000);
+        }
+
+        setTimeout(() => {
+            showToast();
+            setInterval(showToast, 7000); // Varied notifications every 7s
+        }, 1500);
+
+        /* --- MODALS CONTENT --- */
+        const content = {
+            'privacy': `<h3>Our Commitment to Privacy</h3><p>We take your privacy seriously. This policy outlines how we collect, use, and protect your personal information.</p><h3>Information Collection</h3><p>We collect information you provide directly to us when filling out our loan request form, including contact details and financial information.</p><h3><span class="highlight-text">Secure Data Transmission</span></h3><p>All data transmitted between your browser and our servers is encrypted using <strong>256-bit SSL technology</strong>. We employ industry-standard security measures to protect your data from unauthorized access.</p><h3>Information Sharing</h3><p>We share your information with our network of lenders and marketing partners solely for the purpose of connecting you with a loan option. We do not sell your personal information to unauthorized third parties.</p><div class="info-modal-footer"><button class="btn-modal-action" onclick="closeModal()">I Understand</button></div>`,
+            
+            'terms': `<h3>Agreement to Terms</h3><p>By accessing this website, you agree to be bound by these Terms of Use and all applicable laws and regulations.</p><h3><span class="highlight-text">Eligibility</span></h3><p>To use our service, you must be at least <strong>18 years old</strong>, a legal resident of the United States, and have a valid bank account.</p><h3>Service Description</h3><p>LoanfinderUS is a matching service, not a lender. We connect users with prospective lenders. We do not make credit decisions or originate loans.</p><h3>No Guarantee</h3><p>Completion of the form does not guarantee that you will be connected with a lender or approved for a loan.</p><div class="info-modal-footer"><button class="btn-modal-action" onclick="closeModal()">I Understand</button></div>`,
+            
+            'rates': `<h3><span class="highlight-text">Material Disclosure</span></h3><p><strong>LoanfinderUS is not a lender</strong>, loan broker, or agent for any lender or loan broker. We are an advertising referral service to qualified participating lenders that may be able to provide amounts between $100 and $5,000.</p><div style="background: #f8f9fa; padding: 15px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #00c853;"><h4 style="margin-top:0; color: #0d1e2b; margin-bottom: 5px;">Representative APR</h4><div style="font-size: 24px; font-weight: 800; color: #00c853;">5.99% - 35.99%</div><p style="font-size: 11px; color: #666; margin-bottom: 0;">Rates vary by lender and state.</p></div><h3>Representative Loan Example</h3><table style="width: 100%; border-collapse: collapse; font-size: 13px; margin-bottom: 15px; border: 1px solid #eee;"><tr style="background-color: #f9f9f9; border-bottom: 1px solid #eee;"><td style="padding: 10px; color: #555;">Borrowing Amount</td><td style="padding: 10px; font-weight: 700; text-align: right;">$2,000</td></tr><tr style="border-bottom: 1px solid #eee;"><td style="padding: 10px; color: #555;">Loan Term</td><td style="padding: 10px; font-weight: 700; text-align: right;">12 Months</td></tr><tr style="background-color: #f9f9f9; border-bottom: 1px solid #eee;"><td style="padding: 10px; color: #555;">Interest Rate (APR)</td><td style="padding: 10px; font-weight: 700; text-align: right;">14.95%</td></tr><tr style="border-bottom: 1px solid #eee;"><td style="padding: 10px; color: #555;">Monthly Payment</td><td style="padding: 10px; font-weight: 700; text-align: right;">$180.23</td></tr><tr style="border-bottom: 1px solid #eee;"><td style="padding: 10px; color: #555;">Total Interest</td><td style="padding: 10px; font-weight: 700; text-align: right;">$162.76</td></tr><tr style="background-color: #e8f5e9;"><td style="padding: 10px; color: #0d1e2b; font-weight: 700;">Total Repayment</td><td style="padding: 10px; font-weight: 800; color: #00c853; text-align: right;">$2,162.76</td></tr></table><p style="font-size: 12px; color: #666; font-style: italic;">Example: If you borrowed $2,000 over a 12 month period at 14.95% APR, your monthly repayments would be $180.23, with a total pay back amount of $2,162.76.</p><h3>Exclusions</h3><p>We do not guarantee that you will be matched with a lender or that your loan request will be approved. This service does not constitute an offer or solicitation for loan products which are prohibited by any state law.</p><h3>Credit Implications</h3><p>Participating lenders may verify your social security number, driver license number, national ID, or any other state or federal identifications and review your information against national databases (such as Equifax, TransUnion, and Experian) to determine your credit worthiness.</p><div class="info-modal-footer"><button class="btn-modal-action" onclick="closeModal()">I Understand</button></div>`
+        };
+
+        function openModal(key) {
+            document.getElementById('modal-title').innerText = key === 'rates' ? 'Rates & Fees' : key.charAt(0).toUpperCase() + key.slice(1);
+            document.getElementById('modal-content').innerHTML = content[key];
+            document.getElementById('modal-overlay').classList.remove('hidden');
+            document.getElementById('modal-overlay').classList.add('flex');
+        }
+        
+        function closeModal() {
+            document.getElementById('modal-overlay').classList.add('hidden');
+            document.getElementById('modal-overlay').classList.remove('flex');
+        }
+    </script>
+</body>
+</html>
